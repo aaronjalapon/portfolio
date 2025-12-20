@@ -12,6 +12,9 @@ const featuredProjects = [
     timeline: 'Jan 2025 — Present',
     tags: ['Python', 'IoT', 'Machine Learning', 'MQTT', 'React', 'Time-Series'],
     featured: true,
+    image: '/public/tanum.png',
+    link: 'https://tanum.vercel.app/',
+    github: 'https://github.com/aaronjalapon/tanum',
   },
   {
     title: 'Mindspace',
@@ -21,6 +24,9 @@ const featuredProjects = [
     timeline: '2024',
     tags: ['React', 'Accessibility', 'UX Design', 'Privacy-first'],
     featured: true,
+    image: '/public/mindspace.png',
+    link: 'https://mindspace.infinityfreeapp.com/?i=1',
+    github: 'https://github.com/aaronjalapon/mindspace',
   },
   {
     title: 'RealiTech',
@@ -30,6 +36,9 @@ const featuredProjects = [
     timeline: '2025 — Present',
     tags: ['Node.js', 'Chatbot', 'Product Management', 'UX'],
     featured: true,
+    image: '/public/realitech.png',
+    link: 'https://um-realitech-hackestate-1ed69.web.app/',
+    github: 'https://github.com/aaronjalapon/realitech',
   },
 ]
 
@@ -42,6 +51,7 @@ const otherProjects = [
     timeline: '2024',
     tags: ['React', 'Node.js', 'MongoDB'],
     featured: false,
+    image: '/goalbuddy-preview.png',
   },
   {
     title: 'Agriklima',
@@ -51,6 +61,7 @@ const otherProjects = [
     timeline: '2024',
     tags: ['Python', 'API Integration', 'Data Viz'],
     featured: false,
+    image: '/agriklima-preview.png',
   },
 ]
 

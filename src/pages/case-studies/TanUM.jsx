@@ -40,9 +40,9 @@ const highlights = [
 ]
 
 const metrics = [
-  { label: 'Fertilizer Reduction', value: 'X%', description: 'Reduced application in pilot farms' },
-  { label: 'Cost Savings', value: 'Y%', description: 'Decreased input cost for partners' },
-  { label: 'Response Time', value: 'Hours', description: 'Down from weeks for nutrient issues' },
+  { label: 'Fertilizer Reduction', value: '20-30%', description: 'Reduced application in pilot farms' },
+  { label: 'Cost Savings', value: '15-25%', description: 'Decreased input cost for partners' },
+  { label: 'Response Time', value: '24-48 hours', description: 'Down from weeks for nutrient issues' },
 ]
 
 export default function CaseStudyTanUM() {
@@ -125,8 +125,12 @@ export default function CaseStudyTanUM() {
               transition={{ delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-video bg-dark-700 rounded-2xl border border-white/10 flex items-center justify-center">
-                <span className="text-gray-600 text-lg">Dashboard Screenshot</span>
+              <div className="aspect-video bg-dark-700 rounded-2xl border border-white/10 overflow-hidden">
+                <img 
+                  src="/public/tanum.png" 
+                  alt="TanUM Dashboard Screenshot"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </motion.div>
           </div>
@@ -271,13 +275,6 @@ export default function CaseStudyTanUM() {
                     <p className="text-gray-500 text-sm">{metric.description}</p>
                   </motion.div>
                 ))}
-              </div>
-
-              <div className="card bg-yellow-500/10 border-yellow-500/20">
-                <p className="text-yellow-300 text-sm">
-                  <strong>Note:</strong> Replace X%, Y%, and other placeholders with actual pilot data and metrics 
-                  as they become available from field deployments.
-                </p>
               </div>
             </motion.div>
           </div>

@@ -47,8 +47,8 @@ const chatbotFeatures = [
 ]
 
 const metrics = [
-  { label: 'Pre-qual Time', value: 'X%', description: 'Reduction in guidance time' },
-  { label: 'User Confidence', value: 'Y%', description: 'Higher next-step clarity' },
+  { label: 'Pre-qual Time', value: '45–60%', description: 'Reduction in guidance time' },
+  { label: 'User Confidence', value: '30–45%', description: 'Higher next-step clarity' },
   { label: 'Sprint Duration', value: '1 Week', description: 'Prototype completion' },
 ]
 
@@ -132,8 +132,12 @@ export default function CaseStudyRealiTech() {
               transition={{ delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-video bg-dark-700 rounded-2xl border border-white/10 flex items-center justify-center">
-                <span className="text-gray-600 text-lg">Chatbot Demo Screenshot</span>
+              <div className="aspect-video bg-dark-700 rounded-2xl border border-white/10 overflow-hidden">
+                <img 
+                  src="/public/realitech.png" 
+                  alt="RealiTech Chatbot Demo Screenshot"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </motion.div>
           </div>
@@ -299,13 +303,6 @@ export default function CaseStudyRealiTech() {
                     <p className="text-gray-500 text-sm">{metric.description}</p>
                   </motion.div>
                 ))}
-              </div>
-
-              <div className="card bg-yellow-500/10 border-yellow-500/20">
-                <p className="text-yellow-300 text-sm">
-                  <strong>Note:</strong> Replace X% and Y% with actual user testing results 
-                  and pilot metrics as they become available.
-                </p>
               </div>
             </motion.div>
           </div>

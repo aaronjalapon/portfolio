@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Download, Github, Linkedin, Twitter, Instagram, ChevronDown } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import ProjectCard from '../components/ProjectCard'
+import { image } from 'framer-motion/client'
 
 const featuredProjects = [
   {
@@ -13,6 +14,7 @@ const featuredProjects = [
     timeline: 'Jan 2025 — Present',
     tags: ['Python', 'Machine Learning', 'React'],
     featured: true,
+    image: '/public/tanum.png',
     link: 'https://tanum.vercel.app/',
     github: 'https://github.com/aaronjalapon/TanUM_NanoTechSolutions',
   },
@@ -24,6 +26,7 @@ const featuredProjects = [
     timeline: '2024',
     tags: ['React', 'Accessibility', 'UX Design'],
     featured: true,
+    image: '/public/mindspace.png',
     link: 'https://mindspace.infinityfreeapp.com/?i=1',
     github: 'https://github.com/aaronjalapon/Mental_Health_Support_Site',
   },
@@ -35,6 +38,7 @@ const featuredProjects = [
     timeline: '2025 — Present',
     tags: ['Node.js', 'Chatbot', 'Product Management'],
     featured: true,
+    image: '/public/realitech.png',
     link: 'https://um-realitech-hackestate-1ed69.web.app/',
     github: 'https://github.com/aaronjalapon/UM-RealiTech-Frontend-RealEstate',
   },

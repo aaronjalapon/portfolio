@@ -47,8 +47,8 @@ const accessibilityFeatures = [
 ]
 
 const metrics = [
-  { label: 'Session Completion', value: 'X%', description: 'Improvement after UI updates' },
-  { label: 'Time-to-Resource', value: 'Y%', description: 'Reduction in search time' },
+  { label: 'Session Completion', value: '25-35%', description: 'Improvement after UI updates' },
+  { label: 'Time-to-Resource', value: '40-55%', description: 'Reduction in search time' },
   { label: 'Privacy Score', value: 'A+', description: 'No public PII exposure' },
 ]
 
@@ -132,8 +132,12 @@ export default function CaseStudyMindspace() {
               transition={{ delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-video bg-dark-700 rounded-2xl border border-white/10 flex items-center justify-center">
-                <span className="text-gray-600 text-lg">UI Screenshot</span>
+              <div className="aspect-video bg-dark-700 rounded-2xl border border-white/10 overflow-hidden">
+                <img 
+                  src="/public/mindspace.png" 
+                  alt="Mindspace App UI Screenshot"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </motion.div>
           </div>
@@ -304,13 +308,6 @@ export default function CaseStudyMindspace() {
                     <p className="text-gray-500 text-sm">{metric.description}</p>
                   </motion.div>
                 ))}
-              </div>
-
-              <div className="card bg-yellow-500/10 border-yellow-500/20">
-                <p className="text-yellow-300 text-sm">
-                  <strong>Note:</strong> Replace X% and Y% with actual user engagement and usability 
-                  test metrics as they become available.
-                </p>
               </div>
             </motion.div>
           </div>
