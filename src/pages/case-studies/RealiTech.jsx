@@ -114,13 +114,13 @@ export default function CaseStudyRealiTech() {
 
               {/* CTAs */}
               <div className="flex flex-wrap gap-4">
-                <a href="#" className="btn-primary gap-2">
+                <a href="https://github.com/aaronjalapon/realitech" target="_blank" rel="noopener noreferrer" className="btn-primary gap-2">
                   <Github size={18} />
                   View Repository
                 </a>
-                <a href="#" className="btn-outline gap-2">
+                <a href="https://um-realitech-hackestate-1ed69.web.app/" target="_blank" rel="noopener noreferrer" className="btn-outline gap-2">
                   <ExternalLink size={18} />
-                  Demo Video
+                  Live Demo
                 </a>
               </div>
             </motion.div>

@@ -1,13 +1,20 @@
-import { Link } from 'react-router-dom'
-import { ArrowRight, Calendar, Users } from 'lucide-react'
+import { ArrowRight, Calendar, Users, ExternalLink, Github } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 export default function ProjectCard({ project }) {
-  const { title, slug, tagline, role, timeline, tags, image, featured } = project
+  const { title, slug, tagline, role, timeline, tags, image, featured, link, github } = project
+  const navigate = useNavigate()
+
+  const openDemo = (e, url) => {
+    e.preventDefault()
+    e.stopPropagation()
+    window.open(url, '_blank')
+  }
 
   return (
-    <Link 
-      to={`/projects/${slug}`}
-      className={`group card card-hover block overflow-hidden ${featured ? 'lg:col-span-2' : ''}`}
+    <div 
+      className={`group card card-hover block overflow-hidden cursor-pointer ${featured ? 'lg:col-span-2' : ''}`}
+      onClick={() => navigate(`/projects/${slug}`)}
     >
       {/* Image */}
       <div className="relative h-48 md:h-56 -mx-6 -mt-6 mb-6 overflow-hidden bg-dark-600">
@@ -67,11 +74,36 @@ export default function ProjectCard({ project }) {
         </div>
 
         {/* CTA */}
-        <span className="inline-flex items-center gap-2 text-primary text-sm font-medium group-hover:gap-3 transition-all">
-          View Case Study
-          <ArrowRight size={16} />
-        </span>
+        <div className="flex items-center gap-4 pt-4 border-t border-white/5">
+          <span className="inline-flex items-center gap-2 text-primary text-sm font-medium group-hover:gap-3 transition-all">
+            View Case Study
+            <ArrowRight size={16} />
+          </span>
+          
+          {link && (
+            <button
+              type="button"
+              onClick={(e) => openDemo(e, link)}
+              className="inline-flex items-center gap-1 text-gray-400 text-sm hover:text-primary transition-colors z-10"
+              title="Live Demo"
+            >
+              <ExternalLink size={14} />
+              Demo
+            </button>
+          )}
+          
+          {github && (
+            <button
+              type="button"
+              onClick={(e) => openDemo(e, github)}
+              className="inline-flex items-center gap-1 text-gray-400 text-sm hover:text-primary transition-colors z-10"
+              title="GitHub Repository"
+            >
+              <Github size={14} />
+            </button>
+          )}
+        </div>
       </div>
-    </Link>
+    </div>
   )
 }

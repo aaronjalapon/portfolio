@@ -107,11 +107,11 @@ export default function CaseStudyTanUM() {
 
               {/* CTAs */}
               <div className="flex flex-wrap gap-4">
-                <a href="#" className="btn-primary gap-2">
+                <a href="https://github.com/aaronjalapon/tanum" target="_blank" rel="noopener noreferrer" className="btn-primary gap-2">
                   <Github size={18} />
                   View Repository
                 </a>
-                <a href="#" className="btn-outline gap-2">
+                <a href="https://tanum.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-outline gap-2">
                   <ExternalLink size={18} />
                   Live Demo
                 </a>

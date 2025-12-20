@@ -13,6 +13,8 @@ const featuredProjects = [
     timeline: 'Jan 2025 — Present',
     tags: ['Python', 'Machine Learning', 'React'],
     featured: true,
+    link: 'https://tanum.vercel.app/',
+    github: 'https://github.com/aaronjalapon/TanUM_NanoTechSolutions',
   },
   {
     title: 'Mindspace',
@@ -22,6 +24,8 @@ const featuredProjects = [
     timeline: '2024',
     tags: ['React', 'Accessibility', 'UX Design'],
     featured: true,
+    link: 'https://mindspace.infinityfreeapp.com/?i=1',
+    github: 'https://github.com/aaronjalapon/Mental_Health_Support_Site',
   },
   {
     title: 'RealiTech',
@@ -31,6 +35,8 @@ const featuredProjects = [
     timeline: '2025 — Present',
     tags: ['Node.js', 'Chatbot', 'Product Management'],
     featured: true,
+    link: 'https://um-realitech-hackestate-1ed69.web.app/',
+    github: 'https://github.com/aaronjalapon/UM-RealiTech-Frontend-RealEstate',
   },
 ]
 
@@ -146,7 +152,7 @@ export default function Home() {
         <div className="section-container">
           <SectionHeader 
             title="Featured Projects"
-            subtitle="Spotlight on TanUM Nanotech Solutions, Mindspace, and RealiTech — my most impactful work in IoT, ML, and product development."
+            subtitle="Spotlight on TanUM Nanotech Solutions, Mindspace, and RealiTech — my most impactful work in Web, ML, and product development."
           />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
