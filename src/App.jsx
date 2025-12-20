@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import About from './pages/About'
 import Skills from './pages/Skills'
@@ -12,7 +13,9 @@ import CaseStudyRealiTech from './pages/case-studies/RealiTech'
 
 function App() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
@@ -25,6 +28,7 @@ function App() {
         <Route path="projects/realitech" element={<CaseStudyRealiTech />} />
       </Route>
     </Routes>
+    </>
   )
 }
 
