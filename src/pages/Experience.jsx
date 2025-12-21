@@ -227,7 +227,7 @@ export default function Experience() {
                 <span className="text-gray-400 text-sm mt-2 md:mt-0">September 2–3, 2025</span>
               </div>
               <p className="text-gray-300 mb-3">
-                University of the Philippines Los Baños
+                <strong>Project:</strong> TanUM Nanotech Solutions @ University of the Philippines Los Baños
               </p>
               <p className="text-gray-400">
                 Achieved First Runner-Up for presenting a high-impact, innovation-driven solution evaluated on feasibility, innovation, and societal impact.
