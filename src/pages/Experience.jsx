@@ -155,20 +155,85 @@ export default function Experience() {
         <div className="section-container">
           <SectionHeader 
             title="Awards & Recognition"
-            subtitle="Achievements and acknowledgments."
+            subtitle="Achievements and acknowledgments from competitions and hackathons."
           />
 
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="max-w-2xl mx-auto card text-center"
-          >
-            <p className="text-gray-400">
-              Awards and competition results will be listed here. 
-              Currently participating in various hackathons and tech competitions.
-            </p>
-          </motion.div>
+          <div className="max-w-4xl mx-auto space-y-6">
+            {/* Proptech Hackestate - Preliminary */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="card border-l-4 border-primary"
+            >
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-1">Top 3 — Preliminary Round</h3>
+                  <p className="text-primary font-medium">Proptech Hackestate Hackathon</p>
+                </div>
+                <span className="text-gray-400 text-sm mt-2 md:mt-0">July 30, 2025</span>
+              </div>
+              <p className="text-gray-300 mb-3">
+                <strong>Project:</strong> RealiTech
+              </p>
+              <p className="text-gray-400">
+                Selected among the Top 3 teams during the preliminary round for presenting a scalable proptech solution focused on homebuyer assistance and process automation.
+              </p>
+            </motion.div>
+
+            {/* Proptech Hackestate - Finals */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="card border-l-4 border-yellow-500"
+            >
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-1">Best UX Award & Top 5 Finalist — Finals</h3>
+                  <p className="text-yellow-500 font-medium">Proptech Hackestate Hackathon</p>
+                </div>
+                <span className="text-gray-400 text-sm mt-2 md:mt-0">August 27, 2025</span>
+              </div>
+              <p className="text-gray-300 mb-3">
+                <strong>Project:</strong> RealiTech @ Grand Regal Hotel & Casino
+              </p>
+              <ul className="space-y-2 text-gray-400">
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full mt-2 flex-shrink-0" />
+                  Awarded Best User Experience (UX) for intuitive design, clarity of buyer journey, and effective chatbot-guided workflows
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full mt-2 flex-shrink-0" />
+                  Recognized as a Top 5 Finalist among competing proptech teams nationwide
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Innovation Olympics */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="card border-l-4 border-blue-400"
+            >
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-1">First Runner-Up</h3>
+                  <p className="text-blue-400 font-medium">Innovation Olympics 3.0</p>
+                </div>
+                <span className="text-gray-400 text-sm mt-2 md:mt-0">September 2–3, 2025</span>
+              </div>
+              <p className="text-gray-300 mb-3">
+                University of the Philippines Los Baños
+              </p>
+              <p className="text-gray-400">
+                Achieved First Runner-Up for presenting a high-impact, innovation-driven solution evaluated on feasibility, innovation, and societal impact.
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
