@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Calendar, ArrowRight, AlertCircle } from 'lucide-react'
 import emailjs from '@emailjs/browser'
+import { PopupModal } from 'react-calendly'
 import SectionHeader from '../components/SectionHeader'
 
 const contactInfo = [
@@ -50,6 +51,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -300,15 +302,26 @@ export default function Contact() {
                   Prefer a live conversation? Schedule a 30-minute call to discuss your project 
                   requirements and how we can work together.
                 </p>
-                <a href="#" className="btn-primary w-full justify-center gap-2">
+                <button
+                  onClick={() => setIsCalendlyOpen(true)}
+                  className="btn-primary w-full justify-center gap-2"
+                >
                   Book a Meeting
                   <ArrowRight size={18} />
-                </a>
+                </button>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
+
+      {/* Calendly Popup */}
+      <PopupModal
+        url="https://calendly.com/aaronjalapon"
+        onModalClose={() => setIsCalendlyOpen(false)}
+        open={isCalendlyOpen}
+        rootElement={document.getElementById('root')}
+      />
     </div>
   )
 }
