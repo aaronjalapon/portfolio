@@ -92,7 +92,7 @@ export default function CaseStudyTanUM() {
                 </span>
                 <span className="flex items-center gap-2">
                   <Calendar size={18} className="text-primary" />
-                  Jan 2025 — Present
+                  September 2025
                 </span>
               </div>
 

@@ -99,7 +99,7 @@ export default function CaseStudyRealiTech() {
                 </span>
                 <span className="flex items-center gap-2">
                   <Calendar size={18} className="text-primary" />
-                  2025 — Present
+                  July 2025
                 </span>
               </div>
 

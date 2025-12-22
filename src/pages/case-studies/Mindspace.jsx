@@ -99,7 +99,7 @@ export default function CaseStudyMindspace() {
                 </span>
                 <span className="flex items-center gap-2">
                   <Calendar size={18} className="text-primary" />
-                  2024
+                  January 2025
                 </span>
               </div>
 
