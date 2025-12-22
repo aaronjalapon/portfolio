@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Calendar, ArrowRight } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Calendar, ArrowRight, AlertCircle } from 'lucide-react'
+import emailjs from '@emailjs/browser'
 import SectionHeader from '../components/SectionHeader'
 
 const contactInfo = [
@@ -48,17 +49,34 @@ export default function Contact() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    setIsSubmitting(false)
-    setSubmitted(true)
-    setFormData({ name: '', email: '', projectType: '', message: '' })
+    setError('')
+
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          project_type: formData.projectType || 'Not specified',
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+
+      setSubmitted(true)
+      setFormData({ name: '', email: '', projectType: '', message: '' })
+    } catch (err) {
+      console.error('EmailJS Error:', err)
+      setError('Failed to send message. Please try again or email me directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e) => {
@@ -202,6 +220,13 @@ export default function Contact() {
                       </>
                     )}
                   </button>
+
+                  {error && (
+                    <div className="flex items-center gap-2 p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400">
+                      <AlertCircle size={18} />
+                      <span>{error}</span>
+                    </div>
+                  )}
                 </form>
               )}
             </motion.div>
