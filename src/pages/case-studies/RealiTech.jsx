@@ -134,7 +134,7 @@ export default function CaseStudyRealiTech() {
             >
               <div className="aspect-video bg-dark-700 rounded-2xl border border-white/10 overflow-hidden">
                 <img 
-                  src="/public/realitech.png" 
+                  src="/realitech.png" 
                   alt="RealiTech Chatbot Demo Screenshot"
                   className="w-full h-full object-cover"
                 />

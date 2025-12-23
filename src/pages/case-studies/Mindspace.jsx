@@ -134,7 +134,7 @@ export default function CaseStudyMindspace() {
             >
               <div className="aspect-video bg-dark-700 rounded-2xl border border-white/10 overflow-hidden">
                 <img 
-                  src="/public/mindspace.png" 
+                  src="/mindspace.png" 
                   alt="Mindspace App UI Screenshot"
                   className="w-full h-full object-cover"
                 />

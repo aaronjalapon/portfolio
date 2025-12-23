@@ -127,7 +127,7 @@ export default function CaseStudyTanUM() {
             >
               <div className="aspect-video bg-dark-700 rounded-2xl border border-white/10 overflow-hidden">
                 <img 
-                  src="/public/tanum.png" 
+                  src="/tanum.png" 
                   alt="TanUM Dashboard Screenshot"
                   className="w-full h-full object-cover"
                 />
