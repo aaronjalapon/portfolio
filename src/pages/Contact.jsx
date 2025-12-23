@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Calendar, ArrowRi
 import emailjs from '@emailjs/browser'
 import { PopupModal } from 'react-calendly'
 import SectionHeader from '../components/SectionHeader'
+import SEO from '../components/SEO'
 
 const contactInfo = [
   {
@@ -89,7 +90,13 @@ export default function Contact() {
   }
 
   return (
-    <div className="pt-20">
+    <>
+      <SEO
+        title="Contact"
+        description="Get in touch with Aaron Jalapon — Software & ML Engineer. Let's discuss projects, collaborations, or opportunities."
+        url="/contact"
+      />
+      <div className="pt-20">
       {/* Hero */}
       <section className="section-padding bg-dark-800">
         <div className="section-container">
@@ -322,6 +329,7 @@ export default function Contact() {
         open={isCalendlyOpen}
         rootElement={document.getElementById('root')}
       />
-    </div>
+      </div>
+    </>
   )
 }

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import ProjectCard from '../components/ProjectCard'
 import SectionHeader from '../components/SectionHeader'
+import SEO from '../components/SEO'
 
 const featuredProjects = [
   {
@@ -67,7 +68,13 @@ const otherProjects = [
 
 export default function Projects() {
   return (
-    <div className="pt-20">
+    <>
+      <SEO
+        title="Projects"
+        description="Featured projects by Aaron Jalapon — TanUM IoT agriculture system, Mindspace mental health platform, RealiTech proptech ecosystem, and more."
+        url="/projects"
+      />
+      <div className="pt-20">
       {/* Hero */}
       <section className="section-padding bg-dark-800">
         <div className="section-container">
@@ -180,6 +187,7 @@ export default function Projects() {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

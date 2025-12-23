@@ -4,6 +4,7 @@ import {
   ArrowLeft, ArrowRight, Calendar, Users, Github, ExternalLink, Download,
   Database, Cloud, Cpu, Bell, BarChart3, Leaf
 } from 'lucide-react'
+import SEO from '../../components/SEO'
 
 const techStack = [
   { name: 'Python', category: 'Backend' },
@@ -47,7 +48,15 @@ const metrics = [
 
 export default function CaseStudyTanUM() {
   return (
-    <div className="pt-20">
+    <>
+      <SEO
+        title="TanUM Nanotech Solutions — Case Study"
+        description="IoT + ML system for real-time soil monitoring and data-driven fertilizer recommendations. Reduced fertilizer waste by 20-30% for pilot farms."
+        image="/tanum.png"
+        url="/projects/tanum"
+        type="article"
+      />
+      <div className="pt-20">
       {/* Hero */}
       <section className="section-padding bg-dark-800">
         <div className="section-container">
@@ -349,6 +358,7 @@ export default function CaseStudyTanUM() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

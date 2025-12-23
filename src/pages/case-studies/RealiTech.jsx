@@ -4,6 +4,7 @@ import {
   ArrowLeft, ArrowRight, Calendar, Users, Github, ExternalLink,
   Home, MessageSquare, FileCheck, Building2, Users2, Workflow
 } from 'lucide-react'
+import SEO from '../../components/SEO'
 
 const techStack = [
   { name: 'Node.js', category: 'Backend' },
@@ -54,7 +55,15 @@ const metrics = [
 
 export default function CaseStudyRealiTech() {
   return (
-    <div className="pt-20">
+    <>
+      <SEO
+        title="RealiTech — Case Study"
+        description="End-to-end proptech ecosystem featuring a buyer-assistant chatbot for loan pre-qualification and document guidance. Reduced pre-qual time by 45-60%."
+        image="/realitech.png"
+        url="/projects/realitech"
+        type="article"
+      />
+      <div className="pt-20">
       {/* Hero */}
       <section className="section-padding bg-dark-800">
         <div className="section-container">
@@ -377,6 +386,7 @@ export default function CaseStudyRealiTech() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

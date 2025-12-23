@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Download, MapPin, GraduationCap, Heart, Target } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
+import SEO from '../components/SEO'
 
 const highlights = [
   {
@@ -32,7 +33,13 @@ const interests = [
 
 export default function About() {
   return (
-    <div className="pt-20">
+    <>
+      <SEO
+        title="About"
+        description="Learn about Aaron Jalapon — a product-minded Software & ML Engineer from the Philippines, focused on AI/ML-driven solutions and user-centered front ends."
+        url="/about"
+      />
+      <div className="pt-20">
       {/* Hero Section */}
       <section className="section-padding bg-dark-800">
         <div className="section-container">
@@ -227,6 +234,7 @@ export default function About() {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

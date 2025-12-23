@@ -4,6 +4,7 @@ import {
   FileCode, Server, Cpu, Globe, Figma, GitBranch
 } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
+import SEO from '../components/SEO'
 
 const skillCategories = [
   {
@@ -77,7 +78,13 @@ const tools = [
 
 export default function Skills() {
   return (
-    <div className="pt-20">
+    <>
+      <SEO
+        title="Skills"
+        description="Technical skills and expertise of Aaron Jalapon — Python, React, Machine Learning, DevOps, UX Design, and more."
+        url="/skills"
+      />
+      <div className="pt-20">
       {/* Hero */}
       <section className="section-padding bg-dark-800">
         <div className="section-container">
@@ -207,6 +214,7 @@ export default function Skills() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

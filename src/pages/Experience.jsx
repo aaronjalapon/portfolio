@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Download, ArrowRight, Briefcase, GraduationCap } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import TimelineItem from '../components/TimelineItem'
+import SEO from '../components/SEO'
 
 const experiences = [
   {
@@ -64,7 +65,13 @@ const resumeHighlights = [
 
 export default function Experience() {
   return (
-    <div className="pt-20">
+    <>
+      <SEO
+        title="Experience"
+        description="Professional experience and career timeline of Aaron Jalapon — Software & ML Lead at TanUM, Sprint Lead at RealiTech, and more."
+        url="/experience"
+      />
+      <div className="pt-20">
       {/* Hero */}
       <section className="section-padding bg-dark-800">
         <div className="section-container">
@@ -265,6 +272,7 @@ export default function Experience() {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

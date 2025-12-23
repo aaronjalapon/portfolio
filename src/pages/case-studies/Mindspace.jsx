@@ -4,6 +4,7 @@ import {
   ArrowLeft, ArrowRight, Calendar, Users, Github, ExternalLink,
   Shield, Heart, Search, Phone, Layout, Accessibility
 } from 'lucide-react'
+import SEO from '../../components/SEO'
 
 const techStack = [
   { name: 'React', category: 'Frontend' },
@@ -54,7 +55,15 @@ const metrics = [
 
 export default function CaseStudyMindspace() {
   return (
-    <div className="pt-20">
+    <>
+      <SEO
+        title="Mindspace — Case Study"
+        description="Privacy-first student mental health platform with guided meditations, curated resources, and WCAG 2.1 AA compliant accessible design."
+        image="/mindspace.png"
+        url="/projects/mindspace"
+        type="article"
+      />
+      <div className="pt-20">
       {/* Hero */}
       <section className="section-padding bg-dark-800">
         <div className="section-container">
@@ -381,6 +390,7 @@ export default function CaseStudyMindspace() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

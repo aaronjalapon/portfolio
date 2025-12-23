@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Download, Github, Linkedin, Twitter, Instagram, ChevronDown } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import ProjectCard from '../components/ProjectCard'
+import SEO from '../components/SEO'
 import { image } from 'framer-motion/client'
 
 const featuredProjects = [
@@ -54,6 +55,11 @@ const socialLinks = [
 export default function Home() {
   return (
     <>
+      <SEO
+        title="Home"
+        description="Aaron Jalapon — Software & ML Engineer building user-first web apps and AI systems. Portfolio featuring TanUM, Mindspace, and RealiTech projects."
+        url="/"
+      />
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         {/* Background gradient */}

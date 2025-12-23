@@ -1,0 +1,11 @@
+# Robots.txt for Aaron Jalapon Portfolio
+# https://aaronjalapon.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://aaronjalapon.vercel.app/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
