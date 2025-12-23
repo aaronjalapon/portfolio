@@ -8,7 +8,7 @@ const SEO = ({
   type = 'website',
   noIndex = false,
 }) => {
-  const siteUrl = 'https://aaronjalapon.vercel.app'; // Update with your actual domain
+  const siteUrl = 'https://aaron-jalapon.vercel.app'; // Update with your actual domain
   const siteName = 'Aaron Jalapon — Software & ML Engineer';
   const defaultDescription = 'TanUM, Mindspace, RealiTech — IoT + ML + front-end engineering by Aaron Jalapon. Software & ML Engineer | Product-minded Developer';
   
@@ -29,7 +29,7 @@ const SEO = ({
     description: seo.description,
     sameAs: [
       'https://github.com/aaronjalapon', // Update with your actual profiles
-      'https://linkedin.com/in/aaronjalapon',
+      'https://linkedin.com/in/https://www.linkedin.com/in/aaron-jalapon-5aba74290/',
     ],
     knowsAbout: [
       'Software Engineering',
