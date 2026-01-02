@@ -30,7 +30,7 @@ const experiences = [
   {
     title: 'BS Computer Science',
     organization: 'University',
-    period: '2021 — Present',
+    period: '2023 — Present',
     description: 'Pursuing a Bachelor of Science in Computer Science with focus on AI/ML, software engineering, and product development.',
     type: 'education',
   },
