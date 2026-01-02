@@ -7,7 +7,7 @@ import {
 import SEO from '../../components/SEO'
 
 const techStack = [
-  { name: 'Vanilla JavaScript', category: 'Frontend' },
+  { name: 'JavaScript', category: 'Frontend' },
   { name: 'HTML5', category: 'Markup' },
   { name: 'Accessible Forms', category: 'A11y' },
   { name: 'Lazy Loading', category: 'Performance' },
