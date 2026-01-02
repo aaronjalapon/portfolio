@@ -7,12 +7,12 @@ import {
 import SEO from '../../components/SEO'
 
 const techStack = [
-  { name: 'React', category: 'Frontend' },
-  { name: 'Component Library', category: 'UI' },
+  { name: 'Vanilla JavaScript', category: 'Frontend' },
+  { name: 'HTML5', category: 'Markup' },
   { name: 'Accessible Forms', category: 'A11y' },
   { name: 'Lazy Loading', category: 'Performance' },
   { name: 'Responsive Design', category: 'UX' },
-  { name: 'CSS Modules', category: 'Styling' },
+  { name: 'CSS', category: 'Styling' },
 ]
 
 const features = [
