@@ -25,7 +25,7 @@ const featuredProjects = [
     tagline: 'Privacy-first student mental health platform with guided meditations, curated resources, and moderated peer support.',
     role: 'Front-end Developer',
     timeline: '2024',
-    tags: ['React', 'Accessibility', 'UX Design'],
+    tags: ['Javascript', 'Accessibility', 'UX Design'],
     featured: true,
     image: '/mindspace.png',
     link: 'https://mindspace.infinityfreeapp.com/?i=1',
