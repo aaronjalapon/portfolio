@@ -1,7 +1,10 @@
+import { useState, useCallback, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import useEmblaCarousel from 'embla-carousel-react'
 import { 
   Code2, Database, Brain, Cloud, Palette, Users,
-  FileCode, Server, Cpu, Globe, Figma, GitBranch
+  FileCode, Server, Cpu, Globe, Figma, GitBranch,
+  ChevronLeft, ChevronRight
 } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import SEO from '../components/SEO'
@@ -76,6 +79,137 @@ const tools = [
   { name: 'Vercel', icon: Globe },
 ]
 
+// Skills Carousel Component
+function SkillsCarousel({ categories }) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    align: 'start',
+    loop: true,
+    slidesToScroll: 1,
+  })
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [scrollSnaps, setScrollSnaps] = useState([])
+  const [canScrollPrev, setCanScrollPrev] = useState(false)
+  const [canScrollNext, setCanScrollNext] = useState(false)
+
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi])
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi])
+  const scrollTo = useCallback((index) => emblaApi?.scrollTo(index), [emblaApi])
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return
+    setSelectedIndex(emblaApi.selectedScrollSnap())
+    setCanScrollPrev(emblaApi.canScrollPrev())
+    setCanScrollNext(emblaApi.canScrollNext())
+  }, [emblaApi])
+
+  useEffect(() => {
+    if (!emblaApi) return
+    setScrollSnaps(emblaApi.scrollSnapList())
+    onSelect()
+    emblaApi.on('select', onSelect)
+    emblaApi.on('reInit', onSelect)
+    return () => {
+      emblaApi.off('select', onSelect)
+      emblaApi.off('reInit', onSelect)
+    }
+  }, [emblaApi, onSelect])
+
+  // Keyboard navigation
+  const handleKeyDown = useCallback((e) => {
+    if (e.key === 'ArrowLeft') scrollPrev()
+    if (e.key === 'ArrowRight') scrollNext()
+  }, [scrollPrev, scrollNext])
+
+  return (
+    <div 
+      className="relative"
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      role="region"
+      aria-label="Skills carousel"
+    >
+      {/* Carousel viewport */}
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex ml-[calc(-1.5rem)]">
+          {categories.map((category, categoryIndex) => (
+            <div
+              key={category.title}
+              className="flex-[0_0_85%] sm:flex-[0_0_45%] lg:flex-[0_0_33.333%] min-w-0 pl-6"
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: categoryIndex * 0.1 }}
+                className="card h-full"
+              >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <category.icon size={20} className="text-primary" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{category.title}</h3>
+              </div>
+
+              <div className="space-y-4">
+                {category.skills.map((skill) => (
+                  <div key={skill.name}>
+                    <div className="flex justify-between items-center mb-1.5">
+                      <span className="text-sm text-gray-300">{skill.name}</span>
+                      <span className="text-xs text-gray-500">{skill.level}%</span>
+                    </div>
+                    <div className="h-2 bg-dark-600 rounded-full overflow-hidden">
+                      <motion.div 
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="h-full bg-gradient-to-r from-primary to-blue-400 rounded-full"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Navigation buttons */}
+      <button
+        onClick={scrollPrev}
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-dark-700 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-primary/20 hover:border-primary/50 transition-all hidden md:flex"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft size={20} />
+      </button>
+      <button
+        onClick={scrollNext}
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-dark-700 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-primary/20 hover:border-primary/50 transition-all hidden md:flex"
+        aria-label="Next slide"
+      >
+        <ChevronRight size={20} />
+      </button>
+
+      {/* Pagination dots */}
+      <div className="flex justify-center gap-2 mt-6">
+        {scrollSnaps.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => scrollTo(index)}
+            className={`w-2.5 h-2.5 rounded-full transition-all ${
+              index === selectedIndex 
+                ? 'bg-primary w-8' 
+                : 'bg-dark-600 hover:bg-dark-500'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function Skills() {
   return (
     <>
@@ -107,48 +241,10 @@ export default function Skills() {
         </div>
       </section>
 
-      {/* Skills Grid */}
+      {/* Skills Carousel */}
       <section className="section-padding">
         <div className="section-container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skillCategories.map((category, categoryIndex) => (
-              <motion.div
-                key={category.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: categoryIndex * 0.1 }}
-                className="card"
-              >
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <category.icon size={20} className="text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white">{category.title}</h3>
-                </div>
-
-                <div className="space-y-4">
-                  {category.skills.map((skill) => (
-                    <div key={skill.name}>
-                      <div className="flex justify-between items-center mb-1.5">
-                        <span className="text-sm text-gray-300">{skill.name}</span>
-                        <span className="text-xs text-gray-500">{skill.level}%</span>
-                      </div>
-                      <div className="h-2 bg-dark-600 rounded-full overflow-hidden">
-                        <motion.div 
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.8, delay: 0.2 }}
-                          className="h-full bg-gradient-to-r from-primary to-blue-400 rounded-full"
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <SkillsCarousel categories={skillCategories} />
         </div>
       </section>
 
