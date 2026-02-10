@@ -10,7 +10,11 @@ export default function TimelineItem({ item, isLast }) {
       
       {/* Timeline dot */}
       <div className={`absolute left-0 top-1.5 w-6 h-6 rounded-full border-2 ${
-        type === 'work' ? 'border-primary bg-primary/20' : 'border-blue-400 bg-blue-400/20'
+        type === 'work' 
+          ? 'border-primary bg-primary/20' 
+          : type === 'volunteer' 
+            ? 'border-emerald-400 bg-emerald-400/20' 
+            : 'border-blue-400 bg-blue-400/20'
       }`} />
 
       {/* Content */}

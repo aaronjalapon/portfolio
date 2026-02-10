@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Download, ArrowRight, Briefcase, GraduationCap } from 'lucide-react'
+import { Download, ArrowRight, Briefcase, GraduationCap, Heart } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import TimelineItem from '../components/TimelineItem'
 import SEO from '../components/SEO'
@@ -33,6 +33,37 @@ const experiences = [
     period: '2023 — Present',
     description: 'Pursuing a Bachelor of Science in Computer Science with focus on AI/ML, software engineering, and product development.',
     type: 'education',
+  },
+]
+
+const volunteerExperiences = [
+  {
+    title: 'Campus Torchbearer & Ambassador',
+    organization: 'Wadhwani Foundation Philippines',
+    period: 'Nov 2024 — Present',
+    description: 'Representing and promoting entrepreneurship and innovation initiatives on campus, connecting students with resources and opportunities from Wadhwani Foundation.',
+    type: 'volunteer',
+  },
+  {
+    title: 'Programs Committee Member',
+    organization: 'Google Developer Group - Davao',
+    period: 'Apr 2025 — Dec 2025',
+    description: 'Handled the program flow of community events from registration to execution, ensuring smooth event operations and engaging attendee experiences.',
+    type: 'volunteer',
+  },
+  {
+    title: 'Community Events Management Committee',
+    organization: 'Davao Startup Week',
+    period: 'Jul 2025 — Sep 2025',
+    description: 'Contributed to organizing and managing community events during Davao Startup Week, supporting the local startup ecosystem.',
+    type: 'volunteer',
+  },
+  {
+    title: 'Communications Committee Member',
+    organization: 'DurianPy - Davao Python User Group',
+    period: 'Jul 2025 — Oct 2025',
+    description: 'Managed communications and outreach for the local Python community, helping promote events and engage with members.',
+    type: 'volunteer',
   },
 ]
 
@@ -124,8 +155,35 @@ export default function Experience() {
         </div>
       </section>
 
-      {/* Resume Highlights */}
+      {/* Volunteer & Community */}
       <section className="section-padding bg-dark-800">
+        <div className="section-container">
+          <SectionHeader 
+            title="Volunteer & Community"
+            subtitle="Contributing to tech communities and organizations."
+          />
+
+          <div className="max-w-3xl mx-auto">
+            {volunteerExperiences.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <TimelineItem 
+                  item={item} 
+                  isLast={index === volunteerExperiences.length - 1}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Resume Highlights */}
+      <section className="section-padding">
         <div className="section-container">
           <SectionHeader 
             title="Resume Highlights"
