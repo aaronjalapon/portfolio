@@ -4,6 +4,7 @@ import { ArrowRight, Download, Github, Linkedin, Twitter, Instagram, ChevronDown
 import SectionHeader from '../components/SectionHeader'
 import ProjectCard from '../components/ProjectCard'
 import SEO from '../components/SEO'
+import { TextGenerateEffect } from '../components/ui/text-generate-effect'
 import { image } from 'framer-motion/client'
 
 const featuredProjects = [
@@ -79,14 +80,18 @@ export default function Home() {
                 Software & ML Engineer
               </span>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                Hi, I'm{' '}
-                <span className="gradient-text">Aaron Jalapon</span>
-              </h1>
+              <div className="mb-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  <span className="text-white">Hi, I'm </span>
+                  <span className="gradient-text">Aaron Jalapon</span>
+                </h1>
+              </div>
               
-              <p className="text-xl text-gray-300 mb-4">
-                Product-minded Developer
-              </p>
+              <TextGenerateEffect 
+                words="Product-minded Developer"
+                className="text-xl mb-4"
+                duration={0.3}
+              />
               
               <p className="text-gray-400 text-lg mb-8 max-w-xl">
                 I design user-first web apps and AI systems that solve real problems — 

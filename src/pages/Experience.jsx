@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Download, ArrowRight, Briefcase, GraduationCap, Heart } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import TimelineItem from '../components/TimelineItem'
+import { Timeline } from '../components/ui/timeline'
 import SEO from '../components/SEO'
 
 const experiences = [
@@ -94,6 +95,95 @@ const resumeHighlights = [
   },
 ]
 
+// Transform experiences into Timeline format grouped by year
+const timelineData = [
+  {
+    title: "2025",
+    content: (
+      <div className="space-y-6">
+        <div className="card">
+          <div className="flex items-start gap-3 mb-3">
+            <div className="p-2 bg-primary/10 rounded-lg">
+              <Briefcase className="text-primary" size={20} />
+            </div>
+            <div className="flex-1">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
+                <h3 className="text-lg font-semibold text-white">Software & ML Lead</h3>
+                <span className="text-sm text-gray-500">September 2025 — Present</span>
+              </div>
+              <p className="text-primary font-medium text-sm mb-3">TanUM Nanotech Solutions</p>
+              <p className="text-gray-400 text-sm">
+                Designed and implemented cloud-based ingestion and visualization platform for IoT soil sensors. 
+                Built and deployed ML models that generate automated fertilizer recommendations integrated into a web dashboard and SMS alert system.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="card">
+          <div className="flex items-start gap-3 mb-3">
+            <div className="p-2 bg-primary/10 rounded-lg">
+              <Briefcase className="text-primary" size={20} />
+            </div>
+            <div className="flex-1">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
+                <h3 className="text-lg font-semibold text-white">Sprint Lead / Product Owner</h3>
+                <span className="text-sm text-gray-500">July 2025 — Present</span>
+              </div>
+              <p className="text-primary font-medium text-sm mb-3">RealiTech</p>
+              <p className="text-gray-400 text-sm">
+                Led sprint to prototype a buyer-assistant chatbot that guides users through loan pre-qualification and documentation. 
+                Coordinated product roadmap and integrations across four RealiTech modules.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="card">
+          <div className="flex items-start gap-3 mb-3">
+            <div className="p-2 bg-primary/10 rounded-lg">
+              <Briefcase className="text-primary" size={20} />
+            </div>
+            <div className="flex-1">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
+                <h3 className="text-lg font-semibold text-white">Front-end Developer</h3>
+                <span className="text-sm text-gray-500">Jan - March 2025</span>
+              </div>
+              <p className="text-primary font-medium text-sm mb-3">Mindspace</p>
+              <p className="text-gray-400 text-sm">
+                Built responsive, privacy-forward front-end UI for a student mental-health platform; implemented resource discovery and crisis support flows. 
+                Collaborated with mental-health professionals to translate clinical guidance into usable interfaces.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "2023",
+    content: (
+      <div className="card">
+        <div className="flex items-start gap-3">
+          <div className="p-2 bg-blue-400/10 rounded-lg">
+            <GraduationCap className="text-blue-400" size={20} />
+          </div>
+          <div className="flex-1">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
+              <h3 className="text-lg font-semibold text-white">BS Computer Science</h3>
+              <span className="text-sm text-gray-500">2023 — Present</span>
+            </div>
+            <p className="text-blue-400 font-medium text-sm mb-3">University</p>
+            <p className="text-gray-400 text-sm">
+              Pursuing a Bachelor of Science in Computer Science with focus on AI/ML, software engineering, and product development.
+            </p>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+]
+
 export default function Experience() {
   return (
     <>
@@ -136,22 +226,7 @@ export default function Experience() {
             subtitle="Key roles and milestones in my career."
           />
 
-          <div className="max-w-3xl mx-auto">
-            {experiences.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <TimelineItem 
-                  item={item} 
-                  isLast={index === experiences.length - 1}
-                />
-              </motion.div>
-            ))}
-          </div>
+          <Timeline data={timelineData} />
         </div>
       </section>
 
