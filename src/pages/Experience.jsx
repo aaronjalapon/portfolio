@@ -5,6 +5,7 @@ import SectionHeader from '../components/SectionHeader'
 import TimelineItem from '../components/TimelineItem'
 import { Timeline } from '../components/ui/timeline'
 import SEO from '../components/SEO'
+import InteractiveHeroBg from '../components/InteractiveHeroBg'
 
 const experiences = [
   {
@@ -194,8 +195,9 @@ export default function Experience() {
       />
       <div className="pt-20">
       {/* Hero */}
-      <section className="section-padding bg-dark-800">
-        <div className="section-container">
+      <section className="section-padding relative overflow-hidden">
+        <InteractiveHeroBg />
+        <div className="section-container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

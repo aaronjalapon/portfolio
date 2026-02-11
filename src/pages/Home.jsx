@@ -4,6 +4,7 @@ import { ArrowRight, Download, Github, Linkedin, Twitter, Instagram, ChevronDown
 import SectionHeader from '../components/SectionHeader'
 import ProjectCard from '../components/ProjectCard'
 import SEO from '../components/SEO'
+import InteractiveHeroBg from '../components/InteractiveHeroBg'
 import { TextGenerateEffect } from '../components/ui/text-generate-effect'
 import { image } from 'framer-motion/client'
 
@@ -63,10 +64,7 @@ export default function Home() {
       />
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900" />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+        <InteractiveHeroBg />
         
         <div className="section-container relative z-10 py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">

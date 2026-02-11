@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser'
 import { PopupModal } from 'react-calendly'
 import SectionHeader from '../components/SectionHeader'
 import SEO from '../components/SEO'
+import InteractiveHeroBg from '../components/InteractiveHeroBg'
 
 const contactInfo = [
   {
@@ -98,8 +99,9 @@ export default function Contact() {
       />
       <div className="pt-20">
       {/* Hero */}
-      <section className="section-padding bg-dark-800">
-        <div className="section-container">
+      <section className="section-padding relative overflow-hidden">
+        <InteractiveHeroBg />
+        <div className="section-container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

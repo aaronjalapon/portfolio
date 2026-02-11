@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import ProjectCard from '../components/ProjectCard'
 import SectionHeader from '../components/SectionHeader'
 import SEO from '../components/SEO'
+import InteractiveHeroBg from '../components/InteractiveHeroBg'
 
 const featuredProjects = [
   {
@@ -76,8 +77,9 @@ export default function Projects() {
       />
       <div className="pt-20">
       {/* Hero */}
-      <section className="section-padding bg-dark-800">
-        <div className="section-container">
+      <section className="section-padding relative overflow-hidden">
+        <InteractiveHeroBg />
+        <div className="section-container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
