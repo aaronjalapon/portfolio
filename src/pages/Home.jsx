@@ -81,7 +81,7 @@ export default function Home() {
               <div className="mb-6">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="text-white">Hi, I'm </span>
-                  <span className="gradient-text">Aaron Jalapon</span>
+                  <span className="gradient-text">Aaron Jalapon Arquillano</span>
                 </h1>
               </div>
               
@@ -137,7 +137,7 @@ export default function Home() {
                 <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/30">
                   <img 
                     src="/fb.jpeg" 
-                    alt="Aaron Jalapon"
+                    alt="Aaron Jalapon Arquillano"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -209,7 +209,7 @@ export default function Home() {
                 <span className="gradient-text">About Me</span>
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                I'm Aaron Jalapon, a BS Computer Science student and product-minded developer 
+                I'm Aaron Jalapon Arquillano, a BS Computer Science student and product-minded developer 
                 focused on AI/ML-driven solutions and user-centered front ends. I build software 
                 that bridges technical innovation and real-world impact — examples include 
                 <span className="text-primary"> TanUM</span> (smart soil & fertilizer optimization), 
