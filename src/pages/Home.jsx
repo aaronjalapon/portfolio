@@ -59,7 +59,7 @@ export default function Home() {
     <>
       <SEO
         title="Home"
-        description="Aaron Jalapon — Software & ML Engineer building user-first web apps and AI systems. Portfolio featuring TanUM, Mindspace, and RealiTech projects."
+        description="Aaron Jalapon Arquillano — Software & ML Engineer building user-first web apps and AI systems. Portfolio featuring TanUM, Mindspace, and RealiTech projects."
         url="/"
       />
       {/* Hero Section */}

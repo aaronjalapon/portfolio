@@ -74,7 +74,7 @@ export default function About() {
               </span>
               
               <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Aaron Jalapon
+                Aaron Jalapon Arquillano
               </h1>
               
               <p className="flex items-center gap-2 text-gray-400 mb-6">
@@ -86,6 +86,11 @@ export default function About() {
                 I'm a <span className="text-primary font-medium">BS Computer Science student</span> and 
                 product-minded developer focused on AI/ML-driven solutions and user-centered front ends. 
                 I build software that bridges technical innovation and real-world impact.
+              </p>
+
+              <p className="text-gray-400 leading-relaxed mb-6">
+                I am also known as Aaron Jalapon. Through the Affidavit to Use the Surname of the Father (AUSF)
+                under Republic Act No. 9255, I now use my full name, Aaron Jalapon Arquillano.
               </p>
 
               <p className="text-gray-400 leading-relaxed mb-8">
