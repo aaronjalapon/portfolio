@@ -73,6 +73,8 @@ export default function Header() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 text-gray-300 hover:text-primary transition-colors"
+            aria-expanded={isOpen}
+            aria-label="Toggle navigation menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

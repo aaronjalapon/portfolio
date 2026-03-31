@@ -57,6 +57,9 @@ export default function About() {
                   <img 
                     src="/fb.jpeg" 
                     alt="Aaron Jalapon"
+                    loading="lazy"
+                    width={384}
+                    height={384}
                     className="w-full h-full object-cover"
                   />
                 </div>

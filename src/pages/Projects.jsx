@@ -4,68 +4,7 @@ import ProjectCard from '../components/ProjectCard'
 import SectionHeader from '../components/SectionHeader'
 import SEO from '../components/SEO'
 import InteractiveHeroBg from '../components/InteractiveHeroBg'
-
-const featuredProjects = [
-  {
-    title: 'TanUM Nanotech Solutions',
-    slug: 'tanum',
-    tagline: 'IoT + ML system for real-time soil monitoring and data-driven fertilizer recommendations that reduces waste and improves yields.',
-    role: 'Software & ML Lead',
-    timeline: 'September 2025',
-    tags: ['Python', 'IoT', 'Machine Learning', 'MQTT', 'React', 'Time-Series'],
-    featured: true,
-    image: '/tanum.png',
-    link: 'https://tanum.vercel.app/',
-    github: 'https://github.com/aaronjalapon/tanum',
-  },
-  {
-    title: 'Mindspace',
-    slug: 'mindspace',
-    tagline: 'Privacy-first student mental health platform with guided meditations, curated resources, and moderated peer support.',
-    role: 'Front-end Developer',
-    timeline: 'January 2025',
-    tags: ['Javascript', 'UX Design', 'Privacy-first'],
-    featured: true,
-    image: '/mindspace.png',
-    link: 'https://mindspace.infinityfreeapp.com/?i=1',
-    github: 'https://github.com/aaronjalapon/mindspace',
-  },
-  {
-    title: 'RealiTech',
-    slug: 'realitech',
-    tagline: 'End-to-end proptech ecosystem featuring a buyer-assistant chatbot to guide homebuyers through financing and documents.',
-    role: 'Sprint Lead / Product Owner',
-    timeline: 'July 2025',
-    tags: ['Node.js', 'Chatbot', 'Product Management', 'UX'],
-    featured: true,
-    image: '/realitech.png',
-    link: 'https://um-realitech-hackestate-1ed69.web.app/',
-    github: 'https://github.com/aaronjalapon/realitech',
-  },
-]
-
-const otherProjects = [
-  {
-    title: 'GoalBuddy',
-    slug: 'goalbuddy',
-    tagline: 'Goal tracking and habit formation app with personalized insights and social accountability features.',
-    role: 'Full-stack Developer',
-    timeline: '2024',
-    tags: ['React', 'Node.js', 'MongoDB'],
-    featured: false,
-    image: '/goalbuddy-preview.png',
-  },
-  {
-    title: 'Agriklima',
-    slug: 'agriklima',
-    tagline: 'Climate-smart agriculture platform providing weather forecasts and farming recommendations.',
-    role: 'Developer',
-    timeline: '2024',
-    tags: ['Python', 'API Integration', 'Data Viz'],
-    featured: false,
-    image: '/agriklima-preview.png',
-  },
-]
+import { featuredProjects, otherProjects } from '../data/projects'
 
 export default function Projects() {
   return (

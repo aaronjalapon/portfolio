@@ -1,13 +1,7 @@
 import { Link } from 'react-router-dom'
-import { Github, Linkedin, Twitter, Instagram, Mail, ArrowUp } from 'lucide-react'
-
-const socialLinks = [
-  { icon: Linkedin, href: 'https://www.linkedin.com/in/aaron-jalapon-5aba74290/', label: 'LinkedIn' },
-  { icon: Github, href: 'https://github.com/aaronjalapon', label: 'GitHub' },
-  { icon: Twitter, href: 'https://x.com/Itisaaron18', label: 'Twitter' },
-  { icon: Instagram, href: 'https://www.instagram.com/aeyrown18/', label: 'Instagram' },
-  { icon: Mail, href: 'mailto:aaronjalapon@gmail.com', label: 'Email' },
-]
+import { ArrowUp } from 'lucide-react'
+import { socialLinks } from '../data/socials'
+import { featuredProjects } from '../data/projects'
 
 const quickLinks = [
   { name: 'About', href: '/about' },
@@ -16,11 +10,7 @@ const quickLinks = [
   { name: 'Contact', href: '/contact' },
 ]
 
-const featuredProjects = [
-  { name: 'TanUM Nanotech', href: '/projects/tanum' },
-  { name: 'Mindspace', href: '/projects/mindspace' },
-  { name: 'RealiTech', href: '/projects/realitech' },
-]
+const footerProjects = featuredProjects.map(p => ({ name: p.title.replace(' Nanotech Solutions', ' Nanotech'), href: `/projects/${p.slug}` }))
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -77,7 +67,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Featured Projects</h4>
             <ul className="space-y-3">
-              {featuredProjects.map((project) => (
+              {footerProjects.map((project) => (
                 <li key={project.name}>
                   <Link 
                     to={project.href}

@@ -158,7 +158,14 @@ function SkillsCarousel({ categories }) {
                       <span className="text-sm text-gray-300">{skill.name}</span>
                       <span className="text-xs text-gray-500">{skill.level}%</span>
                     </div>
-                    <div className="h-2 bg-dark-600 rounded-full overflow-hidden">
+                    <div
+                      className="h-2 bg-dark-600 rounded-full overflow-hidden"
+                      role="progressbar"
+                      aria-valuenow={skill.level}
+                      aria-valuemin={0}
+                      aria-valuemax={100}
+                      aria-label={`${skill.name} proficiency`}
+                    >
                       <motion.div 
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}

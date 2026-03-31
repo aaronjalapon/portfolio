@@ -1,58 +1,13 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Download, Github, Linkedin, Twitter, Instagram, ChevronDown } from 'lucide-react'
+import { ArrowRight, Download, ChevronDown } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import ProjectCard from '../components/ProjectCard'
 import SEO from '../components/SEO'
 import InteractiveHeroBg from '../components/InteractiveHeroBg'
 import { TextGenerateEffect } from '../components/ui/text-generate-effect'
-import { image } from 'framer-motion/client'
-
-const featuredProjects = [
-  {
-    title: 'TanUM Nanotech Solutions',
-    slug: 'tanum',
-    tagline: 'IoT + ML system for real-time soil monitoring and data-driven fertilizer recommendations that reduces waste and improves yields.',
-    role: 'Software & ML Lead',
-    timeline: 'Jan 2025 — Present',
-    tags: ['Python', 'Machine Learning', 'React'],
-    featured: true,
-    image: '/tanum.png',
-    link: 'https://tanum.vercel.app/',
-    github: 'https://github.com/aaronjalapon/TanUM_NanoTechSolutions',
-  },
-  {
-    title: 'Mindspace',
-    slug: 'mindspace',
-    tagline: 'Privacy-first student mental health platform with guided meditations, curated resources, and moderated peer support.',
-    role: 'Front-end Developer',
-    timeline: '2024',
-    tags: ['Javascript', 'Accessibility', 'UX Design'],
-    featured: true,
-    image: '/mindspace.png',
-    link: 'https://mindspace.infinityfreeapp.com/?i=1',
-    github: 'https://github.com/aaronjalapon/Mental_Health_Support_Site',
-  },
-  {
-    title: 'RealiTech',
-    slug: 'realitech',
-    tagline: 'End-to-end proptech ecosystem featuring a buyer-assistant chatbot to guide homebuyers through financing and documents.',
-    role: 'Sprint Lead / Product Owner',
-    timeline: '2025 — Present',
-    tags: ['Node.js', 'Chatbot', 'Product Management'],
-    featured: true,
-    image: '/realitech.png',
-    link: 'https://um-realitech-hackestate-1ed69.web.app/',
-    github: 'https://github.com/aaronjalapon/UM-RealiTech-Frontend-RealEstate',
-  },
-]
-
-const socialLinks = [
-  { icon: Linkedin, href: 'https://www.linkedin.com/in/aaron-jalapon-5aba74290/', label: 'LinkedIn' },
-  { icon: Github, href: 'https://github.com/aaronjalapon', label: 'GitHub' },
-  { icon: Twitter, href: 'https://x.com/Itisaaron18', label: 'Twitter' },
-  { icon: Instagram, href: 'https://www.instagram.com/aeyrown18/', label: 'Instagram' },
-]
+import { featuredProjects } from '../data/projects'
+import { socialLinks } from '../data/socials'
 
 export default function Home() {
   return (

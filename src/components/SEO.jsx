@@ -28,8 +28,8 @@ const SEO = ({
     jobTitle: 'Software & ML Engineer',
     description: seo.description,
     sameAs: [
-      'https://github.com/aaronjalapon', // Update with your actual profiles
-      'https://linkedin.com/in/https://www.linkedin.com/in/aaron-jalapon-5aba74290/',
+      'https://github.com/aaronjalapon',
+      'https://www.linkedin.com/in/aaron-jalapon-5aba74290/',
     ],
     knowsAbout: [
       'Software Engineering',
@@ -66,7 +66,7 @@ const SEO = ({
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
-      {/* <meta name="twitter:creator" content="@yourtwitterhandle" /> */}
+      <meta name="twitter:creator" content="@Itisaaron18" />
       
       {/* JSON-LD Structured Data */}
       <script type="application/ld+json">

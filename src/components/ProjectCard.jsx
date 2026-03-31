@@ -5,6 +5,8 @@ export default function ProjectCard({ project }) {
   const { title, slug, tagline, role, timeline, tags, image, featured, link, github } = project
   const navigate = useNavigate()
 
+  const hasCaseStudy = featured
+
   const openDemo = (e, url) => {
     e.preventDefault()
     e.stopPropagation()
@@ -13,8 +15,8 @@ export default function ProjectCard({ project }) {
 
   return (
     <div 
-      className={`group card card-hover block overflow-hidden cursor-pointer ${featured ? 'lg:col-span-2' : ''}`}
-      onClick={() => navigate(`/projects/${slug}`)}
+      className={`group card card-hover block overflow-hidden ${hasCaseStudy ? 'cursor-pointer' : ''} ${featured ? 'lg:col-span-2' : ''}`}
+      onClick={hasCaseStudy ? () => navigate(`/projects/${slug}`) : undefined}
     >
       {/* Image */}
       <div className="relative h-48 md:h-56 -mx-6 -mt-6 mb-6 overflow-hidden bg-dark-600">
@@ -22,6 +24,9 @@ export default function ProjectCard({ project }) {
           <img 
             src={image} 
             alt={title}
+            loading="lazy"
+            width={400}
+            height={224}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
@@ -75,10 +80,12 @@ export default function ProjectCard({ project }) {
 
         {/* CTA */}
         <div className="flex items-center gap-4 pt-4 border-t border-white/5">
-          <span className="inline-flex items-center gap-2 text-primary text-sm font-medium group-hover:gap-3 transition-all">
-            View Case Study
-            <ArrowRight size={16} />
-          </span>
+          {hasCaseStudy && (
+            <span className="inline-flex items-center gap-2 text-primary text-sm font-medium group-hover:gap-3 transition-all">
+              View Case Study
+              <ArrowRight size={16} />
+            </span>
+          )}
           
           {link && (
             <button

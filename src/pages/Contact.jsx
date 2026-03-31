@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Calendar, ArrowRight, AlertCircle } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Calendar, ArrowRight, AlertCircle } from 'lucide-react'
 import emailjs from '@emailjs/browser'
 import { PopupModal } from 'react-calendly'
 import SectionHeader from '../components/SectionHeader'
 import SEO from '../components/SEO'
 import InteractiveHeroBg from '../components/InteractiveHeroBg'
+import { socialLinks } from '../data/socials'
 
 const contactInfo = [
   {
@@ -19,27 +20,6 @@ const contactInfo = [
     label: 'Location',
     value: 'Philippines',
     href: null,
-  },
-]
-
-const socialLinks = [
-  { 
-    icon: Linkedin, 
-    label: 'LinkedIn', 
-    href: 'https://www.linkedin.com/in/aaron-jalapon-5aba74290/',
-    description: 'Connect professionally'
-  },
-  { 
-    icon: Github, 
-    label: 'GitHub', 
-    href: 'https://github.com/aaronjalapon',
-    description: 'Check out my code'
-  },
-  { 
-    icon: Twitter, 
-    label: 'Twitter', 
-    href: 'https://x.com/Itisaaron18',
-    description: 'Follow my updates'
   },
 ]
 
