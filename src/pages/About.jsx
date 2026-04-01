@@ -25,13 +25,15 @@ const highlights = [
 const recognitions = [
   {
     title: 'Innovation with Purpose: UM Teams Define Excellence at FIMiEx 2025',
-    source: 'Facebook',
+    description: 'Key contributor to TanimPro as the original developer, whose technical work significantly strengthened the innovation. The team earned gold at FIMiEx 2025 in Malaysia.',
+    source: 'Facebook - Primum',
     date: 'November 2025',
     url: 'https://www.facebook.com/photo/?fbid=1323728336457110&set=a.693356426160974',
     project: 'TanUM',
   },
   {
     title: "UM's TanUM Nano Tech Solutions Triumphs in the 2025 Mindanao-Wide Technology Transfer Conference at CarSU",
+    description: 'Built the cloud ingestion pipeline and ML models for TanUM. The team secured 1st Place in Pitching and 2nd Place in Poster Competition at the Mindanao-Wide Technology Transfer Conference.',
     source: 'UM News',
     date: 'October 1, 2025',
     url: 'https://umindanao.edu.ph/info/news/article/719',
@@ -39,6 +41,7 @@ const recognitions = [
   },
   {
     title: "UM RPC's TanUM Nanotech Solutions is First Runner Up in UPLB Innovation Olympics 3.0",
+    description: 'Developed the software and ML stack for TanUM. The team placed First Runner Up at the UPLB Innovation Olympics 3.0.',
     source: 'UM News',
     date: 'September 4, 2025',
     url: 'https://umindanao.edu.ph/info/news/article/696',
@@ -46,6 +49,7 @@ const recognitions = [
   },
   {
     title: "UM's TanUM Nano Tech Solutions among the Top 10 Qualifying Student Teams at the Innovation Olympics 3.0 at UPLB",
+    description: 'Served as the "Hipster" (design & front-end) of TanUM. The team qualified among the Top 10 student teams in the Innovation Olympics 3.0 at UPLB.',
     source: 'UM News',
     date: 'August 28, 2025',
     url: 'https://umindanao.edu.ph/info/news/article/ums-tanum-nano-tech-solutions-among-the-top-10-qualifying-student-teams-at-the-innovation-olympics-30-at-uplb',
@@ -53,6 +57,7 @@ const recognitions = [
   },
   {
     title: 'HackEstate 2025: RealiTech Wins Top UX Interface Award',
+    description: 'Led the development and UX design for RealiTech, which was recognized with the Top UX Interface Award at HackEstate 2025.',
     source: 'Facebook — UM CCE Skills Clinic',
     date: 'July 2025',
     url: 'https://www.facebook.com/share/p/1GvSxdW9GG/',
@@ -60,6 +65,7 @@ const recognitions = [
   },
   {
     title: 'Davao HackEstate Hackathon 2025: RealiTech Top 3 Finish',
+    description: 'Business developer (Hustler) for RealiTech. The team grabbed a Top 3 finish at the Davao HackEstate Hackathon 2025 demo day.',
     source: 'Facebook — UM CCE Skills Clinic',
     date: 'July 30, 2025',
     url: 'https://www.facebook.com/share/p/1Ee77Lz2Bv/',
@@ -67,6 +73,7 @@ const recognitions = [
   },
   {
     title: 'HackEstate Hackathon 2025: Final Top 6 Teams',
+    description: 'Part of Team RealiTech from the University of Mindanao, selected as one of 6 finalists for the HackEstate Hackathon 2025 grand finale in Davao City.',
     source: 'Facebook — Proptech Philippines',
     date: 'July 2025',
     url: 'https://www.facebook.com/share/p/1DfSKnVcwj/',
@@ -229,9 +236,12 @@ export default function About() {
                       {item.source}
                     </span>
                   </div>
-                  <h3 className="text-white font-medium leading-snug mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-white font-medium leading-snug mb-2 group-hover:text-primary transition-colors">
                     {item.title}
                   </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                    {item.description}
+                  </p>
                 </div>
                 <div className="flex items-center justify-between text-sm text-gray-500">
                   <span>{item.date}</span>
