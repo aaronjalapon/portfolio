@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Download, MapPin, GraduationCap, Heart, Target } from 'lucide-react'
+import { ArrowRight, Download, MapPin, GraduationCap, Heart, Target, ExternalLink } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import SEO from '../components/SEO'
 
@@ -19,6 +19,29 @@ const highlights = [
     icon: GraduationCap,
     title: 'Continuous Learner',
     description: 'Always exploring new technologies and methodologies to deliver better solutions.'
+  },
+]
+
+const articles = [
+  {
+    title: "TanUM Nano Tech Solutions — Innovation Olympics 3.0 Announcement",
+    source: "Facebook",
+    url: "https://www.facebook.com/photo/?fbid=1323728336457110&set=a.693356426160974",
+  },
+  {
+    title: "UM's TanUM Nano Tech Solutions among the Top 10 Qualifying Student Teams at the Innovation Olympics 3.0 at UPLB",
+    source: "University of Mindanao",
+    url: "https://umindanao.edu.ph/info/news/article/ums-tanum-nano-tech-solutions-among-the-top-10-qualifying-student-teams-at-the-innovation-olympics-30-at-uplb",
+  },
+  {
+    title: "UM RPC's TanUM Nanotech Solutions is First Runner Up in Study and Research in Agriculture",
+    source: "University of Mindanao",
+    url: "https://umindanao.edu.ph/info/news/article/696",
+  },
+  {
+    title: "UM's TanUM Nano Tech Solutions Triumphs in the 2025 Competition",
+    source: "University of Mindanao",
+    url: "https://umindanao.edu.ph/info/news/article/719",
   },
 ]
 
@@ -210,6 +233,45 @@ export default function About() {
                   Mentor and collaborate with fellow developers to grow together
                 </li>
               </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured In */}
+      <section className="section-padding bg-dark-800">
+        <div className="section-container">
+          <div className="max-w-3xl mx-auto">
+            <SectionHeader
+              title="Featured In"
+              subtitle="Press coverage and articles about my work and achievements."
+            />
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              {articles.map((article, index) => (
+                <a
+                  key={index}
+                  href={article.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-4 card card-hover group"
+                >
+                  <div className="flex-1 min-w-0">
+                    <p className="text-white font-medium group-hover:text-primary transition-colors leading-snug mb-1">
+                      {article.title}
+                    </p>
+                    <span className="text-xs text-primary/70 font-medium uppercase tracking-wide">
+                      {article.source}
+                    </span>
+                  </div>
+                  <ExternalLink size={18} className="text-gray-500 group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
+                </a>
+              ))}
             </motion.div>
           </div>
         </div>
