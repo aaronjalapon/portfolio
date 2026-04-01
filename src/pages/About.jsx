@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Download, MapPin, GraduationCap, Heart, Target } from 'lucide-react'
+import { ArrowRight, Download, MapPin, GraduationCap, Heart, Target, ExternalLink } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import SEO from '../components/SEO'
 
@@ -29,6 +29,37 @@ const interests = [
   'User Experience Design',
   'Open Source',
   'Agritech Innovation',
+]
+
+const articles = [
+  {
+    title: 'UM Teams Win 3 Gold & 1 Silver at FIMiEx 2025, Malaysia',
+    source: 'PRIMUM / UM Facebook',
+    date: 'November 2025',
+    description: 'Aaron Jalapon credited as key contributor and original developer of TanimPro, a technology-driven tool that boosts farm productivity, at the Faculty Industrial Management International Innovation Exhibition in Malaysia.',
+    url: 'https://www.facebook.com/photo/?fbid=1323728336457110&set=a.693356426160974',
+  },
+  {
+    title: 'TanUM Triumphs at Mindanao-Wide Tech Transfer Conference — 1st Place Pitching',
+    source: 'University of Mindanao',
+    date: 'October 2025',
+    description: 'TanUM Nano Tech Solutions secured 1st Place in Pitching and 2nd Place in Poster Competition at the 2025 Mindanao-Wide Technology Transfer Conference hosted by Caraga State University.',
+    url: 'https://umindanao.edu.ph/info/news/article/719',
+  },
+  {
+    title: 'TanUM is First Runner Up at UPLB Innovation Olympics 3.0',
+    source: 'University of Mindanao',
+    date: 'September 2025',
+    description: 'TanUM Nanotech Solutions finished as first runner up in the Innovation Olympics 3.0 at UP Los Baños, supported by the Asian Development Bank and SEARCA.',
+    url: 'https://umindanao.edu.ph/info/news/article/696',
+  },
+  {
+    title: 'TanUM Among Top 10 Qualifying Teams at Innovation Olympics 3.0, UPLB',
+    source: 'University of Mindanao',
+    date: 'August 2025',
+    description: 'The team — Aaron A. Jalapon (BSCS), Windel A. Andan (BSECE), and Marcy Nil A. Ogsoc (BSChE) — qualified among the Top 10 student teams for the SmartAgri-themed Innovation Olympics 3.0.',
+    url: 'https://umindanao.edu.ph/info/news/article/ums-tanum-nano-tech-solutions-among-the-top-10-qualifying-student-teams-at-the-innovation-olympics-30-at-uplb',
+  },
 ]
 
 export default function About() {
@@ -211,6 +242,48 @@ export default function About() {
                 </li>
               </ul>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Press & Recognition */}
+      <section className="section-padding bg-dark-800">
+        <div className="section-container">
+          <SectionHeader 
+            title="Press & Recognition"
+            subtitle="Featured in university news and international exhibitions for innovation in agritech and sustainable technology."
+          />
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {articles.map((article, index) => (
+              <motion.a
+                key={article.title}
+                href={article.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="card card-hover group flex flex-col"
+              >
+                <div className="flex items-start justify-between gap-3 mb-3">
+                  <h3 className="text-lg font-semibold text-white group-hover:text-primary transition-colors">
+                    {article.title}
+                  </h3>
+                  <ExternalLink size={18} className="text-gray-500 group-hover:text-primary transition-colors shrink-0 mt-1" />
+                </div>
+                <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+                  {article.description}
+                </p>
+                <div className="flex items-center gap-3 text-xs text-gray-500">
+                  <span className="px-2 py-1 bg-primary/10 text-primary rounded-md font-medium">
+                    {article.source}
+                  </span>
+                  <span>{article.date}</span>
+                </div>
+              </motion.a>
+            ))}
           </div>
         </div>
       </section>
