@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Download, MapPin, GraduationCap, Heart, Target } from 'lucide-react'
+import { ArrowRight, Download, MapPin, GraduationCap, Heart, Target, ExternalLink, Award } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import SEO from '../components/SEO'
 
@@ -19,6 +19,58 @@ const highlights = [
     icon: GraduationCap,
     title: 'Continuous Learner',
     description: 'Always exploring new technologies and methodologies to deliver better solutions.'
+  },
+]
+
+const recognitions = [
+  {
+    title: 'Innovation with Purpose: UM Teams Define Excellence at FIMiEx 2025',
+    source: 'Facebook',
+    date: 'November 2025',
+    url: 'https://www.facebook.com/photo/?fbid=1323728336457110&set=a.693356426160974',
+    project: 'TanUM',
+  },
+  {
+    title: "UM's TanUM Nano Tech Solutions Triumphs in the 2025 Mindanao-Wide Technology Transfer Conference at CarSU",
+    source: 'UM News',
+    date: 'October 1, 2025',
+    url: 'https://umindanao.edu.ph/info/news/article/719',
+    project: 'TanUM',
+  },
+  {
+    title: "UM RPC's TanUM Nanotech Solutions is First Runner Up in UPLB Innovation Olympics 3.0",
+    source: 'UM News',
+    date: 'September 4, 2025',
+    url: 'https://umindanao.edu.ph/info/news/article/696',
+    project: 'TanUM',
+  },
+  {
+    title: "UM's TanUM Nano Tech Solutions among the Top 10 Qualifying Student Teams at the Innovation Olympics 3.0 at UPLB",
+    source: 'UM News',
+    date: 'August 28, 2025',
+    url: 'https://umindanao.edu.ph/info/news/article/ums-tanum-nano-tech-solutions-among-the-top-10-qualifying-student-teams-at-the-innovation-olympics-30-at-uplb',
+    project: 'TanUM',
+  },
+  {
+    title: 'HackEstate 2025: RealiTech Wins Top UX Interface Award',
+    source: 'Facebook — UM CCE Skills Clinic',
+    date: 'July 2025',
+    url: 'https://www.facebook.com/share/p/1GvSxdW9GG/',
+    project: 'RealiTech',
+  },
+  {
+    title: 'Davao HackEstate Hackathon 2025: RealiTech Top 3 Finish',
+    source: 'Facebook — UM CCE Skills Clinic',
+    date: 'July 30, 2025',
+    url: 'https://www.facebook.com/share/p/1Ee77Lz2Bv/',
+    project: 'RealiTech',
+  },
+  {
+    title: 'HackEstate Hackathon 2025: Final Top 6 Teams',
+    source: 'Facebook — Proptech Philippines',
+    date: 'July 2025',
+    url: 'https://www.facebook.com/share/p/1DfSKnVcwj/',
+    project: 'RealiTech',
   },
 ]
 
@@ -147,8 +199,52 @@ export default function About() {
         </div>
       </section>
 
-      {/* Interests */}
+      {/* Recognitions */}
       <section className="section-padding bg-dark-800">
+        <div className="section-container">
+          <SectionHeader 
+            title="Press & Media"
+            subtitle="Featured articles and publications highlighting project achievements."
+          />
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {recognitions.map((item, index) => (
+              <motion.a
+                key={index}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="card card-hover group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                      {item.project}
+                    </span>
+                    <span className="px-3 py-1 bg-dark-600 text-gray-400 rounded-full text-xs">
+                      {item.source}
+                    </span>
+                  </div>
+                  <h3 className="text-white font-medium leading-snug mb-3 group-hover:text-primary transition-colors">
+                    {item.title}
+                  </h3>
+                </div>
+                <div className="flex items-center justify-between text-sm text-gray-500">
+                  <span>{item.date}</span>
+                  <ExternalLink size={16} className="text-gray-500 group-hover:text-primary transition-colors" />
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Interests */}
+      <section className="section-padding">
         <div className="section-container">
           <SectionHeader 
             title="Interests & Focus Areas"
