@@ -67,7 +67,7 @@ export default function About() {
     <>
       <SEO
         title="About"
-        description="Learn about Aaron Jalapon — a product-minded Software & ML Engineer from the Philippines, focused on AI/ML-driven solutions and user-centered front ends."
+        description="Learn about Aaron Jalapon — a product-minded Software & ML Engineer from the Philippines, focused on AI/ML-driven solutions and user-centered front ends. Recognized in university news and international exhibitions for agritech innovation."
         url="/about"
       />
       <div className="pt-20">
