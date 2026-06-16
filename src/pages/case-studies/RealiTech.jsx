@@ -65,7 +65,7 @@ export default function CaseStudyRealiTech() {
       />
       <div className="pt-20">
       {/* Hero */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           {/* Back Link */}
           <motion.div
@@ -74,7 +74,7 @@ export default function CaseStudyRealiTech() {
           >
             <Link 
               to="/projects" 
-              className="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors mb-8"
             >
               <ArrowLeft size={18} />
               Back to Projects
@@ -92,16 +92,16 @@ export default function CaseStudyRealiTech() {
                 PropTech / Product
               </span>
               
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
                 RealiTech
               </h1>
               
-              <p className="text-xl text-gray-300 mb-6">
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
                 Proptech Ecosystem & Buyer Assistant Chatbot
               </p>
 
               {/* Meta */}
-              <div className="flex flex-wrap gap-6 text-gray-400 mb-8">
+              <div className="flex flex-wrap gap-6 text-gray-600 dark:text-gray-400 mb-8">
                 <span className="flex items-center gap-2">
                   <Users size={18} className="text-primary" />
                   Sprint Lead / Product Owner
@@ -114,8 +114,8 @@ export default function CaseStudyRealiTech() {
 
               {/* TL;DR */}
               <div className="p-4 bg-primary/10 border border-primary/20 rounded-xl mb-8">
-                <p className="text-gray-300">
-                  <strong className="text-white">TL;DR:</strong> Multi-solution proptech ecosystem 
+                <p className="text-gray-600 dark:text-gray-300">
+                  <strong className="text-gray-900 dark:text-white">TL;DR:</strong> Multi-solution proptech ecosystem 
                   (DevTrackr, RealtyConnect, BuySmart PH, Post-Sale Platform) featuring a buyer-assistant 
                   chatbot to guide homebuyers through financing and document processes.
                 </p>
@@ -141,7 +141,7 @@ export default function CaseStudyRealiTech() {
               transition={{ delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-video bg-dark-700 rounded-2xl border border-white/10 overflow-hidden">
+              <div className="aspect-video bg-white dark:bg-dark-700 rounded-2xl border border-gray-200 dark:border-white/10 overflow-hidden">
                 <img 
                   src="/realitech.png" 
                   alt="RealiTech Chatbot Demo Screenshot"
@@ -162,10 +162,10 @@ export default function CaseStudyRealiTech() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 The <span className="gradient-text">Problem</span>
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
                 Homebuyers struggle with fragmented processes, unclear loan pre-qualification 
                 requirements, and complex post-sale construction tracking. The traditional 
                 homebuying journey involves multiple disconnected systems, confusing documentation 
@@ -178,7 +178,7 @@ export default function CaseStudyRealiTech() {
       </section>
 
       {/* Solution */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -186,10 +186,10 @@ export default function CaseStudyRealiTech() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 The <span className="gradient-text">Solution</span>
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
+              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
                 I led a one-week sprint to prototype the buyer-assistant chatbot and buyer profiling 
                 logic. The assistant helps users pre-qualify for loans, check required documents, and 
                 receive updates on construction progress. Beyond the chatbot, I helped shape the product 
@@ -198,7 +198,7 @@ export default function CaseStudyRealiTech() {
             </motion.div>
 
             {/* Modules */}
-            <h3 className="text-xl font-semibold text-white mb-6 mt-12">Platform Modules</h3>
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 mt-12">Platform Modules</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {modules.map((module, index) => (
                 <motion.div
@@ -212,8 +212,8 @@ export default function CaseStudyRealiTech() {
                   <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-4">
                     <module.icon size={24} className="text-blue-400" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{module.title}</h3>
-                  <p className="text-gray-400">{module.description}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{module.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400">{module.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -234,7 +234,7 @@ export default function CaseStudyRealiTech() {
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
                   <MessageSquare size={24} className="text-primary" />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-white">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
                   Chatbot <span className="gradient-text">Features</span>
                 </h2>
               </div>
@@ -243,10 +243,10 @@ export default function CaseStudyRealiTech() {
                 {chatbotFeatures.map((feature) => (
                   <div 
                     key={feature}
-                    className="flex items-center gap-3 p-4 bg-dark-700 rounded-xl"
+                    className="flex items-center gap-3 p-4 bg-white dark:bg-dark-700 rounded-xl"
                   >
                     <Workflow size={18} className="text-primary flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">{feature}</span>
+                    <span className="text-gray-600 dark:text-gray-300 text-sm">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -256,7 +256,7 @@ export default function CaseStudyRealiTech() {
       </section>
 
       {/* Tech Stack */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -264,7 +264,7 @@ export default function CaseStudyRealiTech() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
                 Tech <span className="gradient-text">Stack</span>
               </h2>
               
@@ -272,7 +272,7 @@ export default function CaseStudyRealiTech() {
                 {techStack.map((tech) => (
                   <span 
                     key={tech.name}
-                    className="px-4 py-2 bg-dark-700 text-gray-300 rounded-lg text-sm"
+                    className="px-4 py-2 bg-white dark:bg-dark-700 text-gray-600 dark:text-gray-300 rounded-lg text-sm"
                   >
                     {tech.name}
                     <span className="text-gray-500 ml-2">({tech.category})</span>
@@ -293,7 +293,7 @@ export default function CaseStudyRealiTech() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
                 Impact & <span className="gradient-text">Metrics</span>
               </h2>
 
@@ -308,7 +308,7 @@ export default function CaseStudyRealiTech() {
                     className="card text-center"
                   >
                     <p className="text-4xl font-bold gradient-text mb-2">{metric.value}</p>
-                    <p className="text-white font-medium mb-1">{metric.label}</p>
+                    <p className="text-gray-900 dark:text-white font-medium mb-1">{metric.label}</p>
                     <p className="text-gray-500 text-sm">{metric.description}</p>
                   </motion.div>
                 ))}
@@ -319,7 +319,7 @@ export default function CaseStudyRealiTech() {
       </section>
 
       {/* Resume Bullets */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -327,16 +327,16 @@ export default function CaseStudyRealiTech() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 Resume <span className="gradient-text">Highlights</span>
               </h2>
               
               <ul className="space-y-4">
-                <li className="flex items-start gap-4 text-gray-300">
+                <li className="flex items-start gap-4 text-gray-600 dark:text-gray-300">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                   Led sprint to prototype a buyer-assistant chatbot that guides users through loan pre-qualification and documentation
                 </li>
-                <li className="flex items-start gap-4 text-gray-300">
+                <li className="flex items-start gap-4 text-gray-600 dark:text-gray-300">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                   Coordinated product roadmap and integrations across four RealiTech modules
                 </li>
@@ -355,8 +355,8 @@ export default function CaseStudyRealiTech() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-2xl font-bold text-white mb-6">Elevator Pitch</h2>
-            <blockquote className="text-xl text-gray-300 italic leading-relaxed">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Elevator Pitch</h2>
+            <blockquote className="text-xl text-gray-600 dark:text-gray-300 italic leading-relaxed">
               "RealiTech is an end-to-end proptech ecosystem. I led the chatbot sprint that helps 
               buyers pre-qualify loans, track documents, and get construction updates—reducing 
               friction in homebuying."
@@ -366,12 +366,12 @@ export default function CaseStudyRealiTech() {
       </section>
 
       {/* Navigation */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <Link 
               to="/projects/mindspace" 
-              className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors"
+              className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
             >
               <ArrowLeft size={18} />
               Previous: Mindspace

@@ -59,7 +59,7 @@ export default function InteractiveHeroBg() {
       className="absolute inset-0 overflow-hidden"
     >
       {/* Base gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900" />
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 transition-colors duration-500" />
 
       {/* Parallax blobs */}
       {blobs.map((blob, i) => {

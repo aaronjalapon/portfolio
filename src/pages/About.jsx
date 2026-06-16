@@ -100,7 +100,7 @@ export default function About() {
       />
       <div className="pt-20">
       {/* Hero Section */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
@@ -135,30 +135,30 @@ export default function About() {
                 About Me
               </span>
               
-              <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 Aaron Jalapon Arquillano
               </h1>
               
-              <p className="flex items-center gap-2 text-gray-400 mb-6">
+              <p className="flex items-center gap-2 text-gray-600 dark:text-gray-400 mb-6">
                 <MapPin size={18} className="text-primary" />
                 Philippines
               </p>
               
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
                 I'm a <span className="text-primary font-medium">BS Computer Science student</span> and 
                 product-minded developer focused on AI/ML-driven solutions and user-centered front ends. 
                 I build software that bridges technical innovation and real-world impact.
               </p>
 
-              <p className="text-gray-400 leading-relaxed mb-6">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                 I am also known as Aaron Jalapon. Through the Affidavit to Use the Surname of the Father (AUSF)
                 under Republic Act No. 9255, I now use my full name, Aaron Jalapon Arquillano.
               </p>
 
-              <p className="text-gray-400 leading-relaxed mb-8">
-                My featured projects include <strong className="text-white">TanUM</strong> (smart soil & fertilizer optimization), 
-                <strong className="text-white"> Mindspace</strong> (student mental-health UI), and 
-                <strong className="text-white"> RealiTech</strong> (proptech ecosystem). 
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+                My featured projects include <strong className="text-gray-900 dark:text-white">TanUM</strong> (smart soil & fertilizer optimization), 
+                <strong className="text-gray-900 dark:text-white"> Mindspace</strong> (student mental-health UI), and 
+                <strong className="text-gray-900 dark:text-white"> RealiTech</strong> (proptech ecosystem). 
                 I'm passionate about sustainable tech, practical ML, and shipping polished, maintainable code.
               </p>
 
@@ -198,8 +198,8 @@ export default function About() {
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <item.icon size={28} className="text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
-                <p className="text-gray-400">{item.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{item.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -207,7 +207,7 @@ export default function About() {
       </section>
 
       {/* Recognitions */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <SectionHeader 
             title="Press & Media"
@@ -232,14 +232,14 @@ export default function About() {
                     <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
                       {item.project}
                     </span>
-                    <span className="px-3 py-1 bg-dark-600 text-gray-400 rounded-full text-xs">
+                    <span className="px-3 py-1 bg-gray-100 dark:bg-dark-600 text-gray-600 dark:text-gray-400 rounded-full text-xs">
                       {item.source}
                     </span>
                   </div>
-                  <h3 className="text-white font-medium leading-snug mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-gray-900 dark:text-white font-medium leading-snug mb-2 group-hover:text-primary transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-3">
                     {item.description}
                   </p>
                 </div>
@@ -270,7 +270,7 @@ export default function About() {
             {interests.map((interest) => (
               <span 
                 key={interest}
-                className="px-5 py-3 bg-dark-700 text-gray-300 rounded-full border border-white/5 hover:border-primary/30 hover:text-primary transition-all"
+                className="px-5 py-3 bg-white dark:bg-dark-700 text-gray-600 dark:text-gray-300 rounded-full border border-gray-200 dark:border-white/5 hover:border-primary/30 hover:text-primary transition-all"
               >
                 {interest}
               </span>
@@ -294,11 +294,11 @@ export default function About() {
               viewport={{ once: true }}
               className="card"
             >
-              <p className="text-gray-300 text-lg leading-relaxed mb-4">
+              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-4">
                 My goal is to become a well-rounded software engineer who can bridge the gap between 
                 cutting-edge technology and practical, user-focused solutions. I aim to:
               </p>
-              <ul className="space-y-3 text-gray-400">
+              <ul className="space-y-3 text-gray-600 dark:text-gray-400">
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2" />
                   Build AI/ML systems that create tangible value for communities
@@ -322,7 +322,7 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-gradient-to-br from-primary/10 via-dark-800 to-dark-900">
+      <section className="section-padding bg-gradient-to-br from-primary/5 via-gray-100 to-gray-50 dark:from-primary/10 dark:via-dark-800 dark:to-dark-900 transition-colors duration-300">
         <div className="section-container">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
@@ -330,10 +330,10 @@ export default function About() {
             viewport={{ once: true }}
             className="max-w-2xl mx-auto text-center"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Want to Learn More?
             </h2>
-            <p className="text-gray-400 mb-8">
+            <p className="text-gray-600 dark:text-gray-400 mb-8">
               Check out my projects to see my work in action, or get in touch to discuss collaboration opportunities.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

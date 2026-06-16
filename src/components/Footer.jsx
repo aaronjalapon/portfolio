@@ -18,7 +18,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-dark-800 border-t border-white/5">
+    <footer className="bg-white dark:bg-dark-800 border-t border-gray-100 dark:border-white/5 transition-colors duration-300">
       <div className="section-container py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
@@ -26,7 +26,7 @@ export default function Footer() {
             <Link to="/" className="text-3xl font-bold text-primary">
               Aaron
             </Link>
-            <p className="mt-4 text-gray-400 text-sm leading-relaxed">
+            <p className="mt-4 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
               Software & ML Engineer building user-first web apps and AI systems 
               that solve real problems.
             </p>
@@ -37,7 +37,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-dark-700 rounded-lg text-gray-400 hover:text-primary hover:bg-dark-600 transition-all"
+                  className="p-2 bg-gray-100 dark:bg-dark-700 rounded-lg text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:bg-gray-200 dark:hover:bg-dark-600 transition-all"
                   aria-label={social.label}
                 >
                   <social.icon size={18} />
@@ -48,13 +48,13 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-gray-900 dark:text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link 
                     to={link.href}
-                    className="text-gray-400 hover:text-primary transition-colors text-sm"
+                    className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -65,13 +65,13 @@ export default function Footer() {
 
           {/* Featured Projects */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Featured Projects</h4>
+            <h4 className="text-gray-900 dark:text-white font-semibold mb-4">Featured Projects</h4>
             <ul className="space-y-3">
               {footerProjects.map((project) => (
                 <li key={project.name}>
                   <Link 
                     to={project.href}
-                    className="text-gray-400 hover:text-primary transition-colors text-sm"
+                    className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors text-sm"
                   >
                     {project.name}
                   </Link>
@@ -82,8 +82,8 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Get in Touch</h4>
-            <p className="text-gray-400 text-sm mb-4">
+            <h4 className="text-gray-900 dark:text-white font-semibold mb-4">Get in Touch</h4>
+            <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
               Interested in working together? Let's connect!
             </p>
             <Link 
@@ -96,13 +96,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-12 pt-8 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} Aaron Jalapon. All rights reserved.
           </p>
           <button
             onClick={scrollToTop}
-            className="p-2 bg-dark-700 rounded-lg text-gray-400 hover:text-primary hover:bg-dark-600 transition-all"
+            className="p-2 bg-gray-100 dark:bg-dark-700 rounded-lg text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:bg-gray-200 dark:hover:bg-dark-600 transition-all"
             aria-label="Scroll to top"
           >
             <ArrowUp size={20} />

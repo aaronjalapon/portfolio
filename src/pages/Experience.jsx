@@ -109,11 +109,11 @@ const timelineData = [
             </div>
             <div className="flex-1">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-                <h3 className="text-lg font-semibold text-white">Software & ML Lead</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Software & ML Lead</h3>
                 <span className="text-sm text-gray-500">September 2025 — Present</span>
               </div>
               <p className="text-primary font-medium text-sm mb-3">TanUM Nanotech Solutions</p>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Designed and implemented cloud-based ingestion and visualization platform for IoT soil sensors. 
                 Built and deployed ML models that generate automated fertilizer recommendations integrated into a web dashboard and SMS alert system.
               </p>
@@ -128,11 +128,11 @@ const timelineData = [
             </div>
             <div className="flex-1">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-                <h3 className="text-lg font-semibold text-white">Sprint Lead / Product Owner</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Sprint Lead / Product Owner</h3>
                 <span className="text-sm text-gray-500">July 2025 — Present</span>
               </div>
               <p className="text-primary font-medium text-sm mb-3">RealiTech</p>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Led sprint to prototype a buyer-assistant chatbot that guides users through loan pre-qualification and documentation. 
                 Coordinated product roadmap and integrations across four RealiTech modules.
               </p>
@@ -147,11 +147,11 @@ const timelineData = [
             </div>
             <div className="flex-1">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-                <h3 className="text-lg font-semibold text-white">Front-end Developer</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Front-end Developer</h3>
                 <span className="text-sm text-gray-500">Jan - March 2025</span>
               </div>
               <p className="text-primary font-medium text-sm mb-3">Mindspace</p>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Built responsive, privacy-forward front-end UI for a student mental-health platform; implemented resource discovery and crisis support flows. 
                 Collaborated with mental-health professionals to translate clinical guidance into usable interfaces.
               </p>
@@ -171,11 +171,11 @@ const timelineData = [
           </div>
           <div className="flex-1">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-              <h3 className="text-lg font-semibold text-white">BS Computer Science</h3>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">BS Computer Science</h3>
               <span className="text-sm text-gray-500">2023 — Present</span>
             </div>
             <p className="text-blue-400 font-medium text-sm mb-3">University</p>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-600 dark:text-gray-400 text-sm">
               Pursuing a Bachelor of Science in Computer Science with focus on AI/ML, software engineering, and product development.
             </p>
           </div>
@@ -206,10 +206,10 @@ export default function Experience() {
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
               Career Journey
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Experience & <span className="gradient-text">Timeline</span>
             </h1>
-            <p className="text-gray-400 text-lg mb-8">
+            <p className="text-gray-600 dark:text-gray-400 text-lg mb-8">
               My professional journey in software development, machine learning, and product leadership.
             </p>
             <a href="/resume.pdf" target="_blank" className="btn-primary gap-2">
@@ -233,7 +233,7 @@ export default function Experience() {
       </section>
 
       {/* Volunteer & Community */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <SectionHeader 
             title="Volunteer & Community"
@@ -280,7 +280,7 @@ export default function Experience() {
                 <h3 className="text-lg font-semibold text-primary mb-4">{section.category}</h3>
                 <ul className="space-y-3">
                   {section.bullets.map((bullet, bulletIndex) => (
-                    <li key={bulletIndex} className="flex items-start gap-3 text-gray-400 text-sm">
+                    <li key={bulletIndex} className="flex items-start gap-3 text-gray-600 dark:text-gray-400 text-sm">
                       <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
                       {bullet}
                     </li>
@@ -310,15 +310,15 @@ export default function Experience() {
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-1">Top 3 — Preliminary Round</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">Top 3 — Preliminary Round</h3>
                   <p className="text-primary font-medium">Proptech Hackestate Hackathon</p>
                 </div>
-                <span className="text-gray-400 text-sm mt-2 md:mt-0">July 30, 2025</span>
+                <span className="text-gray-600 dark:text-gray-400 text-sm mt-2 md:mt-0">July 30, 2025</span>
               </div>
-              <p className="text-gray-300 mb-3">
+              <p className="text-gray-600 dark:text-gray-300 mb-3">
                 <strong>Project:</strong> RealiTech
               </p>
-              <p className="text-gray-400">
+              <p className="text-gray-600 dark:text-gray-400">
                 Selected among the Top 3 teams during the preliminary round for presenting a scalable proptech solution focused on homebuyer assistance and process automation.
               </p>
             </motion.div>
@@ -333,15 +333,15 @@ export default function Experience() {
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-1">Best UX Award & Top 5 Finalist — Finals</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">Best UX Award & Top 5 Finalist — Finals</h3>
                   <p className="text-yellow-500 font-medium">Proptech Hackestate Hackathon</p>
                 </div>
-                <span className="text-gray-400 text-sm mt-2 md:mt-0">August 27, 2025</span>
+                <span className="text-gray-600 dark:text-gray-400 text-sm mt-2 md:mt-0">August 27, 2025</span>
               </div>
-              <p className="text-gray-300 mb-3">
+              <p className="text-gray-600 dark:text-gray-300 mb-3">
                 <strong>Project:</strong> RealiTech @ Grand Regal Hotel & Casino
               </p>
-              <ul className="space-y-2 text-gray-400">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full mt-2 flex-shrink-0" />
                   Awarded Best User Experience (UX) for intuitive design, clarity of buyer journey, and effective chatbot-guided workflows
@@ -363,15 +363,15 @@ export default function Experience() {
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-1">First Runner-Up</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">First Runner-Up</h3>
                   <p className="text-blue-400 font-medium">Innovation Olympics 3.0</p>
                 </div>
-                <span className="text-gray-400 text-sm mt-2 md:mt-0">September 2–3, 2025</span>
+                <span className="text-gray-600 dark:text-gray-400 text-sm mt-2 md:mt-0">September 2–3, 2025</span>
               </div>
-              <p className="text-gray-300 mb-3">
+              <p className="text-gray-600 dark:text-gray-300 mb-3">
                 <strong>Project:</strong> TanUM Nanotech Solutions @ University of the Philippines Los Baños
               </p>
-              <p className="text-gray-400">
+              <p className="text-gray-600 dark:text-gray-400">
                 Achieved First Runner-Up for presenting a high-impact, innovation-driven solution evaluated on feasibility, innovation, and societal impact.
               </p>
             </motion.div>
@@ -380,7 +380,7 @@ export default function Experience() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-gradient-to-br from-primary/10 via-dark-800 to-dark-900">
+      <section className="section-padding bg-gradient-to-br from-primary/5 via-gray-100 to-gray-50 dark:from-primary/10 dark:via-dark-800 dark:to-dark-900 transition-colors duration-300">
         <div className="section-container">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
@@ -388,10 +388,10 @@ export default function Experience() {
             viewport={{ once: true }}
             className="max-w-2xl mx-auto text-center"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Let's Work Together
             </h2>
-            <p className="text-gray-400 mb-8">
+            <p className="text-gray-600 dark:text-gray-400 mb-8">
               Interested in my experience? Let's discuss how I can contribute to your team or project.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

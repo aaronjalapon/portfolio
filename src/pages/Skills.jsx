@@ -148,18 +148,18 @@ function SkillsCarousel({ categories }) {
                 <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                   <category.icon size={20} className="text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">{category.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{category.title}</h3>
               </div>
 
               <div className="space-y-4">
                 {category.skills.map((skill) => (
                   <div key={skill.name}>
                     <div className="flex justify-between items-center mb-1.5">
-                      <span className="text-sm text-gray-300">{skill.name}</span>
+                      <span className="text-sm text-gray-600 dark:text-gray-300">{skill.name}</span>
                       <span className="text-xs text-gray-500">{skill.level}%</span>
                     </div>
                     <div
-                      className="h-2 bg-dark-600 rounded-full overflow-hidden"
+                      className="h-2 bg-gray-100 dark:bg-dark-600 rounded-full overflow-hidden"
                       role="progressbar"
                       aria-valuenow={skill.level}
                       aria-valuemin={0}
@@ -186,14 +186,14 @@ function SkillsCarousel({ categories }) {
       {/* Navigation buttons */}
       <button
         onClick={scrollPrev}
-        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-dark-700 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-primary/20 hover:border-primary/50 transition-all hidden md:flex"
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-white dark:bg-dark-700 border border-gray-200 dark:border-white/10 rounded-full flex items-center justify-center text-gray-900 dark:text-white hover:bg-primary/20 hover:border-primary/50 transition-all hidden md:flex"
         aria-label="Previous slide"
       >
         <ChevronLeft size={20} />
       </button>
       <button
         onClick={scrollNext}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-dark-700 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-primary/20 hover:border-primary/50 transition-all hidden md:flex"
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-white dark:bg-dark-700 border border-gray-200 dark:border-white/10 rounded-full flex items-center justify-center text-gray-900 dark:text-white hover:bg-primary/20 hover:border-primary/50 transition-all hidden md:flex"
         aria-label="Next slide"
       >
         <ChevronRight size={20} />
@@ -208,7 +208,7 @@ function SkillsCarousel({ categories }) {
             className={`w-2.5 h-2.5 rounded-full transition-all ${
               index === selectedIndex 
                 ? 'bg-primary w-8' 
-                : 'bg-dark-600 hover:bg-dark-500'
+                : 'bg-gray-100 dark:bg-dark-600 hover:bg-dark-500'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -239,10 +239,10 @@ export default function Skills() {
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
               Technical Skills
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Skills & <span className="gradient-text">Technologies</span>
             </h1>
-            <p className="text-gray-400 text-lg">
+            <p className="text-gray-600 dark:text-gray-400 text-lg">
               A comprehensive overview of my technical expertise and the tools I use to build 
               impactful solutions across AI/ML, web development, and IoT systems.
             </p>
@@ -258,7 +258,7 @@ export default function Skills() {
       </section>
 
       {/* Tools */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <SectionHeader 
             title="Tools I Use"
@@ -276,7 +276,7 @@ export default function Skills() {
                 className="card card-hover text-center py-8"
               >
                 <tool.icon size={32} className="text-primary mx-auto mb-3" />
-                <span className="text-sm text-gray-300">{tool.name}</span>
+                <span className="text-sm text-gray-600 dark:text-gray-300">{tool.name}</span>
               </motion.div>
             ))}
           </div>

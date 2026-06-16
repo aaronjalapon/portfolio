@@ -27,10 +27,10 @@ export default function Projects() {
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
               My Work
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Featured <span className="gradient-text">Projects</span>
             </h1>
-            <p className="text-gray-400 text-lg">
+            <p className="text-gray-600 dark:text-gray-400 text-lg">
               Spotlighting TanUM Nanotech Solutions, Mindspace, and RealiTech — 
               IoT + ML + front-end engineering projects that solve real problems.
             </p>
@@ -63,7 +63,7 @@ export default function Projects() {
       </section>
 
       {/* Other Projects */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <SectionHeader 
             title="Other Projects"
@@ -80,13 +80,13 @@ export default function Projects() {
                 transition={{ delay: index * 0.1 }}
                 className="card card-hover"
               >
-                <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-                <p className="text-gray-400 text-sm mb-4">{project.tagline}</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{project.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{project.tagline}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span 
                       key={tag}
-                      className="px-2 py-1 bg-dark-600 text-gray-400 text-xs rounded"
+                      className="px-2 py-1 bg-gray-100 dark:bg-dark-600 text-gray-600 dark:text-gray-400 text-xs rounded"
                     >
                       {tag}
                     </span>
@@ -111,10 +111,10 @@ export default function Projects() {
             viewport={{ once: true }}
             className="max-w-2xl mx-auto text-center"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Want to See More?
             </h2>
-            <p className="text-gray-400 mb-8">
+            <p className="text-gray-600 dark:text-gray-400 mb-8">
               Check out my GitHub for more projects, code samples, and open-source contributions.
             </p>
             <a 

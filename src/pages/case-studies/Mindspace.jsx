@@ -65,7 +65,7 @@ export default function CaseStudyMindspace() {
       />
       <div className="pt-20">
       {/* Hero */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           {/* Back Link */}
           <motion.div
@@ -74,7 +74,7 @@ export default function CaseStudyMindspace() {
           >
             <Link 
               to="/projects" 
-              className="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors mb-8"
             >
               <ArrowLeft size={18} />
               Back to Projects
@@ -92,16 +92,16 @@ export default function CaseStudyMindspace() {
                 Mental Health / UX
               </span>
               
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
                 Mindspace
               </h1>
               
-              <p className="text-xl text-gray-300 mb-6">
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
                 Student Mental Health Support Platform
               </p>
 
               {/* Meta */}
-              <div className="flex flex-wrap gap-6 text-gray-400 mb-8">
+              <div className="flex flex-wrap gap-6 text-gray-600 dark:text-gray-400 mb-8">
                 <span className="flex items-center gap-2">
                   <Users size={18} className="text-primary" />
                   Front-end Developer
@@ -114,8 +114,8 @@ export default function CaseStudyMindspace() {
 
               {/* TL;DR */}
               <div className="p-4 bg-primary/10 border border-primary/20 rounded-xl mb-8">
-                <p className="text-gray-300">
-                  <strong className="text-white">TL;DR:</strong> Front-end developer for Mindspace — 
+                <p className="text-gray-600 dark:text-gray-300">
+                  <strong className="text-gray-900 dark:text-white">TL;DR:</strong> Front-end developer for Mindspace — 
                   a secure, accessible platform offering self-help resources, guided meditations, 
                   moderated peer support, and crisis integration for students.
                 </p>
@@ -141,7 +141,7 @@ export default function CaseStudyMindspace() {
               transition={{ delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-video bg-dark-700 rounded-2xl border border-white/10 overflow-hidden">
+              <div className="aspect-video bg-white dark:bg-dark-700 rounded-2xl border border-gray-200 dark:border-white/10 overflow-hidden">
                 <img 
                   src="/mindspace.png" 
                   alt="Mindspace App UI Screenshot"
@@ -162,10 +162,10 @@ export default function CaseStudyMindspace() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 The <span className="gradient-text">Problem</span>
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
                 Students face significant stress and limited access to mental-health resources. 
                 Stigma surrounding mental health and concerns about privacy create substantial 
                 barriers to help-seeking behavior. Many students don't know where to turn for 
@@ -178,7 +178,7 @@ export default function CaseStudyMindspace() {
       </section>
 
       {/* Solution */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -186,10 +186,10 @@ export default function CaseStudyMindspace() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 The <span className="gradient-text">Solution</span>
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
+              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
                 I built the responsive front-end UI for Mindspace's resource library, meditation flows, 
                 and community support features. Focus areas were accessibility, privacy-first UI design 
                 (no public PII), and intuitive flows for seeking immediate help (crisis hotline integration). 
@@ -212,8 +212,8 @@ export default function CaseStudyMindspace() {
                   <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-4">
                     <item.icon size={24} className="text-purple-400" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-gray-400">{item.description}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400">{item.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -234,12 +234,12 @@ export default function CaseStudyMindspace() {
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
                   <Accessibility size={24} className="text-primary" />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-white">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
                   Accessibility <span className="gradient-text">First</span>
                 </h2>
               </div>
               
-              <p className="text-gray-300 mb-8">
+              <p className="text-gray-600 dark:text-gray-300 mb-8">
                 Given the sensitive nature of mental health support, accessibility was paramount. 
                 The platform was designed to be usable by everyone, regardless of ability.
               </p>
@@ -248,10 +248,10 @@ export default function CaseStudyMindspace() {
                 {accessibilityFeatures.map((feature) => (
                   <div 
                     key={feature}
-                    className="flex items-center gap-3 p-4 bg-dark-700 rounded-xl"
+                    className="flex items-center gap-3 p-4 bg-white dark:bg-dark-700 rounded-xl"
                   >
                     <Shield size={18} className="text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">{feature}</span>
+                    <span className="text-gray-600 dark:text-gray-300 text-sm">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -261,7 +261,7 @@ export default function CaseStudyMindspace() {
       </section>
 
       {/* Tech Stack */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -269,7 +269,7 @@ export default function CaseStudyMindspace() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
                 Tech <span className="gradient-text">Stack</span>
               </h2>
               
@@ -277,7 +277,7 @@ export default function CaseStudyMindspace() {
                 {techStack.map((tech) => (
                   <span 
                     key={tech.name}
-                    className="px-4 py-2 bg-dark-700 text-gray-300 rounded-lg text-sm"
+                    className="px-4 py-2 bg-white dark:bg-dark-700 text-gray-600 dark:text-gray-300 rounded-lg text-sm"
                   >
                     {tech.name}
                     <span className="text-gray-500 ml-2">({tech.category})</span>
@@ -298,7 +298,7 @@ export default function CaseStudyMindspace() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
                 Impact & <span className="gradient-text">Metrics</span>
               </h2>
 
@@ -313,7 +313,7 @@ export default function CaseStudyMindspace() {
                     className="card text-center"
                   >
                     <p className="text-4xl font-bold gradient-text mb-2">{metric.value}</p>
-                    <p className="text-white font-medium mb-1">{metric.label}</p>
+                    <p className="text-gray-900 dark:text-white font-medium mb-1">{metric.label}</p>
                     <p className="text-gray-500 text-sm">{metric.description}</p>
                   </motion.div>
                 ))}
@@ -324,7 +324,7 @@ export default function CaseStudyMindspace() {
       </section>
 
       {/* Resume Bullets */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -332,16 +332,16 @@ export default function CaseStudyMindspace() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 Resume <span className="gradient-text">Highlights</span>
               </h2>
               
               <ul className="space-y-4">
-                <li className="flex items-start gap-4 text-gray-300">
+                <li className="flex items-start gap-4 text-gray-600 dark:text-gray-300">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                   Built responsive, privacy-forward front-end UI for a student mental-health platform; implemented resource discovery and crisis support flows
                 </li>
-                <li className="flex items-start gap-4 text-gray-300">
+                <li className="flex items-start gap-4 text-gray-600 dark:text-gray-300">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                   Collaborated with mental-health professionals to translate clinical guidance into usable interfaces
                 </li>
@@ -360,8 +360,8 @@ export default function CaseStudyMindspace() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-2xl font-bold text-white mb-6">Elevator Pitch</h2>
-            <blockquote className="text-xl text-gray-300 italic leading-relaxed">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Elevator Pitch</h2>
+            <blockquote className="text-xl text-gray-600 dark:text-gray-300 italic leading-relaxed">
               "Mindspace is a privacy-first student mental health app that bundles guided meditations, 
               curated resources, and moderated peer support—designed to make help-seeking safe and accessible."
             </blockquote>
@@ -370,12 +370,12 @@ export default function CaseStudyMindspace() {
       </section>
 
       {/* Navigation */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <Link 
               to="/projects/tanum" 
-              className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors"
+              className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
             >
               <ArrowLeft size={18} />
               Previous: TanUM

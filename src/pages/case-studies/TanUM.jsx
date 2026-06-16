@@ -58,7 +58,7 @@ export default function CaseStudyTanUM() {
       />
       <div className="pt-20">
       {/* Hero */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           {/* Back Link */}
           <motion.div
@@ -67,7 +67,7 @@ export default function CaseStudyTanUM() {
           >
             <Link 
               to="/projects" 
-              className="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors mb-8"
             >
               <ArrowLeft size={18} />
               Back to Projects
@@ -85,16 +85,16 @@ export default function CaseStudyTanUM() {
                 AgriTech / IoT
               </span>
               
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
                 TanUM Nanotech Solutions
               </h1>
               
-              <p className="text-xl text-gray-300 mb-6">
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
                 Smart Soil Monitoring & Nano Fertilizer Optimization
               </p>
 
               {/* Meta */}
-              <div className="flex flex-wrap gap-6 text-gray-400 mb-8">
+              <div className="flex flex-wrap gap-6 text-gray-600 dark:text-gray-400 mb-8">
                 <span className="flex items-center gap-2">
                   <Users size={18} className="text-primary" />
                   Software & ML Lead
@@ -107,8 +107,8 @@ export default function CaseStudyTanUM() {
 
               {/* TL;DR */}
               <div className="p-4 bg-primary/10 border border-primary/20 rounded-xl mb-8">
-                <p className="text-gray-300">
-                  <strong className="text-white">TL;DR:</strong> IoT + cloud + ML system that monitors 
+                <p className="text-gray-600 dark:text-gray-300">
+                  <strong className="text-gray-900 dark:text-white">TL;DR:</strong> IoT + cloud + ML system that monitors 
                   soil (NPK, pH, moisture, EC, temperature) in real time and gives automated fertilizer 
                   recommendations to reduce waste and improve yields.
                 </p>
@@ -134,7 +134,7 @@ export default function CaseStudyTanUM() {
               transition={{ delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-video bg-dark-700 rounded-2xl border border-white/10 overflow-hidden">
+              <div className="aspect-video bg-white dark:bg-dark-700 rounded-2xl border border-gray-200 dark:border-white/10 overflow-hidden">
                 <img 
                   src="/tanum.png" 
                   alt="TanUM Dashboard Screenshot"
@@ -155,10 +155,10 @@ export default function CaseStudyTanUM() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 The <span className="gradient-text">Problem</span>
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
                 Smallholder farmers and cooperatives often over-apply fertilizer because they lack 
                 timely, actionable soil data. This causes unnecessary expense and soil degradation. 
                 Traditional soil testing is expensive, time-consuming, and doesn't provide the 
@@ -171,7 +171,7 @@ export default function CaseStudyTanUM() {
       </section>
 
       {/* Solution */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -179,10 +179,10 @@ export default function CaseStudyTanUM() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 The <span className="gradient-text">Solution</span>
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
+              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
                 I designed and implemented the cloud ingestion and ML pipeline for TanUM. Field devices 
                 stream multi-parameter soil data to a cloud broker (MQTT/HTTP). I built data cleaning 
                 and storage in a time-series store, then developed ML models that analyze nutrient trends 
@@ -205,8 +205,8 @@ export default function CaseStudyTanUM() {
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                     <item.icon size={24} className="text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-gray-400">{item.description}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400">{item.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -223,12 +223,12 @@ export default function CaseStudyTanUM() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
                 System <span className="gradient-text">Architecture</span>
               </h2>
               
               {/* Architecture Diagram Placeholder */}
-              <div className="aspect-[16/9] bg-dark-700 rounded-2xl border border-white/10 flex items-center justify-center mb-8">
+              <div className="aspect-[16/9] bg-white dark:bg-dark-700 rounded-2xl border border-gray-200 dark:border-white/10 flex items-center justify-center mb-8">
                 <div className="text-center">
                   <Cpu size={48} className="text-gray-600 mx-auto mb-4" />
                   <span className="text-gray-600">Architecture Diagram</span>
@@ -239,12 +239,12 @@ export default function CaseStudyTanUM() {
               </div>
 
               {/* Tech Stack */}
-              <h3 className="text-xl font-semibold text-white mb-4">Tech Stack</h3>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Tech Stack</h3>
               <div className="flex flex-wrap gap-3">
                 {techStack.map((tech) => (
                   <span 
                     key={tech.name}
-                    className="px-4 py-2 bg-dark-700 text-gray-300 rounded-lg text-sm"
+                    className="px-4 py-2 bg-white dark:bg-dark-700 text-gray-600 dark:text-gray-300 rounded-lg text-sm"
                   >
                     {tech.name}
                     <span className="text-gray-500 ml-2">({tech.category})</span>
@@ -257,7 +257,7 @@ export default function CaseStudyTanUM() {
       </section>
 
       {/* Impact & Metrics */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -265,7 +265,7 @@ export default function CaseStudyTanUM() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
                 Impact & <span className="gradient-text">Metrics</span>
               </h2>
 
@@ -280,7 +280,7 @@ export default function CaseStudyTanUM() {
                     className="card text-center"
                   >
                     <p className="text-4xl font-bold gradient-text mb-2">{metric.value}</p>
-                    <p className="text-white font-medium mb-1">{metric.label}</p>
+                    <p className="text-gray-900 dark:text-white font-medium mb-1">{metric.label}</p>
                     <p className="text-gray-500 text-sm">{metric.description}</p>
                   </motion.div>
                 ))}
@@ -299,16 +299,16 @@ export default function CaseStudyTanUM() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 Resume <span className="gradient-text">Highlights</span>
               </h2>
               
               <ul className="space-y-4">
-                <li className="flex items-start gap-4 text-gray-300">
+                <li className="flex items-start gap-4 text-gray-600 dark:text-gray-300">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                   Designed and implemented a cloud-based ingestion and visualization platform for IoT soil sensors
                 </li>
-                <li className="flex items-start gap-4 text-gray-300">
+                <li className="flex items-start gap-4 text-gray-600 dark:text-gray-300">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                   Built and deployed ML models that generate automated fertilizer recommendations integrated into a web dashboard and SMS alert system
                 </li>
@@ -327,8 +327,8 @@ export default function CaseStudyTanUM() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-2xl font-bold text-white mb-6">Elevator Pitch</h2>
-            <blockquote className="text-xl text-gray-300 italic leading-relaxed">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Elevator Pitch</h2>
+            <blockquote className="text-xl text-gray-600 dark:text-gray-300 italic leading-relaxed">
               "TanUM uses low-cost soil sensors and ML to recommend precise fertilizer mixes and timing. 
               Farmers get SMS alerts and a dashboard so they can spend less on inputs, reduce soil damage, 
               and increase yields."
@@ -338,12 +338,12 @@ export default function CaseStudyTanUM() {
       </section>
 
       {/* Navigation */}
-      <section className="section-padding bg-dark-800">
+      <section className="section-padding bg-gray-50 dark:bg-dark-800">
         <div className="section-container">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <Link 
               to="/projects" 
-              className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors"
+              className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
             >
               <ArrowLeft size={18} />
               All Projects

@@ -90,10 +90,10 @@ export default function Contact() {
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
               Get in Touch
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Let's <span className="gradient-text">Connect</span>
             </h1>
-            <p className="text-gray-400 text-lg">
+            <p className="text-gray-600 dark:text-gray-400 text-lg">
               Interested in working together? I'm always open to discussing new projects, 
               creative ideas, or opportunities to be part of your vision.
             </p>
@@ -111,22 +111,22 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl font-bold text-white mb-6">Send a Message</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send a Message</h2>
               
               {submitted ? (
                 <div className="card text-center py-12">
                   <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Send size={28} className="text-green-500" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
-                  <p className="text-gray-400">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Message Sent!</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
                     Thank you for reaching out. I'll get back to you as soon as possible.
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
                       Name
                     </label>
                     <input
@@ -136,13 +136,13 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-dark-700 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors"
+                      className="w-full px-4 py-3 bg-white dark:bg-dark-700 border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors"
                       placeholder="Your name"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
                       Email
                     </label>
                     <input
@@ -152,13 +152,13 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-dark-700 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors"
+                      className="w-full px-4 py-3 bg-white dark:bg-dark-700 border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors"
                       placeholder="your@email.com"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="projectType" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="projectType" className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
                       Project Type
                     </label>
                     <select
@@ -166,7 +166,7 @@ export default function Contact() {
                       name="projectType"
                       value={formData.projectType}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-dark-700 border border-white/10 rounded-lg text-white focus:outline-none focus:border-primary transition-colors"
+                      className="w-full px-4 py-3 bg-white dark:bg-dark-700 border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-primary transition-colors"
                     >
                       <option value="">Select a project type</option>
                       <option value="web-development">Web Development</option>
@@ -179,7 +179,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
                       Message
                     </label>
                     <textarea
@@ -189,7 +189,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 bg-dark-700 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-white dark:bg-dark-700 border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors resize-none"
                       placeholder="Tell me about your project..."
                     />
                   </div>
@@ -230,7 +230,7 @@ export default function Contact() {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-2xl font-bold text-white mb-6">Contact Info</h2>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Contact Info</h2>
                 <div className="space-y-4">
                   {contactInfo.map((item) => (
                     <div key={item.label} className="flex items-center gap-4">
@@ -240,11 +240,11 @@ export default function Contact() {
                       <div>
                         <p className="text-sm text-gray-500">{item.label}</p>
                         {item.href ? (
-                          <a href={item.href} className="text-white hover:text-primary transition-colors">
+                          <a href={item.href} className="text-gray-900 dark:text-white hover:text-primary transition-colors">
                             {item.value}
                           </a>
                         ) : (
-                          <p className="text-white">{item.value}</p>
+                          <p className="text-gray-900 dark:text-white">{item.value}</p>
                         )}
                       </div>
                     </div>
@@ -253,7 +253,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-white mb-6">Connect Online</h2>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Connect Online</h2>
                 <div className="space-y-4">
                   {socialLinks.map((social) => (
                     <a
@@ -267,7 +267,7 @@ export default function Contact() {
                         <social.icon size={22} className="text-primary" />
                       </div>
                       <div className="flex-grow">
-                        <p className="text-white font-medium">{social.label}</p>
+                        <p className="text-gray-900 dark:text-white font-medium">{social.label}</p>
                         <p className="text-sm text-gray-500">{social.description}</p>
                       </div>
                       <ArrowRight size={18} className="text-gray-500" />
@@ -277,17 +277,17 @@ export default function Contact() {
               </div>
 
               {/* Schedule Call CTA */}
-              <div className="card bg-gradient-to-br from-primary/10 to-dark-700 border-primary/20">
+              <div className="card bg-gradient-to-br from-primary/10 to-white dark:from-primary/10 dark:to-dark-700 border-primary/20 dark:border-primary/30">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
                     <Calendar size={22} className="text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold">Schedule a Call</h3>
-                    <p className="text-sm text-gray-400">Let's discuss your project</p>
+                    <h3 className="text-gray-900 dark:text-white font-semibold">Schedule a Call</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Let's discuss your project</p>
                   </div>
                 </div>
-                <p className="text-gray-400 text-sm mb-4">
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
                   Prefer a live conversation? Schedule a 30-minute call to discuss your project 
                   requirements and how we can work together.
                 </p>

@@ -35,7 +35,7 @@ export default function Home() {
               
               <div className="mb-6">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  <span className="text-white">Hi, I'm </span>
+                  <span className="text-gray-900 dark:text-white">Hi, I'm </span>
                   <span className="gradient-text">Aaron Jalapon Arquillano</span>
                 </h1>
               </div>
@@ -46,7 +46,7 @@ export default function Home() {
                 duration={0.3}
               />
               
-              <p className="text-gray-400 text-lg mb-8 max-w-xl">
+              <p className="text-gray-600 dark:text-gray-400 text-lg mb-8 max-w-xl">
                 I design user-first web apps and AI systems that solve real problems — 
                 from sustainable farming to mental health and property tech.
               </p>
@@ -71,7 +71,7 @@ export default function Home() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-dark-700 rounded-xl text-gray-400 hover:text-primary hover:bg-dark-600 transition-all hover:scale-110"
+                    className="p-3 bg-gray-100 dark:bg-dark-700 rounded-xl text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:bg-gray-200 dark:hover:bg-dark-600 transition-all hover:scale-110"
                     aria-label={social.label}
                   >
                     <social.icon size={22} />
@@ -107,7 +107,7 @@ export default function Home() {
             transition={{ delay: 1 }}
             className="absolute bottom-8 left-1/2 -translate-x-1/2"
           >
-            <a href="#featured" className="flex flex-col items-center gap-2 text-gray-500 hover:text-primary transition-colors">
+            <a href="#featured" className="flex flex-col items-center gap-2 text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors">
               <span className="text-sm">Scroll to explore</span>
               <ChevronDown className="animate-bounce" />
             </a>
@@ -116,7 +116,7 @@ export default function Home() {
       </section>
 
       {/* Featured Projects Section */}
-      <section id="featured" className="section-padding bg-dark-800">
+      <section id="featured" className="section-padding bg-gray-50 dark:bg-dark-800 transition-colors duration-300">
         <div className="section-container">
           <SectionHeader 
             title="Featured Projects"
@@ -163,7 +163,7 @@ export default function Home() {
               <h2 className="section-title mb-6">
                 <span className="gradient-text">About Me</span>
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
+              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
                 I'm Aaron Jalapon Arquillano, a BS Computer Science student and product-minded developer 
                 focused on AI/ML-driven solutions and user-centered front ends. I build software 
                 that bridges technical innovation and real-world impact — examples include 
@@ -183,7 +183,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-primary/10 via-dark-800 to-dark-900">
+      <section className="section-padding bg-gradient-to-br from-primary/5 via-gray-100 to-gray-50 dark:from-primary/10 dark:via-dark-800 dark:to-dark-900 transition-colors duration-300">
         <div className="section-container">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
@@ -191,10 +191,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Let's Build Something Amazing
             </h2>
-            <p className="text-gray-400 text-lg mb-8">
+            <p className="text-gray-600 dark:text-gray-400 text-lg mb-8">
               Interested in working together? I'm always open to discussing new projects, 
               creative ideas, or opportunities to be part of your vision.
             </p>

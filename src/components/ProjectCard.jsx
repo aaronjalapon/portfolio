@@ -19,7 +19,7 @@ export default function ProjectCard({ project }) {
       onClick={hasCaseStudy ? () => navigate(`/projects/${slug}`) : undefined}
     >
       {/* Image */}
-      <div className="relative h-48 md:h-56 -mx-6 -mt-6 mb-6 overflow-hidden bg-dark-600">
+      <div className="relative h-48 md:h-56 -mx-6 -mt-6 mb-6 overflow-hidden bg-gray-100 dark:bg-dark-600">
         {image ? (
           <img 
             src={image} 
@@ -43,10 +43,10 @@ export default function ProjectCard({ project }) {
 
       {/* Content */}
       <div>
-        <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors mb-2">
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors mb-2">
           {title}
         </h3>
-        <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+        <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
           {tagline}
         </p>
 
@@ -71,7 +71,7 @@ export default function ProjectCard({ project }) {
           {tags?.slice(0, 4).map((tag) => (
             <span 
               key={tag}
-              className="px-2 py-1 bg-dark-600 text-gray-400 text-xs rounded"
+              className="px-2 py-1 bg-gray-100 dark:bg-dark-600 text-gray-600 dark:text-gray-400 text-xs rounded"
             >
               {tag}
             </span>
@@ -79,7 +79,7 @@ export default function ProjectCard({ project }) {
         </div>
 
         {/* CTA */}
-        <div className="flex items-center gap-4 pt-4 border-t border-white/5">
+        <div className="flex items-center gap-4 pt-4 border-t border-gray-100 dark:border-white/5">
           {hasCaseStudy && (
             <span className="inline-flex items-center gap-2 text-primary text-sm font-medium group-hover:gap-3 transition-all">
               View Case Study
@@ -91,7 +91,7 @@ export default function ProjectCard({ project }) {
             <button
               type="button"
               onClick={(e) => openDemo(e, link)}
-              className="inline-flex items-center gap-1 text-gray-400 text-sm hover:text-primary transition-colors z-10"
+              className="inline-flex items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors z-10"
               title="Live Demo"
             >
               <ExternalLink size={14} />
@@ -103,7 +103,7 @@ export default function ProjectCard({ project }) {
             <button
               type="button"
               onClick={(e) => openDemo(e, github)}
-              className="inline-flex items-center gap-1 text-gray-400 text-sm hover:text-primary transition-colors z-10"
+              className="inline-flex items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors z-10"
               title="GitHub Repository"
             >
               <Github size={14} />
