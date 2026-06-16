@@ -36,6 +36,7 @@ Thumbs.db
 
 # Vite
 *.local
+.vite/
 
 # TypeScript cache
 *.tsbuildinfo
