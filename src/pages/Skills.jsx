@@ -4,7 +4,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { 
   Code2, Database, Brain, Cloud, Palette, Users,
   FileCode, Server, Cpu, Globe, Figma, GitBranch,
-  ChevronLeft, ChevronRight
+  ChevronLeft, ChevronRight, Award, ExternalLink, Calendar, Building2
 } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import SEO from '../components/SEO'
@@ -79,6 +79,174 @@ const tools = [
   { name: 'PostgreSQL', icon: Database },
   { name: 'Vercel', icon: Globe },
 ]
+
+const certifications = [
+  {
+    id: 'b063277e-b414-428e-8bc2-7f6d9e3017c2',
+    name: 'IT Specialist – Java',
+    issuer: 'Certiport / Pearson VUE',
+    issuedOn: '2024-03-08',
+    description: 'Earners of this badge demonstrate that they can recognize, write, and debug Java code that will logically solve a problem.',
+    image: 'https://images.credly.com/size/340x340/images/2210b6fe-0eda-415a-8ab6-cac91d5c2c40/image.png',
+    credlyUrl: 'https://www.credly.com/badges/b063277e-b414-428e-8bc2-7f6d9e3017c2',
+    skills: ['Java', 'OOP', 'Debugging', 'Problem Solving'],
+  },
+  {
+    id: 'a10764a5-dc3e-4458-9fab-1f9caba6ee49',
+    name: 'IT Specialist – Databases',
+    issuer: 'Certiport / Pearson VUE',
+    issuedOn: '2025-03-10',
+    description: 'Earners of this badge demonstrate foundational knowledge of how to design and query relational databases, such as MySQL, Microsoft SQL Server, or Oracle.',
+    image: 'https://images.credly.com/size/340x340/images/49a492cd-5f72-4c9d-aafa-06649e4853fb/image.png',
+    credlyUrl: 'https://www.credly.com/badges/a10764a5-dc3e-4458-9fab-1f9caba6ee49',
+    skills: ['SQL', 'Database Design', 'Relational DBs', 'Querying'],
+  },
+]
+
+function CertificationCard({ cert, index }) {
+  return (
+    <motion.a
+      href={cert.credlyUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.15, duration: 0.5 }}
+      whileHover={{ y: -6 }}
+      className="group card card-hover flex flex-col gap-5 cursor-pointer relative overflow-hidden"
+      aria-label={`View ${cert.name} badge on Credly`}
+    >
+      {/* Gradient accent */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-blue-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+      {/* Top row: badge image + external link icon */}
+      <div className="flex items-start justify-between gap-4">
+        <div className="relative flex-shrink-0">
+          {/* Glowing ring on hover */}
+          <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-primary to-blue-400 opacity-0 group-hover:opacity-30 blur-sm transition-all duration-500" />
+          <div className="relative w-20 h-20 rounded-full bg-gray-100 dark:bg-dark-600 p-1 ring-2 ring-gray-200 dark:ring-white/10 group-hover:ring-primary/50 transition-all duration-300">
+            <img
+              src={cert.image}
+              alt={`${cert.name} badge`}
+              className="w-full h-full object-contain rounded-full"
+              loading="lazy"
+              onError={(e) => {
+                e.target.style.display = 'none'
+                e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center"><svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' class=\'text-primary\'><path d=\'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z\'/></svg></div>'
+              }}
+            />
+          </div>
+        </div>
+
+        <div className="flex-1 min-w-0">
+          <h3 className="text-base font-semibold text-gray-900 dark:text-white leading-tight group-hover:text-primary transition-colors duration-200">
+            {cert.name}
+          </h3>
+          <div className="flex items-center gap-1.5 mt-1.5 text-gray-500 dark:text-gray-400">
+            <Building2 size={13} className="flex-shrink-0" />
+            <span className="text-xs">{cert.issuer}</span>
+          </div>
+          <div className="flex items-center gap-1.5 mt-1 text-gray-400 dark:text-gray-500">
+            <Calendar size={13} className="flex-shrink-0" />
+            <span className="text-xs">
+              Issued {new Date(cert.issuedOn).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+            </span>
+          </div>
+        </div>
+
+        <ExternalLink
+          size={16}
+          className="flex-shrink-0 text-gray-300 dark:text-gray-600 group-hover:text-primary transition-colors duration-200 mt-0.5"
+        />
+      </div>
+
+      {/* Description */}
+      <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-3">
+        {cert.description}
+      </p>
+
+      {/* Skill tags */}
+      <div className="flex flex-wrap gap-2 mt-auto">
+        {cert.skills.map((skill) => (
+          <span
+            key={skill}
+            className="px-2.5 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium"
+          >
+            {skill}
+          </span>
+        ))}
+      </div>
+
+      {/* Bottom CTA */}
+      <div className="flex items-center gap-1.5 text-primary text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 -mt-1">
+        <span>Verify on Credly</span>
+        <ExternalLink size={11} />
+      </div>
+    </motion.a>
+  )
+}
+
+function ComingSoonCard() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.3, duration: 0.5 }}
+      className="flex flex-col gap-5 cursor-default relative overflow-hidden rounded-2xl p-6
+        border-2 border-dashed border-gray-300 dark:border-white/10
+        bg-white/50 dark:bg-dark-700/50
+        hover:border-primary/40 transition-all duration-300"
+      aria-label="More certifications coming soon"
+    >
+      {/* Pulsing blurred badge placeholder */}
+      <div className="flex items-start justify-between gap-4">
+        <div className="relative flex-shrink-0">
+          <div className="w-20 h-20 rounded-full bg-gray-200 dark:bg-dark-600 flex items-center justify-center animate-pulse">
+            <div className="w-10 h-10 rounded-full bg-gray-300 dark:bg-dark-500 blur-[2px]" />
+          </div>
+          {/* Orbiting dot animation */}
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 4, ease: 'linear' }}
+            className="absolute inset-0"
+          >
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1 w-2 h-2 rounded-full bg-primary/50" />
+          </motion.div>
+        </div>
+
+        <div className="flex-1 min-w-0 space-y-2">
+          {/* Skeleton lines */}
+          <div className="h-3.5 w-3/4 rounded-full bg-gray-200 dark:bg-dark-500 animate-pulse" />
+          <div className="h-2.5 w-1/2 rounded-full bg-gray-100 dark:bg-dark-600 animate-pulse" />
+          <div className="h-2.5 w-2/5 rounded-full bg-gray-100 dark:bg-dark-600 animate-pulse" />
+        </div>
+      </div>
+
+      {/* Text content */}
+      <div className="text-center mt-1">
+        <p className="text-sm font-semibold text-gray-400 dark:text-gray-500 tracking-wide uppercase">
+          Coming Soon
+        </p>
+        <p className="text-xs text-gray-400 dark:text-gray-600 mt-1.5 leading-relaxed">
+          More badges on the way&nbsp;&mdash; stay tuned!
+        </p>
+      </div>
+
+      {/* Skeleton skill tags */}
+      <div className="flex flex-wrap gap-2 mt-auto">
+        {[40, 56, 48].map((w) => (
+          <div
+            key={w}
+            style={{ width: `${w}px` }}
+            className="h-6 rounded-full bg-gray-100 dark:bg-dark-600 animate-pulse"
+          />
+        ))}
+      </div>
+    </motion.div>
+  )
+}
 
 // Skills Carousel Component
 function SkillsCarousel({ categories }) {
@@ -317,6 +485,45 @@ export default function Skills() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Certifications & Badges */}
+      <section className="section-padding bg-gray-50 dark:bg-dark-800" id="certifications">
+        <div className="section-container">
+          <SectionHeader
+            title="Certifications & Badges"
+            subtitle="Verified credentials earned through rigorous proctored exams."
+          />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {certifications.map((cert, index) => (
+              <CertificationCard key={cert.id} cert={cert} index={index} />
+            ))}
+            <ComingSoonCard />
+          </div>
+
+          {/* Powered by Credly badge */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="flex items-center justify-center gap-2 mt-10"
+          >
+            <Award size={14} className="text-gray-400" />
+            <span className="text-xs text-gray-400 dark:text-gray-500">
+              Verified & powered by{' '}
+              <a
+                href="https://www.credly.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Credly
+              </a>
+            </span>
+          </motion.div>
         </div>
       </section>
       </div>
