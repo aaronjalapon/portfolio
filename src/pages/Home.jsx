@@ -4,7 +4,6 @@ import { ArrowRight, Download, ChevronDown } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import ProjectCard from '../components/ProjectCard'
 import SEO from '../components/SEO'
-import InteractiveHeroBg from '../components/InteractiveHeroBg'
 import { TextGenerateEffect } from '../components/ui/text-generate-effect'
 import { featuredProjects } from '../data/projects'
 import { socialLinks } from '../data/socials'
@@ -19,7 +18,6 @@ export default function Home() {
       />
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <InteractiveHeroBg />
         
         <div className="section-container relative z-10 py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -116,7 +114,7 @@ export default function Home() {
       </section>
 
       {/* Featured Projects Section */}
-      <section id="featured" className="section-padding bg-gray-50 dark:bg-dark-800 transition-colors duration-300">
+      <section id="featured" className="section-padding transition-colors duration-300">
         <div className="section-container">
           <SectionHeader 
             title="Featured Projects"
@@ -183,18 +181,18 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-primary/5 via-gray-100 to-gray-50 dark:from-primary/10 dark:via-dark-800 dark:to-dark-900 transition-colors duration-300">
+      <section className="section-padding transition-colors duration-300">
         <div className="section-container">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto text-center"
+            className="max-w-3xl mx-auto text-center glass-panel p-10 md:p-16 rounded-3xl"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Let's Build Something Amazing
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 text-lg mb-8">
+            <p className="text-gray-600 dark:text-gray-300 text-lg mb-8">
               Interested in working together? I'm always open to discussing new projects, 
               creative ideas, or opportunities to be part of your vision.
             </p>

@@ -8,7 +8,6 @@ import {
 } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import SEO from '../components/SEO'
-import InteractiveHeroBg from '../components/InteractiveHeroBg'
 
 const skillCategories = [
   {
@@ -196,7 +195,7 @@ function ComingSoonCard() {
       transition={{ delay: 0.3, duration: 0.5 }}
       className="flex flex-col gap-5 cursor-default relative overflow-hidden rounded-2xl p-6
         border-2 border-dashed border-gray-300 dark:border-white/10
-        bg-white/50 dark:bg-dark-700/50
+        glass-panel
         hover:border-primary/40 transition-all duration-300"
       aria-label="More certifications coming soon"
     >
@@ -319,30 +318,14 @@ function SkillsCarousel({ categories }) {
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{category.title}</h3>
               </div>
 
-              <div className="space-y-4">
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
-                  <div key={skill.name}>
-                    <div className="flex justify-between items-center mb-1.5">
-                      <span className="text-sm text-gray-600 dark:text-gray-300">{skill.name}</span>
-                      <span className="text-xs text-gray-500">{skill.level}%</span>
-                    </div>
-                    <div
-                      className="h-2 bg-gray-100 dark:bg-dark-600 rounded-full overflow-hidden"
-                      role="progressbar"
-                      aria-valuenow={skill.level}
-                      aria-valuemin={0}
-                      aria-valuemax={100}
-                      aria-label={`${skill.name} proficiency`}
-                    >
-                      <motion.div 
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        className="h-full bg-gradient-to-r from-primary to-blue-400 rounded-full"
-                      />
-                    </div>
-                  </div>
+                  <span 
+                    key={skill.name}
+                    className="px-3 py-1.5 glass rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary transition-colors cursor-default"
+                  >
+                    {skill.name}
+                  </span>
                 ))}
               </div>
             </motion.div>
@@ -397,7 +380,6 @@ export default function Skills() {
       <div className="pt-20">
       {/* Hero */}
       <section className="section-padding relative overflow-hidden">
-        <InteractiveHeroBg />
         <div className="section-container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -426,7 +408,7 @@ export default function Skills() {
       </section>
 
       {/* Tools */}
-      <section className="section-padding bg-gray-50 dark:bg-dark-800">
+      <section className="section-padding transition-colors duration-300">
         <div className="section-container">
           <SectionHeader 
             title="Tools I Use"
@@ -489,7 +471,7 @@ export default function Skills() {
       </section>
 
       {/* Certifications & Badges */}
-      <section className="section-padding bg-gray-50 dark:bg-dark-800" id="certifications">
+      <section className="section-padding transition-colors duration-300" id="certifications">
         <div className="section-container">
           <SectionHeader
             title="Certifications & Badges"

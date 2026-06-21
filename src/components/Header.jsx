@@ -32,7 +32,7 @@ export default function Header() {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 dark:bg-dark-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        isScrolled ? 'glass' : 'bg-transparent'
       }`}
     >
       <nav className="section-container">
@@ -87,7 +87,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden absolute top-20 left-0 right-0 bg-white dark:bg-dark-800 border-t border-gray-100 dark:border-white/10 shadow-lg animate-fade-in">
+          <div className="md:hidden absolute top-20 left-0 right-0 glass-panel animate-fade-in border-t-0">
             <div className="py-4 px-4 space-y-2">
               {navigation.map((item) => (
                 <Link
@@ -95,8 +95,8 @@ export default function Header() {
                   to={item.href}
                   className={`block py-3 px-4 rounded-lg font-medium transition-colors ${
                     location.pathname === item.href 
-                      ? 'bg-primary/10 text-primary' 
-                      : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5'
+                      ? 'bg-primary/20 text-primary' 
+                      : 'text-gray-600 dark:text-gray-300 hover:bg-white/10'
                   }`}
                 >
                   {item.name}
@@ -105,7 +105,7 @@ export default function Header() {
               <a 
                 href="/resume.pdf" 
                 target="_blank"
-                className="flex items-center gap-2 py-3 px-4 bg-primary text-white rounded-lg font-medium"
+                className="flex items-center gap-2 py-3 px-4 btn-primary rounded-lg font-medium"
               >
                 <Download size={16} />
                 Download Resume

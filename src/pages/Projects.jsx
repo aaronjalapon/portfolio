@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import ProjectCard from '../components/ProjectCard'
 import SectionHeader from '../components/SectionHeader'
 import SEO from '../components/SEO'
-import InteractiveHeroBg from '../components/InteractiveHeroBg'
 import { featuredProjects, otherProjects } from '../data/projects'
 
 export default function Projects() {
@@ -17,7 +16,6 @@ export default function Projects() {
       <div className="pt-20">
       {/* Hero */}
       <section className="section-padding relative overflow-hidden">
-        <InteractiveHeroBg />
         <div className="section-container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -63,7 +61,7 @@ export default function Projects() {
       </section>
 
       {/* Other Projects */}
-      <section className="section-padding bg-gray-50 dark:bg-dark-800">
+      <section className="section-padding transition-colors duration-300">
         <div className="section-container">
           <SectionHeader 
             title="Other Projects"

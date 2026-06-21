@@ -5,7 +5,6 @@ import SectionHeader from '../components/SectionHeader'
 import TimelineItem from '../components/TimelineItem'
 import { Timeline } from '../components/ui/timeline'
 import SEO from '../components/SEO'
-import InteractiveHeroBg from '../components/InteractiveHeroBg'
 
 const experiences = [
   {
@@ -196,7 +195,6 @@ export default function Experience() {
       <div className="pt-20">
       {/* Hero */}
       <section className="section-padding relative overflow-hidden">
-        <InteractiveHeroBg />
         <div className="section-container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -233,7 +231,7 @@ export default function Experience() {
       </section>
 
       {/* Volunteer & Community */}
-      <section className="section-padding bg-gray-50 dark:bg-dark-800">
+      <section className="section-padding transition-colors duration-300">
         <div className="section-container">
           <SectionHeader 
             title="Volunteer & Community"
@@ -380,13 +378,13 @@ export default function Experience() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-gradient-to-br from-primary/5 via-gray-100 to-gray-50 dark:from-primary/10 dark:via-dark-800 dark:to-dark-900 transition-colors duration-300">
+      <section className="section-padding transition-colors duration-300">
         <div className="section-container">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto text-center"
+            className="max-w-2xl mx-auto text-center glass-panel p-10 md:p-16 rounded-3xl"
           >
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Let's Work Together

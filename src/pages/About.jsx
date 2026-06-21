@@ -100,7 +100,7 @@ export default function About() {
       />
       <div className="pt-20">
       {/* Hero Section */}
-      <section className="section-padding bg-gray-50 dark:bg-dark-800">
+      <section className="section-padding transition-colors duration-300">
         <div className="section-container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
@@ -207,7 +207,7 @@ export default function About() {
       </section>
 
       {/* Recognitions */}
-      <section className="section-padding bg-gray-50 dark:bg-dark-800">
+      <section className="section-padding transition-colors duration-300">
         <div className="section-container">
           <SectionHeader 
             title="Press & Media"
@@ -270,7 +270,7 @@ export default function About() {
             {interests.map((interest) => (
               <span 
                 key={interest}
-                className="px-5 py-3 bg-white dark:bg-dark-700 text-gray-600 dark:text-gray-300 rounded-full border border-gray-200 dark:border-white/5 hover:border-primary/30 hover:text-primary transition-all"
+                className="px-5 py-3 glass rounded-full hover:border-primary/30 hover:text-primary transition-all"
               >
                 {interest}
               </span>
@@ -322,18 +322,18 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-gradient-to-br from-primary/5 via-gray-100 to-gray-50 dark:from-primary/10 dark:via-dark-800 dark:to-dark-900 transition-colors duration-300">
+      <section className="section-padding transition-colors duration-300">
         <div className="section-container">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto text-center"
+            className="max-w-2xl mx-auto text-center glass-panel p-10 md:p-16 rounded-3xl"
           >
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Want to Learn More?
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-8">
+            <p className="text-gray-600 dark:text-gray-300 mb-8">
               Check out my projects to see my work in action, or get in touch to discuss collaboration opportunities.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

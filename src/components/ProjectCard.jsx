@@ -19,7 +19,7 @@ export default function ProjectCard({ project }) {
       onClick={hasCaseStudy ? () => navigate(`/projects/${slug}`) : undefined}
     >
       {/* Image */}
-      <div className="relative h-48 md:h-56 -mx-6 -mt-6 mb-6 overflow-hidden bg-gray-100 dark:bg-dark-600">
+      <div className="relative h-48 md:h-56 -mx-6 -mt-6 mb-6 overflow-hidden bg-black/5 dark:bg-white/5">
         {image ? (
           <img 
             src={image} 
@@ -71,7 +71,7 @@ export default function ProjectCard({ project }) {
           {tags?.slice(0, 4).map((tag) => (
             <span 
               key={tag}
-              className="px-2 py-1 bg-gray-100 dark:bg-dark-600 text-gray-600 dark:text-gray-400 text-xs rounded"
+              className="px-2 py-1 bg-white/20 dark:bg-white/10 text-gray-700 dark:text-gray-300 text-xs rounded border border-white/20"
             >
               {tag}
             </span>

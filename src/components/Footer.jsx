@@ -18,7 +18,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-white dark:bg-dark-800 border-t border-gray-100 dark:border-white/5 transition-colors duration-300">
+    <footer className="glass-panel border-b-0 border-x-0 rounded-none transition-colors duration-300 mt-20">
       <div className="section-container py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
@@ -37,7 +37,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-gray-100 dark:bg-dark-700 rounded-lg text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:bg-gray-200 dark:hover:bg-dark-600 transition-all"
+                  className="p-2 glass-button rounded-lg text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
                   aria-label={social.label}
                 >
                   <social.icon size={18} />
@@ -96,13 +96,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-12 pt-8 border-t border-gray-200/50 dark:border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} Aaron Jalapon. All rights reserved.
           </p>
           <button
             onClick={scrollToTop}
-            className="p-2 bg-gray-100 dark:bg-dark-700 rounded-lg text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:bg-gray-200 dark:hover:bg-dark-600 transition-all"
+            className="p-2 glass-button rounded-lg text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary"
             aria-label="Scroll to top"
           >
             <ArrowUp size={20} />
