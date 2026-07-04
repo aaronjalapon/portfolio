@@ -1,15 +1,114 @@
-export const featuredProjects = [
+export const allProjects = [
   {
     title: 'TanUM Nanotech Solutions',
     slug: 'tanum',
     tagline: 'IoT + ML system for real-time soil monitoring and data-driven fertilizer recommendations that reduces waste and improves yields.',
     role: 'Software & ML Lead',
-    timeline: 'Jan 2025 — Present',
+    timeline: 'Jan 2025 - Present',
+    category: 'AgriTech',
+    status: 'Active pilot',
     tags: ['Python', 'IoT', 'Machine Learning', 'MQTT', 'React', 'Time-Series'],
     featured: true,
     image: '/tanum.png',
     link: 'https://tanum.vercel.app/',
     github: 'https://github.com/aaronjalapon/TanUM_NanoTechSolutions',
+    visual: { label: 'NPK', theme: 'emerald' },
+    caseStudyPath: '/projects/tanum',
+    caseStudy: {
+      template: 'generic',
+      eyebrow: 'AgriTech / IoT',
+      title: 'TanUM Nanotech Solutions',
+      subtitle: 'Smart Soil Monitoring & Nano Fertilizer Optimization',
+      overview: 'IoT, cloud, and ML system that monitors soil health in real time and gives automated fertilizer recommendations to reduce waste and improve yields.',
+      problem: 'Smallholder farmers and cooperatives often over-apply fertilizer because they lack timely, actionable soil data. Traditional soil testing is expensive, slow, and not designed for real-time decisions about application timing and quantity.',
+      solution: 'TanUM streams multi-parameter soil data from field devices into a cloud pipeline, stores cleaned readings, analyzes nutrient trends, and delivers fertilizer recommendations through a dashboard and SMS alerts.',
+      contribution: 'I designed and implemented the cloud ingestion flow, data cleaning, time-series storage approach, ML recommendation pipeline, dashboard integration, and low-bandwidth alert strategy.',
+      highlights: [
+        {
+          title: 'Data Ingestion',
+          description: 'MQTT and HTTP device streams feed a cloud pipeline for NPK, pH, moisture, EC, and temperature readings.',
+        },
+        {
+          title: 'ML Recommendations',
+          description: 'Feature engineering from soil time series supports nutrient trend analysis and optimized fertilizer guidance.',
+        },
+        {
+          title: 'Cloud Deployment',
+          description: 'Containerized services expose recommendation outputs through APIs used by the dashboard and notification layer.',
+        },
+        {
+          title: 'SMS Alerts',
+          description: 'Low-bandwidth notifications help farmers receive guidance even without consistent smartphone access.',
+        },
+      ],
+      outcomes: [
+        { label: 'Waste', value: '20-30%', description: 'Target fertilizer reduction for pilot farm workflows.' },
+        { label: 'Savings', value: '15-25%', description: 'Estimated input cost decrease for partner farms.' },
+        { label: 'Response', value: '24-48h', description: 'Faster visibility into nutrient issues than manual testing cycles.' },
+      ],
+      seoDescription: 'IoT and ML soil monitoring system for real-time fertilizer recommendations, cloud ingestion, and farmer alerts.',
+    },
+  },
+  {
+    title: 'IQueue',
+    slug: 'iqueue',
+    tagline: 'AI-powered bus boarding that forecasts demand, assigns seats, supports passengers, and verifies QR passes offline.',
+    role: 'Full-stack Developer / AI-ML Systems Developer',
+    timeline: 'May-Jun 2026',
+    category: 'Smart City',
+    status: 'Hackathon prototype',
+    tags: ['FastAPI', 'Next.js', 'PostgreSQL', 'Machine Learning', 'Prophet', 'PyTorch', 'LightGBM', 'XLM-RoBERTa', 'QR Security'],
+    featured: true,
+    visual: { label: 'AI', theme: 'indigo' },
+    caseStudyPath: '/projects/iqueue',
+    caseStudy: {
+      template: 'generic',
+      eyebrow: 'Smart City / Transportation',
+      title: 'IQueue',
+      subtitle: 'AI-Powered Smart Boarding Platform',
+      overview: 'IQueue is a smart boarding platform for inter-provincial bus terminals. It forecasts seven-day route demand, recommends operator actions for surge risk, assigns seats with explainable constraints, generates HMAC-signed QR boarding passes, and gives passengers a guided boarding experience.',
+      problem: 'Inter-provincial bus terminals often react only after crowds and boarding disputes have already formed. Passengers can face unclear queues, seat hoarding, missed boarding windows, and confusion about when they should arrive at the gate. Operators lack a single system that forecasts demand, recommends staffing or bus actions, assigns seats fairly, and verifies boarding passes even when connectivity is unreliable.',
+      solution: 'The prototype combines forecasting, seat assignment, QR verification, multilingual passenger support, and evidence tracking in one operations loop. Passengers get a recommended seat, boarding window, and signed pass, while operators inspect forecasts, accept or modify recommendations, record outcomes, and replay the learning loop.',
+      contribution: 'I built major full-stack and AI system pieces, including the FastAPI API structure, backend services for forecasting, seat assignment, and QR validation, Next.js passenger and operator flows, the model integration path, evidence view, and demo workflow.',
+      highlights: [
+        {
+          title: 'Hybrid Forecasting',
+          description: 'Prophet and LSTM route models forecast seven-day passenger demand, while a LightGBM surge gate estimates route risk and converts predictions into terminal actions.',
+        },
+        {
+          title: 'Smart Seat Assignment',
+          description: 'A deterministic engine ranks available seats using accessibility constraints, group proximity, preferences, opt-in affinity, and load balancing, then returns human-readable reasons.',
+        },
+        {
+          title: 'Trained Multilingual Chatbot',
+          description: 'A fine-tuned XLM-RoBERTa classifier supports English, Filipino, Bahasa Indonesia, and Vietnamese passenger intents for booking checks, requeue requests, departure info, surge questions, and fallback handling.',
+        },
+        {
+          title: 'Signed QR Boarding',
+          description: 'Boarding passes use HMAC-SHA256 signed payloads that can be scanned offline and rejected if tampered with.',
+        },
+      ],
+      outcomes: [
+        { label: 'Prototype', value: 'End-to-end', description: 'Passenger booking, operator dashboard, evidence view, and scanner flow.' },
+        { label: 'Chatbot', value: '0.8443', description: 'Overall holdout accuracy across 244 multilingual examples.' },
+        { label: 'Evidence', value: 'Responsible', description: 'Synthetic simulations and legacy metrics are labeled separately from field evidence.' },
+      ],
+      detailSections: [
+        {
+          title: 'Evidence & Limitations',
+          description: 'IQueue is not yet production-live and has not completed a real terminal field pilot. Current operational and forecasting data are synthetic or demo-based, and legacy metrics such as 61.33 MAE and 0.817 surge F1 should not be presented as untouched-test evidence.',
+        },
+        {
+          title: 'How the Chatbot Works',
+          description: 'The chatbot uses a multilingual XLM-RoBERTa intent classifier to map passenger messages in English, Filipino, Bahasa Indonesia, and Vietnamese into booking checks, requeue requests, departure info, surge questions, and fallback handling. The current evidence report flags surge_info recall as an area for improvement.',
+        },
+        {
+          title: 'Why Seat Assignment Is Smart',
+          description: 'The assignment engine does not simply pick the next open seat. It scores candidates by accessibility, group proximity, selected preferences, opt-in language/travel-habit/lifestyle affinity, and bus load balancing, then returns the selected seat, score breakdown, and assignment reasons.',
+        },
+      ],
+      seoDescription: 'AI smart boarding platform for bus terminals with surge forecasting, smart seat assignment, multilingual passenger support, QR passes, and operator evidence tracking.',
+    },
   },
   {
     title: 'Mindspace',
@@ -17,36 +116,300 @@ export const featuredProjects = [
     tagline: 'Privacy-first student mental health platform with guided meditations, curated resources, and moderated peer support.',
     role: 'Front-end Developer',
     timeline: '2024',
-    tags: ['Javascript', 'Accessibility', 'UX Design', 'Privacy-first'],
+    category: 'Mental Health',
+    status: 'Live site',
+    tags: ['JavaScript', 'Accessibility', 'UX Design', 'Privacy-first'],
     featured: true,
     image: '/mindspace.png',
     link: 'https://mindspace.infinityfreeapp.com/?i=1',
     github: 'https://github.com/aaronjalapon/Mental_Health_Support_Site',
+    visual: { label: 'MH', theme: 'violet' },
+    caseStudyPath: '/projects/mindspace',
+    caseStudy: {
+      template: 'generic',
+      eyebrow: 'Mental Health / UX',
+      title: 'Mindspace',
+      subtitle: 'Student Mental Health Support Platform',
+      overview: 'Privacy-first student mental health platform offering self-help resources, guided meditations, moderated peer support, and crisis help entry points.',
+      problem: 'Students face stress, stigma, privacy concerns, and limited access to mental-health resources. Existing support can be hard to navigate or feel unsafe for someone seeking help discreetly.',
+      solution: 'Mindspace gives students accessible resource discovery, guided meditation flows, moderated peer support, and fast crisis hotline access in a responsive front-end experience.',
+      contribution: 'I built the responsive front-end UI, translated mental-health advisor research into screens and interactions, and focused the experience on accessibility, privacy, and low-friction help seeking.',
+      highlights: [
+        {
+          title: 'Resource Discovery',
+          description: 'Search and filtering flows help students find mental-health resources and self-help content quickly.',
+        },
+        {
+          title: 'Guided Meditations',
+          description: 'Step-by-step meditation sessions support calmer interaction patterns and progress completion.',
+        },
+        {
+          title: 'Peer Support',
+          description: 'Moderated community threads create safer spaces for anonymous peer interaction.',
+        },
+        {
+          title: 'Accessible UI',
+          description: 'WCAG-minded layouts, keyboard navigation, focus states, and readable contrast guided the interface.',
+        },
+      ],
+      outcomes: [
+        { label: 'Completion', value: '25-35%', description: 'Estimated session-completion improvement after UI updates.' },
+        { label: 'Discovery', value: '40-55%', description: 'Estimated reduction in time to find a relevant resource.' },
+        { label: 'Privacy', value: 'A+', description: 'No public personally identifying information in community flows.' },
+      ],
+      seoDescription: 'Privacy-first student mental health platform with guided meditations, curated resources, peer support, and accessible design.',
+    },
   },
   {
     title: 'RealiTech',
     slug: 'realitech',
     tagline: 'End-to-end proptech ecosystem featuring a buyer-assistant chatbot to guide homebuyers through financing and documents.',
     role: 'Sprint Lead / Product Owner',
-    timeline: '2025 — Present',
+    timeline: '2025 - Present',
+    category: 'PropTech',
+    status: 'Live prototype',
     tags: ['Node.js', 'Chatbot', 'Product Management', 'UX'],
     featured: true,
     image: '/realitech.png',
     link: 'https://um-realitech-hackestate-1ed69.web.app/',
     github: 'https://github.com/aaronjalapon/UM-RealiTech-Frontend-RealEstate',
+    visual: { label: 'RE', theme: 'sky' },
+    caseStudyPath: '/projects/realitech',
+    caseStudy: {
+      template: 'generic',
+      eyebrow: 'PropTech / Product',
+      title: 'RealiTech',
+      subtitle: 'Proptech Ecosystem & Buyer Assistant Chatbot',
+      overview: 'Multi-solution proptech ecosystem featuring a buyer-assistant chatbot that guides homebuyers through financing, documents, routing, and post-sale steps.',
+      problem: 'Homebuyers deal with fragmented processes, unclear loan pre-qualification requirements, complex documentation, and poor visibility into post-sale construction tracking.',
+      solution: 'RealiTech combines buyer assistance, user profiling, financing guidance, agent/developer routing, construction progress tracking, and post-sale support into one prototype ecosystem.',
+      contribution: 'I led the one-week sprint, shaped the product roadmap, prototyped buyer-assistant chatbot flows, and integrated buyer-profiling logic for financing guidance.',
+      highlights: [
+        {
+          title: 'Buyer Assistant',
+          description: 'Chatbot flows guide users through loan pre-qualification, document checklists, and next-step clarity.',
+        },
+        {
+          title: 'User Profiling',
+          description: 'Profile outputs help match buyers with financing paths, property context, and appropriate support routes.',
+        },
+        {
+          title: 'Platform Modules',
+          description: 'DevTrackr, RealtyConnect, BuySmart PH, and post-sale services frame the broader proptech ecosystem.',
+        },
+        {
+          title: 'Sprint Prototype',
+          description: 'A focused one-week build turned concept, flows, and demo-ready product surfaces into a working prototype.',
+        },
+      ],
+      outcomes: [
+        { label: 'Pre-qual', value: '45-60%', description: 'Estimated reduction in guidance time for buyer pre-qualification.' },
+        { label: 'Clarity', value: '30-45%', description: 'Estimated lift in next-step confidence from guided flows.' },
+        { label: 'Sprint', value: '1 week', description: 'Prototype completed inside a compressed hackathon timeline.' },
+      ],
+      seoDescription: 'Proptech ecosystem with buyer-assistant chatbot, loan pre-qualification guidance, document support, and routing workflows.',
+    },
   },
-]
-
-export const otherProjects = [
+  {
+    title: 'AirFlow Sim',
+    slug: 'airflow-sim',
+    tagline: 'Real-time web simulator for HVAC duct airflow, pressure, velocity, and flow-rate analysis.',
+    role: 'Solo Developer / Simulation Engineer',
+    timeline: 'Apr-May 2026',
+    category: 'Engineering Simulation',
+    status: 'Local/Docker demo',
+    tags: ['React', 'FastAPI', 'WebSocket', 'D3.js', 'SciPy', 'NetworkX', 'CFD', 'Docker'],
+    featured: true,
+    visual: { label: 'CFD', theme: 'sky' },
+    caseStudyPath: '/projects/airflow-sim',
+    caseStudy: {
+      template: 'generic',
+      eyebrow: 'Engineering Simulation / HVAC',
+      title: 'AirFlow Sim',
+      subtitle: 'A Computational Fluid Dynamics-Based Simulation of HVAC Duct and Ventilation Pipeline Networks',
+      overview: 'AirFlow Sim models pressure, velocity, and volumetric flow in HVAC duct networks using simplified CFD and pipe-network theory. It streams solver convergence into an interactive React dashboard so users can inspect network behavior while the simulation runs.',
+      problem: 'HVAC duct networks can develop pressure imbalance, uneven airflow, excessive velocity, and inefficient fan operation. Hand calculations become slow and error-prone for complex layouts, while commercial CFD tools can be expensive and difficult for students or small teams to use.',
+      solution: 'The project turns duct systems into graph-based pressure networks, solves node pressures with SciPy sparse linear algebra, and visualizes live pressure, velocity, residuals, and tabular results through a full-stack dashboard.',
+      contribution: 'I built the backend simulation engine, API, WebSocket streaming flow, React visualization dashboard, validation tests, Docker setup, and supporting project documentation.',
+      highlights: [
+        {
+          title: 'Sparse CFD Solver',
+          description: 'Builds a conductance matrix from the duct graph, solves node pressures, then back-calculates duct velocities and flow rates.',
+        },
+        {
+          title: 'Live WebSocket Streaming',
+          description: 'Streams every solver iteration to the browser so users can watch pressure, velocity, and residual convergence update in real time.',
+        },
+        {
+          title: 'Interactive Network Visualization',
+          description: 'Uses D3 and Recharts to show a color-coded duct graph, live pressure and velocity charts, residual curves, and simulation tables.',
+        },
+        {
+          title: 'Physics Validation Suite',
+          description: 'Includes pytest benchmarks for duct pressure-drop behavior, branch rules, flow conservation, topology convergence, and solver stability.',
+        },
+      ],
+      outcomes: [
+        { label: 'Domain', value: 'HVAC CFD', description: 'Engineering simulation with simplified pressure-network physics.' },
+        { label: 'Interface', value: 'Live dashboard', description: 'React UI updates as the solver converges.' },
+        { label: 'Validation', value: 'pytest suite', description: 'Benchmarks cover core duct-network behaviors.' },
+      ],
+      seoDescription: 'Real-time HVAC airflow simulator using FastAPI, React, WebSockets, SciPy, NetworkX, and D3 to model duct pressure, velocity, and flow.',
+    },
+  },
+  {
+    title: 'podcastman',
+    slug: 'podcastman',
+    tagline: 'Convert articles into two-host podcast episodes with RAG agents and Google Cloud TTS.',
+    role: 'Full-stack AI Engineer / Solo Developer',
+    timeline: 'Feb-Mar 2026',
+    category: 'Generative AI',
+    status: 'Deployment-ready MVP',
+    tags: ['Python', 'FastAPI', 'Streamlit', 'LangGraph', 'LiteLLM', 'ChromaDB', 'Google Cloud TTS'],
+    featured: true,
+    visual: { label: 'RAG', theme: 'violet' },
+    caseStudyPath: '/projects/podcastman',
+    caseStudy: {
+      template: 'generic',
+      eyebrow: 'Generative AI / Audio AI',
+      title: 'podcastman',
+      subtitle: 'Blog-to-Podcast Conversion System',
+      overview: 'podcastman turns written articles into conversational podcast episodes. A user can paste a URL, raw text, or Markdown and receive a two-host MP3 episode instead of a plain summary or robotic read-aloud.',
+      problem: 'Long-form articles and blog posts are useful but inconvenient to consume while commuting, multitasking, or preferring audio. Basic text-to-speech tools often sound flat, and generic summarizers can lose source nuance.',
+      solution: 'The system combines source ingestion, RAG, LangGraph agents, dialogue parsing, Google Cloud Text-to-Speech, and audio post-processing to generate grounded two-host podcast episodes.',
+      contribution: 'I built the backend API, Streamlit frontend, RAG pipeline, LLM orchestration, TTS synthesis, audio assembly, tests, Dockerfiles, and Cloud Run deployment script.',
+      highlights: [
+        {
+          title: 'RAG Ingestion',
+          description: 'Accepts URL, raw text, or Markdown, normalizes content, chunks it, generates embeddings, and stores source-grounded context in ChromaDB.',
+        },
+        {
+          title: 'Agentic Script Pipeline',
+          description: 'Uses LangGraph to run generation, accuracy checking, storytelling enhancement, and engagement optimization as explicit stages.',
+        },
+        {
+          title: 'Two-Voice TTS',
+          description: 'Parses dialogue into speaker segments and synthesizes separate host voices with Google Cloud Text-to-Speech and SSML-style cues.',
+        },
+        {
+          title: 'Audio Assembly',
+          description: 'Normalizes and trims speech segments, inserts pauses, supports optional intro/outro audio, and exports a final MP3.',
+        },
+      ],
+      outcomes: [
+        { label: 'Input', value: 'URL/Text/MD', description: 'Multiple source formats feed the same generation pipeline.' },
+        { label: 'Pipeline', value: 'LangGraph', description: 'Generation, fact-checking, and enhancement run as explicit stages.' },
+        { label: 'Output', value: 'MP3', description: 'Two-host dialogue is synthesized and assembled into a downloadable episode.' },
+      ],
+      seoDescription: 'podcastman converts blog posts into two-host podcast MP3s using RAG agents, LangGraph, ChromaDB, and Google Cloud TTS.',
+    },
+  },
+  {
+    title: 'Crop Price Prediction (Senegal)',
+    slug: 'crop-price-prediction-senegal',
+    tagline: 'ML-powered Streamlit app that forecasts Senegal crop prices with confidence intervals.',
+    role: 'Machine Learning Engineer / Full-Stack Data App Developer',
+    timeline: '2025',
+    category: 'AgriTech',
+    status: 'Local Streamlit app',
+    tags: ['Python', 'Streamlit', 'XGBoost', 'scikit-learn', 'Time Series', 'AgriTech', 'Plotly'],
+    featured: true,
+    visual: { label: 'ML', theme: 'emerald' },
+    caseStudyPath: '/projects/crop-price-prediction-senegal',
+    caseStudy: {
+      template: 'generic',
+      eyebrow: 'AgriTech / Forecasting',
+      title: 'Crop Price Prediction (Senegal)',
+      subtitle: 'Machine Learning Forecasting App for Staple Crop Prices',
+      overview: 'Crop Price Prediction (Senegal) forecasts staple crop prices across Senegal markets. It trains and evaluates time-aware models, then exposes predictions through a Streamlit dashboard with price ranges, confidence scoring, and visual forecasts.',
+      problem: 'Food price volatility makes it difficult for farmers, traders, consumers, NGOs, and policymakers to plan around staple crop costs. Forecasting tools need to account for location, crop type, and seasonal behavior without leaking future information.',
+      solution: 'The project compares Random Forest and XGBoost models, uses chronological validation and TimeSeriesSplit, engineers seasonal and lag features, and serves predictions through an interactive Streamlit app.',
+      contribution: 'I handled data analysis, feature engineering, model training, evaluation, model serialization, and the Streamlit prediction interface.',
+      highlights: [
+        {
+          title: 'Time-Aware Validation',
+          description: 'Used chronological train/test splitting and 5-fold TimeSeriesSplit to evaluate the model in a way that better matches forecasting conditions.',
+        },
+        {
+          title: 'Seasonal Features',
+          description: 'Engineered cyclical month and day-of-week encodings so the model can learn seasonal price behavior.',
+        },
+        {
+          title: 'XGBoost Forecasting',
+          description: 'Tuned an XGBoost regressor with GridSearchCV and selected it over Random Forest after stronger test performance.',
+        },
+        {
+          title: 'Interactive Uncertainty',
+          description: 'Built a Streamlit dashboard that shows predicted XOF price, 95% confidence interval, confidence score, and time-series charts.',
+        },
+      ],
+      outcomes: [
+        { label: 'Features', value: '83', description: 'Temporal, lag, market, region, and crop features.' },
+        { label: 'Test R2', value: '0.981', description: 'Reported XGBoost test score on log-price predictions.' },
+        { label: 'Interface', value: 'Streamlit', description: 'Interactive dashboard with Plotly visualizations.' },
+      ],
+      seoDescription: 'ML-powered Streamlit app forecasting Senegal crop prices with XGBoost, time-series features, and confidence intervals.',
+    },
+  },
+  {
+    title: 'Flappy Bird Physics Demo',
+    slug: 'flappy-bird-physics',
+    tagline: 'Flutter mobile game that teaches gravity by letting players fly through planets with different physics.',
+    role: 'Flutter/Game Developer',
+    timeline: 'Physics class project, 2025/2026',
+    category: 'Educational Game',
+    status: 'Class project',
+    tags: ['Flutter', 'Dart', 'Mobile Game', 'Physics Simulation', 'EdTech', 'CustomPainter', 'SharedPreferences'],
+    featured: true,
+    github: 'https://github.com/aaronjalapon/flappy-bird-.git',
+    visual: { label: 'G', theme: 'amber' },
+    caseStudyPath: '/projects/flappy-bird-physics',
+    caseStudy: {
+      template: 'generic',
+      eyebrow: 'Educational Game / Physics Simulation',
+      title: 'Flappy Bird Physics Demo',
+      subtitle: 'Gravity Learning Through Playable Planetary Motion',
+      overview: 'Flappy Bird Physics Demo teaches gravity by making players feel how motion changes across Space, the Moon, Earth, Jupiter, and other environments. It turns acceleration, velocity, and force into a playable challenge with live physics readouts, custom gravity experiments, achievements, and quizzes.',
+      problem: 'Physics concepts like gravity, velocity, and acceleration can feel abstract when students only see formulas. A familiar game loop gives learners a more tangible way to experience how gravity changes motion.',
+      solution: 'The project adapts Flappy Bird-style gameplay into planetary environments with different gravity values, live motion data, custom gravity settings, quiz-based revival, achievements, and persistent progress.',
+      contribution: 'I contributed as a Flutter developer focused on gameplay, UI, and physics implementation.',
+      highlights: [
+        {
+          title: 'Gravity Engine',
+          description: 'Uses real-world gravity values for each environment and converts them into playable acceleration through per-map multipliers.',
+        },
+        {
+          title: 'Canvas Gameplay',
+          description: 'Renders birds, pipes, stars, and immunity effects with Flutter CustomPainter to keep gameplay lightweight and custom.',
+        },
+        {
+          title: 'Learning Loop',
+          description: 'Combines real-time velocity and acceleration display, physics facts, and quiz revival so learning happens inside gameplay.',
+        },
+        {
+          title: 'Persistent Progress',
+          description: 'Tracks achievements, best scores, attempts, environments played, and bird customization locally with shared_preferences.',
+        },
+      ],
+      outcomes: [
+        { label: 'Environments', value: '8+', description: 'Planetary maps and custom gravity experiments.' },
+        { label: 'Gravity Lab', value: '0.1-50 m/s^2', description: 'Custom range for experimentation.' },
+        { label: 'Platform', value: 'Flutter', description: 'Cross-platform mobile/web-ready game implementation.' },
+      ],
+      seoDescription: 'Flutter physics game that teaches gravity through planetary Flappy Bird levels, live motion data, custom gravity, quizzes, and achievements.',
+    },
+  },
   {
     title: 'GoalBuddy',
     slug: 'goalbuddy',
     tagline: 'Goal tracking and habit formation app with personalized insights and social accountability features.',
     role: 'Full-stack Developer',
     timeline: '2024',
+    category: 'Productivity',
+    status: 'Portfolio card',
     tags: ['React', 'Node.js', 'MongoDB'],
-    featured: false,
-    image: '/goalbuddy-preview.png',
+    featured: true,
+    visual: { label: 'GB', theme: 'rose' },
   },
   {
     title: 'TanimPro',
@@ -54,8 +417,21 @@ export const otherProjects = [
     tagline: 'Climate-smart agriculture platform providing weather forecasts and farming recommendations.',
     role: 'Developer',
     timeline: '2024',
+    category: 'AgriTech',
+    status: 'Portfolio card',
     tags: ['Python', 'API Integration', 'Data Viz'],
-    featured: false,
-    image: '/tanimpro-preview.png',
+    featured: true,
+    visual: { label: 'TP', theme: 'green' },
   },
 ]
+
+export const spotlightProjects = allProjects.filter((project) =>
+  ['tanum', 'mindspace', 'realitech'].includes(project.slug)
+)
+
+export const caseStudyProjects = allProjects.filter((project) => project.caseStudyPath)
+
+export const featuredProjects = allProjects
+export const otherProjects = []
+
+export const getProjectBySlug = (slug) => allProjects.find((project) => project.slug === slug)

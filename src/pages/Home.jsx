@@ -5,7 +5,7 @@ import SectionHeader from '../components/SectionHeader'
 import ProjectCard from '../components/ProjectCard'
 import SEO from '../components/SEO'
 import { TextGenerateEffect } from '../components/ui/text-generate-effect'
-import { featuredProjects } from '../data/projects'
+import { spotlightProjects } from '../data/projects'
 import { socialLinks } from '../data/socials'
 
 export default function Home() {
@@ -118,11 +118,11 @@ export default function Home() {
         <div className="section-container">
           <SectionHeader 
             title="Featured Projects"
-            subtitle="Spotlight on TanUM Nanotech Solutions, Mindspace, and RealiTech — my most impactful work in Web, ML, and product development."
+            subtitle="Spotlight on selected case studies, with the full searchable project library one click away."
           />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredProjects.map((project, index) => (
+            {spotlightProjects.map((project, index) => (
               <motion.div
                 key={project.slug}
                 initial={{ opacity: 0, y: 30 }}

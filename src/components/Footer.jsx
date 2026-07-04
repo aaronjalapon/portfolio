@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowUp } from 'lucide-react'
 import { socialLinks } from '../data/socials'
-import { featuredProjects } from '../data/projects'
+import { caseStudyProjects } from '../data/projects'
 
 const quickLinks = [
   { name: 'About', href: '/about' },
@@ -10,7 +10,12 @@ const quickLinks = [
   { name: 'Contact', href: '/contact' },
 ]
 
-const footerProjects = featuredProjects.map(p => ({ name: p.title.replace(' Nanotech Solutions', ' Nanotech'), href: `/projects/${p.slug}` }))
+const footerProjects = caseStudyProjects.map((project) => ({
+  name: project.title
+    .replace(' Nanotech Solutions', ' Nanotech')
+    .replace('Crop Price Prediction (Senegal)', 'Crop Price Prediction'),
+  href: project.caseStudyPath,
+}))
 
 export default function Footer() {
   const scrollToTop = () => {
