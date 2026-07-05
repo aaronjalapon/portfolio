@@ -1,41 +1,10 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Download, ArrowRight, Briefcase, GraduationCap, Heart } from 'lucide-react'
+import { Download, ArrowRight, Briefcase, GraduationCap } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import TimelineItem from '../components/TimelineItem'
 import { Timeline } from '../components/ui/timeline'
 import SEO from '../components/SEO'
-
-const experiences = [
-  {
-    title: 'Software & ML Lead',
-    organization: 'TanUM Nanotech Solutions',
-    period: 'September 2025 — Present',
-    description: 'Designed and implemented cloud-based ingestion and visualization platform for IoT soil sensors. Built and deployed ML models that generate automated fertilizer recommendations integrated into a web dashboard and SMS alert system.',
-    type: 'work',
-  },
-  {
-    title: 'Sprint Lead / Product Owner',
-    organization: 'RealiTech',
-    period: 'July 2025 — Present',
-    description: 'Led sprint to prototype a buyer-assistant chatbot that guides users through loan pre-qualification and documentation. Coordinated product roadmap and integrations across four RealiTech modules.',
-    type: 'work',
-  },
-  {
-    title: 'Front-end Developer',
-    organization: 'Mindspace',
-    period: 'Jan - March 2025',
-    description: 'Built responsive, privacy-forward front-end UI for a student mental-health platform; implemented resource discovery and crisis support flows. Collaborated with mental-health professionals to translate clinical guidance into usable interfaces.',
-    type: 'work',
-  },
-  {
-    title: 'BS Computer Science',
-    organization: 'University',
-    period: '2023 — Present',
-    description: 'Pursuing a Bachelor of Science in Computer Science with focus on AI/ML, software engineering, and product development.',
-    type: 'education',
-  },
-]
 
 const volunteerExperiences = [
   {
@@ -78,11 +47,19 @@ const resumeHighlights = [
     ]
   },
   {
-    category: 'Mindspace',
+    category: 'IQueue',
     bullets: [
-      'Built responsive, privacy-forward front-end UI for student mental-health platform',
-      'Implemented resource discovery, guided meditations, and crisis support flows',
-      'Collaborated with mental-health professionals on clinical UX patterns',
+      'Built full-stack passenger and operator flows for an AI smart boarding platform',
+      'Integrated forecasting, seat assignment, and signed QR boarding validation services',
+      'Connected multilingual passenger support with evidence-aware demo workflows',
+    ]
+  },
+  {
+    category: 'Banana Grading System',
+    bullets: [
+      'Trained Faster R-CNN detector for banana localization in RGB images',
+      'Built VGG16 transfer-learning classifiers for maturity, quality, size, and view',
+      'Shipped a Streamlit grading interface with confidence scores and visual results',
     ]
   },
   {
@@ -93,93 +70,157 @@ const resumeHighlights = [
       'Designed user profiling and document checklist generation features',
     ]
   },
-]
-
-// Transform experiences into Timeline format grouped by year
-const timelineData = [
   {
-    title: "2025",
-    content: (
-      <div className="space-y-6">
-        <div className="card">
-          <div className="flex items-start gap-3 mb-3">
-            <div className="p-2 bg-primary/10 rounded-lg">
-              <Briefcase className="text-primary" size={20} />
-            </div>
-            <div className="flex-1">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Software & ML Lead</h3>
-                <span className="text-sm text-gray-500">September 2025 — Present</span>
-              </div>
-              <p className="text-primary font-medium text-sm mb-3">TanUM Nanotech Solutions</p>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
-                Designed and implemented cloud-based ingestion and visualization platform for IoT soil sensors. 
-                Built and deployed ML models that generate automated fertilizer recommendations integrated into a web dashboard and SMS alert system.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div className="card">
-          <div className="flex items-start gap-3 mb-3">
-            <div className="p-2 bg-primary/10 rounded-lg">
-              <Briefcase className="text-primary" size={20} />
-            </div>
-            <div className="flex-1">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Sprint Lead / Product Owner</h3>
-                <span className="text-sm text-gray-500">July 2025 — Present</span>
-              </div>
-              <p className="text-primary font-medium text-sm mb-3">RealiTech</p>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
-                Led sprint to prototype a buyer-assistant chatbot that guides users through loan pre-qualification and documentation. 
-                Coordinated product roadmap and integrations across four RealiTech modules.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div className="card">
-          <div className="flex items-start gap-3 mb-3">
-            <div className="p-2 bg-primary/10 rounded-lg">
-              <Briefcase className="text-primary" size={20} />
-            </div>
-            <div className="flex-1">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Front-end Developer</h3>
-                <span className="text-sm text-gray-500">Jan - March 2025</span>
-              </div>
-              <p className="text-primary font-medium text-sm mb-3">Mindspace</p>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
-                Built responsive, privacy-forward front-end UI for a student mental-health platform; implemented resource discovery and crisis support flows. 
-                Collaborated with mental-health professionals to translate clinical guidance into usable interfaces.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    ),
+    category: 'podcastman',
+    bullets: [
+      'Built article ingestion for URL, raw text, and Markdown sources',
+      'Orchestrated RAG and LangGraph stages for grounded two-host podcast scripts',
+      'Implemented TTS synthesis, audio assembly, tests, and deployment scripts',
+    ]
   },
   {
-    title: "2023",
-    content: (
-      <div className="card">
-        <div className="flex items-start gap-3">
-          <div className="p-2 bg-blue-400/10 rounded-lg">
-            <GraduationCap className="text-blue-400" size={20} />
+    category: 'Crop Price Prediction',
+    bullets: [
+      'Engineered time-aware market, crop, seasonal, and lag features for forecasting',
+      'Compared Random Forest and XGBoost with chronological validation and TimeSeriesSplit',
+      'Built a Streamlit dashboard with predictions, confidence intervals, and Plotly charts',
+    ]
+  },
+]
+
+const projectMilestones = {
+  2026: [
+    {
+      title: 'IQueue',
+      period: 'May-Jun 2026',
+      role: 'Full-stack Developer / AI-ML Systems Developer',
+      description: 'Built major full-stack and AI system pieces for smart bus boarding: forecasting services, seat assignment, signed QR validation, passenger/operator flows, and demo workflow.',
+    },
+    {
+      title: 'AirFlow Sim',
+      period: 'Apr-May 2026',
+      role: 'Solo Developer / Simulation Engineer',
+      description: 'Built a real-time HVAC airflow simulator with a FastAPI solver, WebSocket streaming, React visualization dashboard, validation tests, and Docker setup.',
+    },
+    {
+      title: 'podcastman',
+      period: 'Feb-Mar 2026',
+      role: 'Full-stack AI Engineer / Solo Developer',
+      description: 'Built a blog-to-podcast system with source ingestion, RAG, LangGraph orchestration, Google Cloud TTS synthesis, audio assembly, tests, and deployment scripts.',
+    },
+    {
+      title: 'Banana Grading System',
+      period: 'Jan-Mar 2026',
+      role: 'Sole Developer / ML Engineer',
+      description: 'Built a Streamlit computer-vision workflow that detects banana regions, crops them automatically, and grades maturity, quality, size, and view with PyTorch models.',
+    },
+  ],
+  2025: [
+    {
+      title: 'TanUM Nanotech Solutions',
+      period: 'Aug 2025 - Present',
+      role: 'Software & ML Lead',
+      description: 'Designed cloud ingestion, data cleaning, time-series storage, ML recommendation logic, dashboard integration, and low-bandwidth SMS alerts for IoT soil monitoring.',
+    },
+    {
+      title: 'RealiTech',
+      period: 'Aug-Sep 2025',
+      role: 'Sprint Lead / Product Owner',
+      description: 'Led a compressed proptech sprint, shaped the product roadmap, prototyped buyer-assistant chatbot flows, and integrated buyer-profiling logic for financing guidance.',
+    },
+    {
+      title: 'Crop Price Prediction (Senegal)',
+      period: 'Nov-Dec 2025',
+      role: 'Machine Learning Engineer / Full-Stack Data App Developer',
+      description: 'Handled data analysis, time-aware feature engineering, model training, evaluation, serialization, and a Streamlit forecasting interface for staple crop prices.',
+    },
+    {
+      title: 'Flappy Bird Physics Demo',
+      period: 'Nov-Dec 2025',
+      role: 'Flutter/Game Developer',
+      description: 'Built gameplay, UI, and physics systems for a Flutter game that teaches gravity through planetary motion, live physics readouts, quizzes, and persistent progress.',
+    },
+    {
+      title: 'Mindspace',
+      period: 'Jan-Mar 2025',
+      role: 'Front-end Developer',
+      description: 'Built a responsive, privacy-forward mental-health interface with resource discovery, guided meditation flows, moderated peer support, and crisis help entry points.',
+    },
+    {
+      title: 'TanimPro',
+      period: 'Jan 2025',
+      role: 'Developer',
+      description: 'Contributed to a climate-smart agriculture platform focused on weather forecasts, farming recommendations, API integration, and data visualization.',
+    },
+  ],
+  2024: [
+    {
+      title: 'GoalBuddy',
+      period: 'Nov 2024',
+      role: 'Full-stack Developer',
+      description: 'Built a productivity app concept for goal tracking, habit formation, personalized insights, and social accountability using a React, Node.js, and MongoDB stack.',
+    },
+  ],
+}
+
+function TimelineCard({ item, type = 'project' }) {
+  const Icon = type === 'education' ? GraduationCap : Briefcase
+  const iconClass = type === 'education' ? 'text-blue-400' : 'text-primary'
+  const iconBgClass = type === 'education' ? 'bg-blue-400/10' : 'bg-primary/10'
+  const roleClass = type === 'education' ? 'text-blue-400' : 'text-primary'
+
+  return (
+    <div className="card">
+      <div className="flex items-start gap-3">
+        <div className={`p-2 ${iconBgClass} rounded-lg`}>
+          <Icon className={iconClass} size={20} />
+        </div>
+        <div className="flex-1">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{item.title}</h3>
+            <span className="text-sm text-gray-500">{item.period}</span>
           </div>
-          <div className="flex-1">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">BS Computer Science</h3>
-              <span className="text-sm text-gray-500">2023 — Present</span>
-            </div>
-            <p className="text-blue-400 font-medium text-sm mb-3">University</p>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Pursuing a Bachelor of Science in Computer Science with focus on AI/ML, software engineering, and product development.
-            </p>
-          </div>
+          <p className={`${roleClass} font-medium text-sm mb-3`}>{item.role}</p>
+          <p className="text-gray-600 dark:text-gray-400 text-sm">{item.description}</p>
         </div>
       </div>
+    </div>
+  )
+}
+
+const renderProjectMilestones = (items) => (
+  <div className="space-y-6">
+    {items.map((item) => (
+      <TimelineCard key={item.title} item={item} />
+    ))}
+  </div>
+)
+
+const timelineData = [
+  {
+    title: '2026',
+    content: renderProjectMilestones(projectMilestones[2026]),
+  },
+  {
+    title: '2025',
+    content: renderProjectMilestones(projectMilestones[2025]),
+  },
+  {
+    title: '2024',
+    content: renderProjectMilestones(projectMilestones[2024]),
+  },
+  {
+    title: '2023',
+    content: (
+      <TimelineCard
+        type="education"
+        item={{
+          title: 'BS Computer Science',
+          period: '2023 — Present',
+          role: 'University',
+          description: 'Pursuing a Bachelor of Science in Computer Science with focus on AI/ML, software engineering, and product development.',
+        }}
+      />
     ),
   },
 ]
@@ -189,7 +230,7 @@ export default function Experience() {
     <>
       <SEO
         title="Experience"
-        description="Professional experience and career timeline of Aaron Jalapon — Software & ML Lead at TanUM, Sprint Lead at RealiTech, and more."
+        description="Project milestones and experience timeline of Aaron Jalapon — Software & ML Lead at TanUM, builder of IQueue, RealiTech, Mindspace, and more."
         url="/experience"
       />
       <div className="pt-20">
@@ -208,7 +249,7 @@ export default function Experience() {
               Experience & <span className="gradient-text">Timeline</span>
             </h1>
             <p className="text-gray-600 dark:text-gray-400 text-lg mb-8">
-              My professional journey in software development, machine learning, and product leadership.
+              My project-building journey across software development, machine learning, simulation, and product leadership.
             </p>
             <a href="/resume.pdf" target="_blank" className="btn-primary gap-2">
               <Download size={18} />
@@ -223,7 +264,7 @@ export default function Experience() {
         <div className="section-container">
           <SectionHeader 
             title="Timeline"
-            subtitle="Key roles and milestones in my career."
+            subtitle="Key projects and milestones from my portfolio."
           />
 
           <Timeline data={timelineData} />
