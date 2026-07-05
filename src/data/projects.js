@@ -111,6 +111,68 @@ export const allProjects = [
     },
   },
   {
+    title: 'Banana Grading System',
+    slug: 'banana-grading-system',
+    tagline: 'Streamlit computer-vision system that detects bananas in RGB images and grades maturity, quality, size, and view with deep learning.',
+    role: 'Sole Developer / ML Engineer',
+    timeline: 'Jan-Mar 2026',
+    category: 'Computer Vision',
+    status: 'Completed academic prototype',
+    tags: ['Python', 'PyTorch', 'Torchvision', 'Streamlit', 'Computer Vision', 'Faster R-CNN', 'VGG16', 'Deep Learning', 'Object Detection', 'AgriTech', 'COCO Evaluation'],
+    featured: true,
+    github: 'https://github.com/aaronjalapon/banana-grading.git',
+    visual: { label: 'CV', theme: 'amber' },
+    caseStudyPath: '/projects/banana-grading-system',
+    caseStudy: {
+      template: 'generic',
+      eyebrow: 'Computer Vision / AgriTech',
+      title: 'Non-invasive Grading System for Banana Tiers using RGB Imaging and Deep Learning',
+      subtitle: 'Two-Stage Banana Detection and Quality Grading Prototype',
+      overview: 'A local Streamlit prototype that detects banana regions in RGB images, crops them automatically, and grades maturity, quality, size, and front/back view using PyTorch deep-learning models.',
+      problem: 'Manual banana grading can be slow, subjective, and inconsistent across farms, packhouses, and inspection workflows. Existing approaches often depend on hand measurements, individual banana fingers, or pre-cropped images rather than a practical image-level grading flow.',
+      solution: 'The system separates localization from grading. Faster R-CNN first finds banana regions in uploaded RGB images, then VGG16 transfer-learning heads classify each crop for maturity, quality, size, and view while the Streamlit interface shows boxes, confidence scores, probabilities, and summaries.',
+      contribution: 'I built the training and evaluation workflow, Faster R-CNN detector, VGG16 classifier deployment code, Streamlit interface, saved model integration, result visualization, and automated tests for model utilities and training components.',
+      highlights: [
+        {
+          title: 'Faster R-CNN Localization',
+          description: 'Trained a Faster R-CNN ResNet50-FPN-v2 detector that reached 0.9675 mAP@0.50:0.95 and detected all 54 held-out test images.',
+        },
+        {
+          title: 'VGG16 Attribute Grading',
+          description: 'Built separate transfer-learning classifiers for maturity, quality, size, and front/back view instead of forcing one monolithic label space.',
+        },
+        {
+          title: 'Ensemble and TTA Inference',
+          description: 'Added optional top-5 ensemble inference and 16-view test-time augmentation controls to improve prediction robustness for small datasets.',
+        },
+        {
+          title: 'Evaluation Artifact Pipeline',
+          description: 'Exported COCO metrics, classification reports, confusion matrices, per-class accuracy tables, and training-history visualizations.',
+        },
+      ],
+      outcomes: [
+        { label: 'Detector mAP', value: '0.9675', description: 'mAP@0.50:0.95 on the held-out detection test split.' },
+        { label: 'Detection', value: '100%', description: 'All 54 held-out test images had banana detections.' },
+        { label: 'Grading', value: '82.5-97.8%', description: 'Best-method classifier accuracy range across maturity, quality, size, and view.' },
+      ],
+      detailSections: [
+        {
+          title: 'Dataset & Evidence Limits',
+          description: 'The project is an academic prototype, not a production deployment. Results come from held-out image evaluation and exported artifacts, with no field pilot or tracked production users yet.',
+        },
+        {
+          title: 'Inference Workflow',
+          description: 'Users upload an RGB image, adjust detection confidence or crop padding, run detection, then review annotated boxes plus maturity, quality, size, and view probabilities for each crop.',
+        },
+        {
+          title: 'Next Improvements',
+          description: 'A larger balanced dataset, hosted demo, calibrated confidence scores, and cleaner comparisons between single-model and ensemble/TTA modes would strengthen the next version.',
+        },
+      ],
+      seoDescription: 'Streamlit computer-vision case study for detecting bananas and grading maturity, quality, size, and view using Faster R-CNN and VGG16 transfer learning.',
+    },
+  },
+  {
     title: 'Mindspace',
     slug: 'mindspace',
     tagline: 'Privacy-first student mental health platform with guided meditations, curated resources, and moderated peer support.',
@@ -426,7 +488,7 @@ export const allProjects = [
 ]
 
 export const spotlightProjects = allProjects.filter((project) =>
-  ['tanum', 'mindspace', 'realitech'].includes(project.slug)
+  ['tanum', 'iqueue', 'banana-grading-system', 'mindspace'].includes(project.slug)
 )
 
 export const caseStudyProjects = allProjects.filter((project) => project.caseStudyPath)

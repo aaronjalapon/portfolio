@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <SEO
         title="Home"
-        description="Aaron Jalapon Arquillano — Software & ML Engineer building user-first web apps and AI systems. Portfolio featuring TanUM, Mindspace, and RealiTech projects."
+        description="Aaron Jalapon Arquillano — Software & ML Engineer building user-first web apps and AI systems. Portfolio featuring TanUM, IQueue, Banana Grading, and Mindspace projects."
         url="/"
       />
       {/* Hero Section */}
@@ -121,7 +121,7 @@ export default function Home() {
             subtitle="Spotlight on selected case studies, with the full searchable project library one click away."
           />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
             {spotlightProjects.map((project, index) => (
               <motion.div
                 key={project.slug}
@@ -129,6 +129,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="h-full"
               >
                 <ProjectCard project={project} />
               </motion.div>
@@ -166,8 +167,9 @@ export default function Home() {
                 focused on AI/ML-driven solutions and user-centered front ends. I build software 
                 that bridges technical innovation and real-world impact — examples include 
                 <span className="text-primary"> TanUM</span> (smart soil & fertilizer optimization), 
-                <span className="text-primary"> Mindspace</span> (student mental-health UI), and 
-                <span className="text-primary"> RealiTech</span> (proptech ecosystem). 
+                <span className="text-primary"> Banana Grading</span> (computer-vision quality inspection),
+                <span className="text-primary"> IQueue</span> (AI-powered smart boarding), and
+                <span className="text-primary"> Mindspace</span> (student mental-health UI).
                 I'm passionate about sustainable tech, practical ML, and shipping polished, 
                 maintainable code.
               </p>

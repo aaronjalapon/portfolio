@@ -62,7 +62,7 @@ export default function Projects() {
     <>
       <SEO
         title="Projects"
-        description="Featured software, AI, ML, IoT, simulation, and web projects by Aaron Jalapon, including TanUM, Mindspace, RealiTech, AirFlow Sim, IQueue, podcastman, and more."
+        description="Featured software, AI, ML, IoT, computer vision, simulation, and web projects by Aaron Jalapon, including TanUM, IQueue, Banana Grading, Mindspace, AirFlow Sim, podcastman, and more."
         url="/projects"
       />
       <div className="pt-20">
@@ -186,6 +186,7 @@ export default function Projects() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.05 }}
+                    className="h-full"
                   >
                     <ProjectCard project={project} />
                   </motion.div>

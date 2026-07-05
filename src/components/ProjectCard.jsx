@@ -51,7 +51,7 @@ export default function ProjectCard({ project }) {
 
   return (
     <article
-      className={`group card card-hover block overflow-hidden ${hasCaseStudy ? 'cursor-pointer' : ''}`}
+      className={`group card card-hover h-full flex flex-col overflow-hidden ${hasCaseStudy ? 'cursor-pointer' : ''}`}
       onClick={handleCardClick}
     >
       {/* Image */}
@@ -83,7 +83,7 @@ export default function ProjectCard({ project }) {
       </div>
 
       {/* Content */}
-      <div>
+      <div className="flex flex-1 flex-col">
         <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors mb-2">
           {title}
         </h3>
@@ -120,7 +120,7 @@ export default function ProjectCard({ project }) {
         </div>
 
         {/* CTA */}
-        <div className="flex items-center gap-4 pt-4 border-t border-gray-100 dark:border-white/5">
+        <div className="mt-auto flex items-center gap-4 pt-4 border-t border-gray-100 dark:border-white/5">
           {hasCaseStudy && (
             <button
               type="button"

@@ -10,7 +10,7 @@ const SEO = ({
 }) => {
   const siteUrl = 'https://aaron-jalapon.vercel.app'; // Update with your actual domain
   const siteName = 'Aaron Jalapon — Software & ML Engineer';
-  const defaultDescription = 'TanUM, Mindspace, RealiTech — IoT + ML + front-end engineering by Aaron Jalapon. Software & ML Engineer | Product-minded Developer';
+  const defaultDescription = 'TanUM, IQueue, Banana Grading, and Mindspace — AI, ML, IoT, and front-end engineering by Aaron Jalapon. Software & ML Engineer | Product-minded Developer';
   
   const seo = {
     title: title ? `${title} | Aaron Jalapon` : siteName,
