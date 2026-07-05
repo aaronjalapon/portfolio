@@ -55,7 +55,7 @@ export default function ProjectCard({ project }) {
       onClick={handleCardClick}
     >
       {/* Image */}
-      <div className="relative h-48 md:h-56 -mx-6 -mt-6 mb-6 overflow-hidden bg-black/5 dark:bg-white/5">
+      <div className="relative h-48 md:h-56 -mx-6 -mt-6 mb-6 overflow-hidden bg-gray-100 dark:bg-dark-900 border-b border-white/30 dark:border-white/10">
         {image ? (
           <img 
             src={image} 
@@ -63,7 +63,7 @@ export default function ProjectCard({ project }) {
             loading="lazy"
             width={400}
             height={224}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
           <div className={`w-full h-full bg-gradient-to-br ${visualClass} flex flex-col items-center justify-center text-center px-6`}>
@@ -76,7 +76,7 @@ export default function ProjectCard({ project }) {
           </div>
         )}
         {category && (
-          <span className="absolute top-4 right-4 px-3 py-1 bg-primary/90 text-white text-xs font-semibold rounded-lg">
+          <span className="absolute top-4 right-4 px-3 py-1 bg-dark-900/75 dark:bg-black/55 text-white text-xs font-semibold rounded-lg backdrop-blur-md border border-white/20 shadow-lg">
             {category}
           </span>
         )}

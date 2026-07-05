@@ -151,22 +151,39 @@ export default function ProjectCaseStudy() {
                 transition={{ delay: 0.2 }}
                 className={`relative min-h-[320px] overflow-hidden rounded-lg border border-white/20 dark:border-white/10 bg-gradient-to-br ${theme.panel}`}
               >
-                <div className="absolute inset-0 bg-white/40 dark:bg-black/20" />
-                <div className="relative h-full min-h-[320px] flex flex-col justify-between p-8">
-                  <div>
-                    <span className="inline-flex px-3 py-1 rounded-lg bg-white/60 dark:bg-dark-900/60 text-xs font-semibold text-gray-700 dark:text-gray-200">
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    className="h-full min-h-[320px] w-full object-cover"
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-white/40 dark:bg-black/20" />
+                    <div className="relative h-full min-h-[320px] flex flex-col justify-between p-8">
+                      <div>
+                        <span className="inline-flex px-3 py-1 rounded-lg bg-white/60 dark:bg-dark-900/60 text-xs font-semibold text-gray-700 dark:text-gray-200">
+                          {project.status}
+                        </span>
+                      </div>
+                      <div>
+                        <p className="text-7xl md:text-8xl font-black text-gray-900/10 dark:text-white/10 mb-4">
+                          {project.visual?.label || project.title.slice(0, 2).toUpperCase()}
+                        </p>
+                        <p className="text-gray-700 dark:text-gray-200 text-lg max-w-md">
+                          {project.tagline}
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                )}
+                {project.image && project.status && (
+                  <div className="absolute left-4 top-4">
+                    <span className="inline-flex px-3 py-1 rounded-lg bg-dark-900/75 dark:bg-black/55 text-xs font-semibold text-white backdrop-blur-md border border-white/20 shadow-lg">
                       {project.status}
                     </span>
                   </div>
-                  <div>
-                    <p className="text-7xl md:text-8xl font-black text-gray-900/10 dark:text-white/10 mb-4">
-                      {project.visual?.label || project.title.slice(0, 2).toUpperCase()}
-                    </p>
-                    <p className="text-gray-700 dark:text-gray-200 text-lg max-w-md">
-                      {project.tagline}
-                    </p>
-                  </div>
-                </div>
+                )}
               </motion.div>
             </div>
           </div>

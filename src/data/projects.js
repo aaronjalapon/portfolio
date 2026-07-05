@@ -59,6 +59,7 @@ export const allProjects = [
     status: 'Hackathon prototype',
     tags: ['FastAPI', 'Next.js', 'PostgreSQL', 'Machine Learning', 'Prophet', 'PyTorch', 'LightGBM', 'XLM-RoBERTa', 'QR Security'],
     featured: true,
+    image: '/iqueue.png',
     visual: { label: 'AI', theme: 'indigo' },
     caseStudyPath: '/projects/iqueue',
     caseStudy: {
@@ -121,6 +122,7 @@ export const allProjects = [
     tags: ['Python', 'PyTorch', 'Torchvision', 'Streamlit', 'Computer Vision', 'Faster R-CNN', 'VGG16', 'Deep Learning', 'Object Detection', 'AgriTech', 'COCO Evaluation'],
     featured: true,
     github: 'https://github.com/aaronjalapon/banana-grading.git',
+    image: '/banana-grading.png',
     visual: { label: 'CV', theme: 'amber' },
     caseStudyPath: '/projects/banana-grading-system',
     caseStudy: {
@@ -282,6 +284,7 @@ export const allProjects = [
     status: 'Local/Docker demo',
     tags: ['React', 'FastAPI', 'WebSocket', 'D3.js', 'SciPy', 'NetworkX', 'CFD', 'Docker'],
     featured: true,
+    image: '/airflow-sim.png',
     visual: { label: 'CFD', theme: 'sky' },
     caseStudyPath: '/projects/airflow-sim',
     caseStudy: {
@@ -329,6 +332,7 @@ export const allProjects = [
     status: 'Deployment-ready MVP',
     tags: ['Python', 'FastAPI', 'Streamlit', 'LangGraph', 'LiteLLM', 'ChromaDB', 'Google Cloud TTS'],
     featured: true,
+    image: '/podcastman.png',
     visual: { label: 'RAG', theme: 'violet' },
     caseStudyPath: '/projects/podcastman',
     caseStudy: {
@@ -376,6 +380,7 @@ export const allProjects = [
     status: 'Local Streamlit app',
     tags: ['Python', 'Streamlit', 'XGBoost', 'scikit-learn', 'Time Series', 'AgriTech', 'Plotly'],
     featured: true,
+    image: '/crop-price-prediction.png',
     visual: { label: 'ML', theme: 'emerald' },
     caseStudyPath: '/projects/crop-price-prediction-senegal',
     caseStudy: {
@@ -424,6 +429,7 @@ export const allProjects = [
     tags: ['Flutter', 'Dart', 'Mobile Game', 'Physics Simulation', 'EdTech', 'CustomPainter', 'SharedPreferences'],
     featured: true,
     github: 'https://github.com/aaronjalapon/flappy-bird-.git',
+    image: '/fluppybert.png',
     visual: { label: 'G', theme: 'amber' },
     caseStudyPath: '/projects/flappy-bird-physics',
     caseStudy: {
@@ -483,6 +489,7 @@ export const allProjects = [
     status: 'Portfolio card',
     tags: ['Python', 'API Integration', 'Data Viz'],
     featured: true,
+    image: '/tanimpro.png',
     visual: { label: 'TP', theme: 'green' },
   },
 ]
