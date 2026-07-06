@@ -165,9 +165,9 @@ const projectMilestones = {
 
 function TimelineCard({ item, type = 'project' }) {
   const Icon = type === 'education' ? GraduationCap : Briefcase
-  const iconClass = type === 'education' ? 'text-blue-400' : 'text-primary'
-  const iconBgClass = type === 'education' ? 'bg-blue-400/10' : 'bg-primary/10'
-  const roleClass = type === 'education' ? 'text-blue-400' : 'text-primary'
+  const iconClass = 'text-primary'
+  const iconBgClass = 'bg-primary/10'
+  const roleClass = 'text-primary'
 
   return (
     <div className="card">
@@ -368,12 +368,12 @@ export default function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="card border-l-4 border-yellow-500"
+              className="card border-l-4 border-primary"
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">Best UX Award & Top 5 Finalist — Finals</h3>
-                  <p className="text-yellow-500 font-medium">Proptech Hackestate Hackathon</p>
+                  <p className="text-primary font-medium">Proptech Hackestate Hackathon</p>
                 </div>
                 <span className="text-gray-600 dark:text-gray-400 text-sm mt-2 md:mt-0">August 27, 2025</span>
               </div>
@@ -382,11 +382,11 @@ export default function Experience() {
               </p>
               <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                 <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full mt-2 flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
                   Awarded Best User Experience (UX) for intuitive design, clarity of buyer journey, and effective chatbot-guided workflows
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full mt-2 flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
                   Recognized as a Top 5 Finalist among competing proptech teams nationwide
                 </li>
               </ul>
@@ -398,12 +398,12 @@ export default function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="card border-l-4 border-blue-400"
+              className="card border-l-4 border-primary"
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">First Runner-Up</h3>
-                  <p className="text-blue-400 font-medium">Innovation Olympics 3.0</p>
+                  <p className="text-primary font-medium">Innovation Olympics 3.0</p>
                 </div>
                 <span className="text-gray-600 dark:text-gray-400 text-sm mt-2 md:mt-0">September 2–3, 2025</span>
               </div>

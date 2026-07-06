@@ -117,13 +117,13 @@ function CertificationCard({ cert, index }) {
       aria-label={`View ${cert.name} badge on Credly`}
     >
       {/* Gradient accent */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-blue-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-black/10 dark:from-white/10 dark:to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
       {/* Top row: badge image + external link icon */}
       <div className="flex items-start justify-between gap-4">
         <div className="relative flex-shrink-0">
           {/* Glowing ring on hover */}
-          <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-primary to-blue-400 opacity-0 group-hover:opacity-30 blur-sm transition-all duration-500" />
+          <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-white to-black/20 dark:from-white/50 dark:to-white/10 opacity-0 group-hover:opacity-40 blur-sm transition-all duration-500" />
           <div className="relative w-20 h-20 rounded-full bg-gray-100 dark:bg-dark-600 p-1 ring-2 ring-gray-200 dark:ring-white/10 group-hover:ring-primary/50 transition-all duration-300">
             <img
               src={cert.image}
@@ -337,14 +337,14 @@ function SkillsCarousel({ categories }) {
       {/* Navigation buttons */}
       <button
         onClick={scrollPrev}
-        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-white dark:bg-dark-700 border border-gray-200 dark:border-white/10 rounded-full flex items-center justify-center text-gray-900 dark:text-white hover:bg-primary/20 hover:border-primary/50 transition-all hidden md:flex"
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-white/70 dark:bg-white/10 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-full flex items-center justify-center text-gray-900 dark:text-white hover:bg-primary/20 hover:border-primary/50 transition-all hidden md:flex"
         aria-label="Previous slide"
       >
         <ChevronLeft size={20} />
       </button>
       <button
         onClick={scrollNext}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-white dark:bg-dark-700 border border-gray-200 dark:border-white/10 rounded-full flex items-center justify-center text-gray-900 dark:text-white hover:bg-primary/20 hover:border-primary/50 transition-all hidden md:flex"
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-white/70 dark:bg-white/10 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-full flex items-center justify-center text-gray-900 dark:text-white hover:bg-primary/20 hover:border-primary/50 transition-all hidden md:flex"
         aria-label="Next slide"
       >
         <ChevronRight size={20} />

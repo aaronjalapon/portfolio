@@ -87,7 +87,7 @@ export default function CaseStudyMindspace() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
                 <Heart size={16} />
                 Mental Health / UX
               </span>
@@ -209,8 +209,8 @@ export default function CaseStudyMindspace() {
                   transition={{ delay: index * 0.1 }}
                   className="card"
                 >
-                  <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-4">
-                    <item.icon size={24} className="text-purple-400" />
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                    <item.icon size={24} className="text-primary" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{item.title}</h3>
                   <p className="text-gray-600 dark:text-gray-400">{item.description}</p>
@@ -250,7 +250,7 @@ export default function CaseStudyMindspace() {
                     key={feature}
                     className="flex items-center gap-3 p-4 bg-white dark:bg-dark-700 rounded-xl"
                   >
-                    <Shield size={18} className="text-green-400 flex-shrink-0" />
+                    <Shield size={18} className="text-primary flex-shrink-0" />
                     <span className="text-gray-600 dark:text-gray-300 text-sm">{feature}</span>
                   </div>
                 ))}
@@ -352,7 +352,7 @@ export default function CaseStudyMindspace() {
       </section>
 
       {/* Elevator Pitch */}
-      <section className="section-padding bg-gradient-to-br from-purple-500/10 via-dark-800 to-dark-900">
+      <section className="section-padding bg-gradient-to-br from-white/60 via-neutral-100/60 to-black/10 dark:from-white/10 dark:via-dark-800 dark:to-dark-900">
         <div className="section-container">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}

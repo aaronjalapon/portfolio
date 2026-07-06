@@ -3,29 +3,25 @@ import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 
 const blobs = [
   {
-    // Large primary blob — top-left area
-    className: 'w-[40rem] h-[40rem] bg-teal-500/40 dark:bg-teal-500/30 rounded-full blur-[100px]',
+    className: 'w-[42rem] h-[42rem] bg-white/75 dark:bg-white/10 rounded-full blur-[110px]',
     baseX: '15%',
     baseY: '20%',
-    depth: 0.02, // slowest layer
+    depth: 0.02,
   },
   {
-    // Medium blue blob — bottom-right area
-    className: 'w-[35rem] h-[35rem] bg-sky-500/40 dark:bg-sky-500/30 rounded-full blur-[100px]',
+    className: 'w-[36rem] h-[36rem] bg-black/10 dark:bg-white/10 rounded-full blur-[120px]',
     baseX: '65%',
     baseY: '60%',
     depth: 0.035,
   },
   {
-    // Small cyan accent — center-right
-    className: 'w-96 h-96 bg-cyan-400/40 dark:bg-cyan-400/30 rounded-full blur-[90px]',
+    className: 'w-96 h-96 bg-white/60 dark:bg-white/10 rounded-full blur-[90px]',
     baseX: '75%',
     baseY: '25%',
-    depth: 0.05, // fastest layer
+    depth: 0.05,
   },
   {
-    // Additional deep blue accent
-    className: 'w-[30rem] h-[30rem] bg-blue-600/30 dark:bg-blue-500/20 rounded-full blur-[100px]',
+    className: 'w-[30rem] h-[30rem] bg-black/10 dark:bg-white/5 rounded-full blur-[100px]',
     baseX: '30%',
     baseY: '70%',
     depth: 0.04,
@@ -58,8 +54,8 @@ export default function InteractiveHeroBg() {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Base gradient background - dynamic & vibrant */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-sky-50 to-teal-50 dark:from-slate-950 dark:via-sky-950 dark:to-teal-950 transition-colors duration-500" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(255,255,255,0.92),transparent_32%),radial-gradient(circle_at_80%_0%,rgba(0,0,0,0.08),transparent_30%),linear-gradient(135deg,#f8f8f8_0%,#e8e8e8_48%,#ffffff_100%)] dark:bg-[radial-gradient(circle_at_20%_10%,rgba(255,255,255,0.12),transparent_34%),radial-gradient(circle_at_80%_0%,rgba(255,255,255,0.08),transparent_28%),linear-gradient(135deg,#030303_0%,#101010_50%,#000000_100%)] transition-colors duration-500" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.42)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)] bg-[size:72px_72px] dark:bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)]" />
 
       {/* Parallax blobs */}
       {blobs.map((blob, i) => {

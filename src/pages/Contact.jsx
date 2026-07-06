@@ -113,8 +113,8 @@ export default function Contact() {
               
               {submitted ? (
                 <div className="card text-center py-12">
-                  <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Send size={28} className="text-green-500" />
+                  <div className="w-16 h-16 bg-black/10 dark:bg-white/15 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Send size={28} className="text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Message Sent!</h3>
                   <p className="text-gray-600 dark:text-gray-400">
@@ -211,7 +211,7 @@ export default function Contact() {
                   </button>
 
                   {error && (
-                    <div className="flex items-center gap-2 p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400">
+                    <div className="flex items-center gap-2 p-4 glass border border-black/20 dark:border-white/20 rounded-lg text-gray-800 dark:text-gray-200">
                       <AlertCircle size={18} />
                       <span>{error}</span>
                     </div>
@@ -275,7 +275,7 @@ export default function Contact() {
               </div>
 
               {/* Schedule Call CTA */}
-              <div className="card bg-gradient-to-br from-primary/10 to-white dark:from-primary/10 dark:to-dark-700 border-primary/20 dark:border-primary/30">
+              <div className="card bg-gradient-to-br from-white/70 via-white/35 to-black/10 dark:from-white/10 dark:via-white/5 dark:to-black/40 border-white/70 dark:border-white/20">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
                     <Calendar size={22} className="text-primary" />

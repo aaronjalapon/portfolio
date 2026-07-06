@@ -69,7 +69,7 @@ export default function Home() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-gray-100 dark:bg-dark-700 rounded-xl text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:bg-gray-200 dark:hover:bg-dark-600 transition-all hover:scale-110"
+                    className="p-3 glass-button rounded-lg text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-all hover:scale-110"
                     aria-label={social.label}
                   >
                     <social.icon size={22} />
@@ -86,12 +86,17 @@ export default function Home() {
               className="relative hidden lg:block"
             >
               <div className="relative w-80 h-80 mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary to-blue-500 rounded-full blur-2xl opacity-30" />
-                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/30">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-black/20 dark:from-white/20 dark:to-white/5 rounded-full blur-2xl opacity-60" />
+                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/70 dark:border-white/20 shadow-2xl shadow-black/20">
                   <img 
-                    src="/fb.jpeg" 
+                    src="/profile-light.png" 
                     alt="Aaron Jalapon Arquillano"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover dark:hidden"
+                  />
+                  <img 
+                    src="/profile-dark.png" 
+                    alt="Aaron Jalapon Arquillano"
+                    className="w-full h-full object-cover hidden dark:block"
                   />
                 </div>
               </div>

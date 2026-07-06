@@ -151,7 +151,7 @@ export default function Projects() {
                     aria-pressed={selectedCategory === category}
                     className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedCategory === category
-                        ? 'bg-primary text-white'
+                        ? 'bg-black text-white dark:bg-white dark:text-black'
                         : 'bg-white/30 dark:bg-white/10 text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-white/20'
                     }`}
                   >

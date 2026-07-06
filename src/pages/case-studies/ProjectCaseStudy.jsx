@@ -18,24 +18,24 @@ import { caseStudyProjects, getProjectBySlug } from '../../data/projects'
 
 const visualThemes = {
   amber: {
-    panel: 'from-amber-400/25 via-orange-400/10 to-sky-400/20',
-    badge: 'bg-amber-500/10 text-amber-500 dark:text-amber-300',
+    panel: 'from-white/70 via-neutral-200/45 to-black/10 dark:from-white/20 dark:via-white/10 dark:to-black/40',
+    badge: 'bg-black/10 text-gray-900 dark:bg-white/15 dark:text-white',
   },
   emerald: {
-    panel: 'from-emerald-400/25 via-teal-400/10 to-sky-400/20',
-    badge: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-300',
+    panel: 'from-white/70 via-neutral-200/45 to-black/10 dark:from-white/20 dark:via-white/10 dark:to-black/40',
+    badge: 'bg-black/10 text-gray-900 dark:bg-white/15 dark:text-white',
   },
   indigo: {
-    panel: 'from-indigo-400/25 via-sky-400/10 to-emerald-400/20',
-    badge: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-300',
+    panel: 'from-white/70 via-neutral-200/45 to-black/10 dark:from-white/20 dark:via-white/10 dark:to-black/40',
+    badge: 'bg-black/10 text-gray-900 dark:bg-white/15 dark:text-white',
   },
   sky: {
-    panel: 'from-sky-400/25 via-cyan-400/10 to-emerald-400/20',
-    badge: 'bg-sky-500/10 text-sky-600 dark:text-sky-300',
+    panel: 'from-white/70 via-neutral-200/45 to-black/10 dark:from-white/20 dark:via-white/10 dark:to-black/40',
+    badge: 'bg-black/10 text-gray-900 dark:bg-white/15 dark:text-white',
   },
   violet: {
-    panel: 'from-violet-400/25 via-fuchsia-400/10 to-sky-400/20',
-    badge: 'bg-violet-500/10 text-violet-600 dark:text-violet-300',
+    panel: 'from-white/70 via-neutral-200/45 to-black/10 dark:from-white/20 dark:via-white/10 dark:to-black/40',
+    badge: 'bg-black/10 text-gray-900 dark:bg-white/15 dark:text-white',
   },
 }
 
@@ -149,7 +149,7 @@ export default function ProjectCaseStudy() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className={`relative min-h-[320px] overflow-hidden rounded-lg border border-white/20 dark:border-white/10 bg-gradient-to-br ${theme.panel}`}
+                className={`relative min-h-[320px] overflow-hidden rounded-lg border border-white/60 dark:border-white/15 bg-gradient-to-br ${theme.panel}`}
               >
                 {project.image ? (
                   <img
@@ -162,7 +162,7 @@ export default function ProjectCaseStudy() {
                     <div className="absolute inset-0 bg-white/40 dark:bg-black/20" />
                     <div className="relative h-full min-h-[320px] flex flex-col justify-between p-8">
                       <div>
-                        <span className="inline-flex px-3 py-1 rounded-lg bg-white/60 dark:bg-dark-900/60 text-xs font-semibold text-gray-700 dark:text-gray-200">
+                    <span className="inline-flex px-3 py-1 rounded-lg bg-white/70 dark:bg-white/10 text-xs font-semibold text-gray-700 dark:text-gray-200 border border-white/50 dark:border-white/10">
                           {project.status}
                         </span>
                       </div>
@@ -179,7 +179,7 @@ export default function ProjectCaseStudy() {
                 )}
                 {project.image && project.status && (
                   <div className="absolute left-4 top-4">
-                    <span className="inline-flex px-3 py-1 rounded-lg bg-dark-900/75 dark:bg-black/55 text-xs font-semibold text-white backdrop-blur-md border border-white/20 shadow-lg">
+                    <span className="inline-flex px-3 py-1 rounded-lg bg-black/75 dark:bg-white/15 text-xs font-semibold text-white backdrop-blur-md border border-white/20 shadow-lg">
                       {project.status}
                     </span>
                   </div>

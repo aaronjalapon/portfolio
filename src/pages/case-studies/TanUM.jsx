@@ -80,7 +80,7 @@ export default function CaseStudyTanUM() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 text-green-400 rounded-full text-sm font-medium mb-6">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
                 <Leaf size={16} />
                 AgriTech / IoT
               </span>
@@ -319,7 +319,7 @@ export default function CaseStudyTanUM() {
       </section>
 
       {/* Elevator Pitch */}
-      <section className="section-padding bg-gradient-to-br from-green-500/10 via-dark-800 to-dark-900">
+      <section className="section-padding bg-gradient-to-br from-white/60 via-neutral-100/60 to-black/10 dark:from-white/10 dark:via-dark-800 dark:to-dark-900">
         <div className="section-container">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}

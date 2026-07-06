@@ -127,15 +127,23 @@ export default function About() {
               className="relative"
             >
               <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary to-blue-500 rounded-2xl blur-2xl opacity-30" />
-                <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-primary/30">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-black/20 dark:from-white/20 dark:to-white/5 rounded-lg blur-2xl opacity-60" />
+                <div className="relative w-full h-full rounded-lg overflow-hidden border-2 border-white/70 dark:border-white/20 shadow-2xl shadow-black/20">
                   <img 
-                    src="/fb.jpeg" 
+                    src="/profile-light.png" 
                     alt="Aaron Jalapon"
                     loading="lazy"
                     width={384}
                     height={384}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover dark:hidden"
+                  />
+                  <img 
+                    src="/profile-dark.png" 
+                    alt="Aaron Jalapon"
+                    loading="lazy"
+                    width={384}
+                    height={384}
+                    className="w-full h-full object-cover hidden dark:block"
                   />
                 </div>
               </div>

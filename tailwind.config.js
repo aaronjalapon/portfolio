@@ -8,12 +8,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#3498db',
+        primary: 'rgb(var(--primary) / <alpha-value>)',
         dark: {
-          900: '#0a0a0a',
-          800: '#111111',
-          700: '#161616',
-          600: '#1a1a1a',
+          900: '#030303',
+          800: '#080808',
+          700: '#111111',
+          600: '#1c1c1c',
         }
       },
       fontFamily: {

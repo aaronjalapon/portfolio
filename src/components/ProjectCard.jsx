@@ -2,13 +2,13 @@ import { ArrowRight, Calendar, Users, ExternalLink, Github } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
 const visualThemes = {
-  amber: 'from-amber-400/30 via-orange-400/15 to-sky-400/25',
-  emerald: 'from-emerald-400/30 via-teal-400/15 to-sky-400/25',
-  green: 'from-green-400/30 via-emerald-400/15 to-cyan-400/25',
-  indigo: 'from-indigo-400/30 via-sky-400/15 to-emerald-400/25',
-  rose: 'from-rose-400/30 via-pink-400/15 to-sky-400/25',
-  sky: 'from-sky-400/30 via-cyan-400/15 to-emerald-400/25',
-  violet: 'from-violet-400/30 via-fuchsia-400/15 to-sky-400/25',
+  amber: 'from-white/70 via-neutral-200/50 to-black/10 dark:from-white/20 dark:via-white/10 dark:to-black/40',
+  emerald: 'from-white/70 via-neutral-200/50 to-black/10 dark:from-white/20 dark:via-white/10 dark:to-black/40',
+  green: 'from-white/70 via-neutral-200/50 to-black/10 dark:from-white/20 dark:via-white/10 dark:to-black/40',
+  indigo: 'from-white/70 via-neutral-200/50 to-black/10 dark:from-white/20 dark:via-white/10 dark:to-black/40',
+  rose: 'from-white/70 via-neutral-200/50 to-black/10 dark:from-white/20 dark:via-white/10 dark:to-black/40',
+  sky: 'from-white/70 via-neutral-200/50 to-black/10 dark:from-white/20 dark:via-white/10 dark:to-black/40',
+  violet: 'from-white/70 via-neutral-200/50 to-black/10 dark:from-white/20 dark:via-white/10 dark:to-black/40',
 }
 
 export default function ProjectCard({ project }) {
@@ -55,7 +55,7 @@ export default function ProjectCard({ project }) {
       onClick={handleCardClick}
     >
       {/* Image */}
-      <div className="relative h-48 md:h-56 -mx-6 -mt-6 mb-6 overflow-hidden bg-gray-100 dark:bg-dark-900 border-b border-white/30 dark:border-white/10">
+      <div className="relative h-48 md:h-56 -mx-6 -mt-6 mb-6 overflow-hidden bg-neutral-100 dark:bg-dark-900 border-b border-white/50 dark:border-white/10">
         {image ? (
           <img 
             src={image} 
@@ -76,7 +76,7 @@ export default function ProjectCard({ project }) {
           </div>
         )}
         {category && (
-          <span className="absolute top-4 right-4 px-3 py-1 bg-dark-900/75 dark:bg-black/55 text-white text-xs font-semibold rounded-lg backdrop-blur-md border border-white/20 shadow-lg">
+          <span className="absolute top-4 right-4 px-3 py-1 bg-black/75 dark:bg-white/15 text-white text-xs font-semibold rounded-lg backdrop-blur-md border border-white/30 shadow-lg">
             {category}
           </span>
         )}
@@ -120,7 +120,7 @@ export default function ProjectCard({ project }) {
         </div>
 
         {/* CTA */}
-        <div className="mt-auto flex items-center gap-4 pt-4 border-t border-gray-100 dark:border-white/5">
+        <div className="mt-auto flex items-center gap-4 pt-4 border-t border-neutral-200/70 dark:border-white/10">
           {hasCaseStudy && (
             <button
               type="button"
