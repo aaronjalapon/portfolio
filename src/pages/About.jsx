@@ -24,6 +24,22 @@ const highlights = [
 
 const recognitions = [
   {
+    title: 'ASEAN Hackathon 2026: UM SIKLAB-IQUEUE Places Top 7',
+    description: 'Aaron Jalapon was part of UM SIKLAB-IQUEUE, which placed Top 7 in the Smart Cities category among 1,080+ participants, 240+ projects, 100+ academic institutions, and 9 ASEAN nations.',
+    source: 'Facebook',
+    date: 'ASEAN Hackathon 2026',
+    url: 'https://www.facebook.com/share/p/1CSwbFkhjz/',
+    project: 'IQueue',
+  },
+  {
+    title: 'IQueue Featured as an AI-Powered Smart Boarding Platform',
+    description: 'UM SIKLAB-IQUEUE from the University of Mindanao was featured for IQueue, an AI-powered bus terminal boarding platform that uses Prophet and LSTM to forecast passenger surges and manage queues.',
+    source: 'Facebook',
+    date: 'ASEAN Hackathon 2026',
+    url: 'https://www.facebook.com/share/1GgUrptqVT/',
+    project: 'IQueue',
+  },
+  {
     title: 'Innovation with Purpose: UM Teams Define Excellence at FIMiEx 2025',
     description: 'Key contributor to TanimPro as the original developer, whose technical work significantly strengthened the innovation. The team earned gold at FIMiEx 2025 in Malaysia.',
     source: 'Facebook - Primum',
