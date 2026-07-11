@@ -170,7 +170,7 @@ export default function About() {
               
               <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
                 I'm a <span className="text-primary font-medium">product-minded Software & ML Engineer</span> 
-                focused on AI/ML-driven solutions and user-centered front ends. 
+                 focused on AI/ML-driven solutions and user-centered front ends. 
                 I build software that bridges technical innovation and real-world impact.
               </p>
 
