@@ -40,7 +40,7 @@ export default function Header() {
           {/* Logo */}
           <Link 
             to="/" 
-            className="text-2xl md:text-3xl font-bold text-primary hover:scale-105 transition-transform"
+            className="font-heading text-2xl md:text-3xl font-bold text-primary hover:scale-105 transition-transform"
           >
             Aaron
           </Link>
