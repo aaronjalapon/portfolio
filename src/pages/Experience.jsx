@@ -218,7 +218,7 @@ const timelineData = [
           title: 'BS Computer Science',
           period: '2023 — Present',
           role: 'University',
-          description: 'Pursuing a Bachelor of Science in Computer Science with focus on AI/ML, software engineering, and product development.',
+          description: 'Computer Science foundation with focus areas in AI/ML, software engineering, and product development.',
         }}
       />
     ),

@@ -168,7 +168,7 @@ export default function Home() {
                 <span className="gradient-text">About Me</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
-                I'm Aaron Jalapon Arquillano, a BS Computer Science student and product-minded developer 
+                I'm Aaron Jalapon Arquillano, a product-minded Software & ML Engineer 
                 focused on AI/ML-driven solutions and user-centered front ends. I build software 
                 that bridges technical innovation and real-world impact — examples include 
                 <span className="text-primary"> TanUM</span> (smart soil & fertilizer optimization), 
