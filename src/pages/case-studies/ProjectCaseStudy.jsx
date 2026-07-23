@@ -284,7 +284,9 @@ export default function ProjectCaseStudy() {
                   {caseStudy.outcomes.map((outcome) => (
                     <div key={outcome.label} className="glass-panel rounded-lg p-5">
                       <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{outcome.label}</p>
-                      <p className="text-2xl font-bold text-primary mb-2">{outcome.value}</p>
+                      <p className="text-[1.45rem] sm:text-2xl font-bold leading-tight text-primary mb-2 break-words">
+                        {outcome.value}
+                      </p>
                       <p className="text-xs text-gray-600 dark:text-gray-400">{outcome.description}</p>
                     </div>
                   ))}

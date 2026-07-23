@@ -62,7 +62,7 @@ export default function Projects() {
     <>
       <SEO
         title="Projects"
-        description="Featured software, AI, ML, IoT, computer vision, simulation, and web projects by Aaron Jalapon, including TanUM, IQueue, Banana Grading, Mindspace, AirFlow Sim, podcastman, and more."
+        description="Featured software, AI, ML, IoT, computer vision, simulation, and web projects by Aaron Jalapon, including TanUM, IQueue, AlienCare, Banana Grading, Mindspace, AirFlow Sim, podcastman, and more."
         url="/projects"
       />
       <div className="pt-20">

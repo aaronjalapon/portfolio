@@ -325,6 +325,68 @@ export const allProjects = [
     },
   },
   {
+    title: 'AlienCare',
+    slug: 'aliencare',
+    tagline: 'Auto shop sales and services web platform built with React and Laravel, shaped through project planning and backend implementation.',
+    role: 'Project Manager / Backend Developer',
+    timeline: 'Aug-Oct 2025; Mar-May 2026',
+    category: 'Software Engineering',
+    status: 'Academic project',
+    tags: ['React', 'Laravel'],
+    featured: true,
+    image: '/aliencare.png',
+    visual: { label: 'AC', theme: 'indigo' },
+    caseStudyPath: '/projects/aliencare',
+    caseStudy: {
+      template: 'generic',
+      eyebrow: 'Software Engineering / Academic Project',
+      title: 'AlienCare',
+      subtitle: 'Auto Shop Sales and Services Platform',
+      overview: 'AlienCare is an academic software engineering project for an auto shop sales and services platform built with React and Laravel. I contributed across two phases: first as project manager for planning and coordination, then as backend developer for server-side implementation.',
+      problem: 'Service-oriented auto shop websites need to communicate offerings clearly, guide customers toward booking actions, and keep the front-end experience connected to maintainable backend workflows. In an academic team setting, that also requires clear scope, task ownership, and coordinated delivery.',
+      solution: 'The project was organized around a React front end and Laravel back end for an auto shop sales and services experience, with planning, role coordination, backend development, and integration work handled across separate project phases.',
+      contribution: 'From August to October 2025, I served as project manager, helping structure the work, coordinate progress, and keep the team aligned. From March to May 2026, I shifted into backend development, focusing on Laravel implementation and support for the React-facing application workflow.',
+      highlights: [
+        {
+          title: 'Project Management',
+          description: 'Coordinated scope, team responsibilities, and delivery checkpoints during the first AlienCare development phase.',
+        },
+        {
+          title: 'Laravel Backend',
+          description: 'Worked on server-side implementation for the platform during the backend development phase.',
+        },
+        {
+          title: 'Service-Oriented UX',
+          description: 'Helped support a customer-facing web flow centered on auto shop services, trust signals, and booking-oriented actions.',
+        },
+        {
+          title: 'Iterative Delivery',
+          description: 'Contributed across separate academic project cycles, carrying context from planning into implementation.',
+        },
+      ],
+      outcomes: [
+        { label: 'Project Manager', value: 'Aug-Oct 2025', description: 'Planning, coordination, scope, and delivery checkpoints.' },
+        { label: 'Backend Developer', value: 'Mar-May 2026', description: 'Laravel backend implementation and React integration support.' },
+        { label: 'Tech Stack', value: 'React + Laravel', description: 'Academic software engineering project using a modern web stack.' },
+      ],
+      detailSections: [
+        {
+          title: 'Role Transition',
+          description: 'AlienCare gave me experience moving from team coordination into hands-on backend development, which helped connect planning decisions with implementation realities.',
+        },
+        {
+          title: 'Academic Context',
+          description: 'The project is presented as an academic software engineering project, so the case study focuses on development process, responsibilities, interface direction, and stack rather than production usage claims.',
+        },
+        {
+          title: 'Engineering Focus',
+          description: 'The strongest portfolio signal is the combination of React/Laravel delivery, backend ownership, project management, and a polished service-business web experience.',
+        },
+      ],
+      seoDescription: 'AlienCare case study: React and Laravel auto shop sales and services platform with project management and backend development contributions.',
+    },
+  },
+  {
     title: 'podcastman',
     slug: 'podcastman',
     tagline: 'Convert articles into two-host podcast episodes with RAG agents and Google Cloud TTS.',

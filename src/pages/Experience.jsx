@@ -71,6 +71,14 @@ const resumeHighlights = [
     ]
   },
   {
+    category: 'AlienCare',
+    bullets: [
+      'Managed scope, task ownership, and delivery checkpoints during the first project phase',
+      'Contributed Laravel backend development in a later implementation phase',
+      'Supported a React and Laravel auto shop sales and services platform',
+    ]
+  },
+  {
     category: 'podcastman',
     bullets: [
       'Built article ingestion for URL, raw text, and Markdown sources',
@@ -103,6 +111,12 @@ const projectMilestones = {
       description: 'Built a real-time HVAC airflow simulator with a FastAPI solver, WebSocket streaming, React visualization dashboard, validation tests, and Docker setup.',
     },
     {
+      title: 'AlienCare',
+      period: 'Mar-May 2026',
+      role: 'Backend Developer',
+      description: 'Contributed Laravel backend development and supported React integration for an auto shop sales and services academic project.',
+    },
+    {
       title: 'podcastman',
       period: 'Feb-Mar 2026',
       role: 'Full-stack AI Engineer / Solo Developer',
@@ -127,6 +141,12 @@ const projectMilestones = {
       period: 'Aug-Sep 2025',
       role: 'Sprint Lead / Product Owner',
       description: 'Led a compressed proptech sprint, shaped the product roadmap, prototyped buyer-assistant chatbot flows, and integrated buyer-profiling logic for financing guidance.',
+    },
+    {
+      title: 'AlienCare',
+      period: 'Aug-Oct 2025',
+      role: 'Project Manager',
+      description: 'Managed planning, scope, role coordination, and delivery checkpoints for a React and Laravel auto shop sales and services academic project.',
     },
     {
       title: 'Crop Price Prediction (Senegal)',
@@ -230,7 +250,7 @@ export default function Experience() {
     <>
       <SEO
         title="Experience"
-        description="Project milestones and experience timeline of Aaron Jalapon — Software & ML Lead at TanUM, builder of IQueue, RealiTech, Mindspace, and more."
+        description="Project milestones and experience timeline of Aaron Jalapon — Software & ML Lead at TanUM, builder of IQueue, AlienCare, RealiTech, Mindspace, and more."
         url="/experience"
       />
       <div className="pt-20">
